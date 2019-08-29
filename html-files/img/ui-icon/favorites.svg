@@ -1,0 +1,8 @@
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Избранное" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-42" fill="#FFFFFF" opacity="0" x="0" y="0" width="30" height="30"></rect>
+        <g id="bookmark-2" transform="translate(9.000000, 7.000000)" fill="#D62626" fill-rule="nonzero">
+            <path d="M6,12.7676349 L12,17 L12,0 L5.68434189e-14,0 L5.68434189e-14,17 L6,12.7676349 Z M10,2 L10,13 L6,10 L2,13 L2,2 L10,2 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

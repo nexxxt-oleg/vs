@@ -1,0 +1,9 @@
+/logs
+/upload
+/*.log
+/*.sql
+/*.txt
+/*.xml
+/*.dt
+/.idea
+/urlrewrite.php

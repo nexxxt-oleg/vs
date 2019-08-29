@@ -1,0 +1,266 @@
+.page-profile
+	&__order-current
+	&__left-menu
+		margin-bottom: 40px
+	&__subtitle
+		margin: 0 0 32px
+	&__card
+		margin: 0 0 32px
+	&__info-price
+		margin: 0 0 32px
+	&__favorites
+		text-align: center
+	
+/* Текущие заказы */
+
+/* Нижняя часть карточек заказов */
+.pp-current-order-card-btm
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	&__btn-more
+	&__btn-repeat
+		margin-left: auto
+		margin-right: 32px
+		&:last-child
+			margin-right: 0
+	&__btn-pay
+		
++media(xs)
+	.pp-current-order-card-btm
+		justify-content: space-between
+		&__btn-more
+			+b4col(100%)
+			margin-bottom: 20px
+			text-align: center
+		&__btn-repeat
+			margin-right: 0
+			margin-left: 0
+			&:last-child
+				+b4col(100%)
+				text-align: center
+
+/* Текущие заказы - Подробная информация */
+/* Информация о заказе */
+.pp-current-order-info-card-body
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	&__name,
+	&__status,
+	&__price
+		display: flex
+		align-items: center
+		height: 60px
+		p
+			margin: 0
+	&__name
+		+b4col(30%)
+	&__status
+		+b4col(29%)
+	&__price
+		+b4col(25%)
+		justify-content: center
+	
++media(md)
+	.pp-current-order-info-card-body
+		&__name
+			+b4col(38%)
+		&__status
+			+b4col(43%)
+		&__price
+			+b4col(19%)
+			justify-content: flex-start
+	
++media(xs)
+	.pp-current-order-info-card-body
+		&__name
+			margin-top: 20px
+			margin-bottom: 20px
+		&__name,
+		&__status
+			height: auto
+		&__name,
+		&__status,
+		&__price
+			+b4col(100%)
+			justify-content: center
+
+/* Параметры оплаты */
+.pp-current-order-params-card-body
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	&__status,
+	&__reckoning,
+	&__payment,
+	&__pay
+		display: flex
+		align-items: center
+		height: 60px
+		p
+			margin: 0
+	&__status
+		+b4col(30%)
+	&__reckoning
+		+b4col(29%)
+	&__payment
+		+b4col(25%)
+		justify-content: center
+	&__pay
+		+b4col(16%)
+		justify-content: flex-end
+	
++media(md)
+	.pp-current-order-params-card-body
+		&__status
+			+b4col(38%)
+		&__reckoning
+			+b4col(62%)
+		&__payment
+			+b4col(50%)
+			justify-content: flex-start
+		&__pay
+			+b4col(50%)
+			justify-content: flex-start
+	
++media(xs)
+	.pp-current-order-params-card-body
+		&__status,
+		&__reckoning,
+		&__payment,
+		&__pay
+			+b4col(100%)
+			justify-content: center
+	
+.pp-current-order-params-radio
+	&__item
+		margin-bottom: 20px
+	
+/* Параметры отгрузки */
+.pp-current-order-params-2-card-body
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	&__status,
+	&__delivery,
+	&__price
+		display: flex
+		align-items: center
+		height: 60px
+		p
+			margin: 0
+	&__status
+		+b4col(30%)
+	&__delivery
+		+b4col(29%)
+	&__price
+		+b4col(25%)
+		justify-content: center
+	
++media(md)
+	.pp-current-order-params-2-card-body
+		&__status
+			+b4col(38%)
+		&__delivery
+			+b4col(43%)
+		&__price
+			+b4col(19%)
+			justify-content: flex-start
+	
++media(xs)
+	.pp-current-order-params-2-card-body
+		&__status
+			margin-top: 20px
+		&__status,
+		&__delivery,
+		&__price
+			+b4col(100%)
+			justify-content: center
+			height: auto
+			margin-bottom: 20px
+
+/* Информация стоимости снизу */
+.order-info-price
+	&__row
+		display: flex
+		justify-content: flex-end
+	&__name,
+	&__value
+		p
+			text-align: right
+			margin: 0
+	&__name
+		width: 110px
+		p
+			font-size: 12px
+	&__value
+		width: 100px
+	&__col
+		width: 110px
+	&__full
+	&__delivery
+	
+/* Личные данные */
+.pe-form
+	&__info
+		p
+			display: block
+			&:not(:last-child)
+				margin-bottom: 10px
+	&__inputs
+	&__input
+		margin-bottom: 10px
+		&_password-first
+			margin-top: 32px
+	&__bottom
+		margin-top: 30px
+		display: flex
+		justify-content: space-around
+		align-items: center
+	
+/* Избранное */
+.pp-favorites-icon
+	display: flex
+	justify-content: center
+	align-items: center	
+	> img, > svg
+		width: 46px
+		height: 40px
+		margin-bottom: 40px
+
+/* Главная профиля */
+.pp-menu-block
+	position: relative
+	display: block
+	width: 100%
+	border: 1px solid $grey3
+	+trs(.2s)
+	+aspect-ratio(1)
+	&:hover
+		border: 1px solid $ac
+	&__content
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__icon
+		width: 93px
+		height: 93px
+		margin-bottom: 11px
+		> img, > svg
+			width: 100%
+			height: auto
+	&__title
+		font-size: 14px
+		font-weight: 400
+		color: $grey1

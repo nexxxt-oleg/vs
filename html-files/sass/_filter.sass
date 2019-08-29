@@ -1,0 +1,550 @@
+.filter
+	&__title
+		margin-bottom: 16px
+		font-size: 16px
+		line-height: 20px
+		*
+			margin: 0
+	&__item
+		position: relative
+		margin-bottom: 36px
+		&_last
+			margin-bottom: 0
+		&_small
+			margin-bottom: 16px
+			&:last-child
+				margin-bottom: 24px
+	&__lists
+		margin-bottom: 16px
+	&__modef
+		display: block
+		position: sticky
+		z-index: 10
+		top: 100px
+		left: 0
+		width: 100%
+		height: 1px
+	&__set-btn
+		margin-right: 16px
+	&__btn-more
+		display: none
+		align-items: center
+		justify-content: center
+		max-width: 196px
+		width: 100%
+		height: 40px
+		padding: 0 14px
+		border: 2px solid $ac
+		border-radius: 4px
+		background: #fff
+		outline: none !important
+		cursor: pointer
+		&:hover, &:focus
+			text-decoration: none
+			span
+				color: $ac
+		span
+			display: block
+			font-size: 14px
+			line-height: 17px
+			text-transform: uppercase
+			white-space: nowrap
+			color: $ac
+		svg
+			width: 18px
+			height: 18px
+			margin-right: 7px
+			path
+				stroke: $ac
+	&__categories
+		display: block
+		margin: 0
+		padding: 0
+		li
+			list-style: none
+			margin: 0 0 24px
+			padding: 0
+			a
+				display: inline-block
+				font-size: 16px
+				line-height: 16px
+				font-weight: 600
+				color: $grey1
+				transition: all .3s ease
+				&:hover
+					color: $ac
+
++media(xs)
+	.filter
+		&__hidden
+			display: none
+			margin-top: 24px
+		&__btn-more
+			display: flex
+		&__item
+			&_xs
+				margin-bottom: 16px
+	.js-filter-categories-hidden
+		display: none
+		margin-top: 24px
+
+.bx-filter-popup-result
+	position: absolute
+	top: 0
+	left: 90%
+	min-width: 150px
+	height: 40px
+	background: transparent
+	padding: 0 16px 0 24px
+	overflow: hidden
+	border-radius: 4px
+	a
+		display: flex
+		width: 100%
+		height: 100%
+		color: #fff
+		font-size: 16px
+		line-height: 40px
+		&:hover, &:focus
+			text-decoration: none
+			color: #ffffff
+	span:nth-child(1)
+		position: absolute
+		z-index: 1
+		left: 0
+		top: 50%
+		display: block
+		width: 82%
+		transform: translate(20%, -50%) rotate(45deg)
+		transform-origin: 50% 50%
+		border-radius: 4px
+		background-image: linear-gradient(45deg, #de0f29, #ff5c25)
+		+aspect-ratio(1)
+	span:nth-child(2)
+		position: relative
+		z-index: 2
+		margin-right: 4px
+	span:nth-child(3)
+		position: relative
+		z-index: 2
+		font-size: 16px
+		line-height: 40px
+
++media(md)
+	.bx-filter-popup-result
+		left: auto
+		right: 0
+
++media(xs)
+	.bx-filter-popup-result
+		min-width: 120px
+		span:nth-child(2),
+		span:nth-child(3)
+			font-size: 13px
+
+.filter-hidden
+	&__title
+		margin-bottom: 20px
+		padding-right: 0
+	
+.filter-box
+	&__title
+		margin-bottom: 20px
+	&__sub-title
+		margin-bottom: 8px
+		font-size: 16px
+		line-height: 20px
+
+.filter-slider
+	+clearfix
+	&__field
+		&_left,
+		&_right
+			float: left
+			width: 50%
+		&_left
+			padding-right: 4px
+		&_right
+			padding-left: 4px
+	&__slider-track
+		float: left
+		width: 100%
+
++media(md)
+	.filter-slider
+		&__field
+			&_left,
+			&_right
+				width: 50%
+			&_left
+				padding-right: 16px
+			&_right
+				padding-left: 16px
+		&__slider-track
+			width: 100%
+
+.filter-field
+	position: relative
+	width: 100%
+	&__ph
+		position: absolute
+		top: 50%
+		left: 10px
+		transform: translateY(-50%)
+		font-size: 14px
+		color: $grey2
+		font-style: normal
+		padding: 0
+	&__input
+		width: 100%
+		height: 40px
+		padding-left: 30px
+		padding-right: 10px
+		text-align: right
+		outline: none !important
+		background-color: #fff
+		border: solid 2px $grey3
+		border-radius: 4px
+		box-sizing: border-box
+		transition: all .2s ease
+		&:focus
+			border-color: #bfbfbf
+	
+.filter-track
+	padding-top: 25px
+	&__container
+		position: relative
+		height: 8px
+	&__part
+		position: absolute
+		top: -6px
+		width: 1px
+		height: 17px
+		background: transparent
+		&.p1
+			left: -1px
+		&.p2
+			left: 25%
+		&.p3
+			left: 50%
+		&.p4
+			left: 75%
+		&.p5
+			right: -1px
+		&.p1, &.p2, &.p3, &.p4, &.p5
+			span
+				display: none
+		&.p1
+			span
+				text-align: left
+				margin-left: 0
+		&.p5
+			span
+				text-align: right
+				margin-left: -100px
+		span
+			font-size: 16px
+			line-height: 14px
+			font-weight: 400
+			color: $grey3
+			position: absolute
+			top: -27px
+			left: 50%
+			display: block
+			width: 100px
+			margin-left: -50px
+			text-align: center
+	&__btn
+		position: absolute
+		top: -4px
+		width: 16px
+		height: 16px
+		box-sizing: border-box
+		border: 2px solid $ac
+		border-radius: 50%
+		background-color: #fff
+		&.left
+			left: 0
+			margin-left: -10px
+		&.right
+			right: 0
+			margin-right: -10px
+		&::after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			display: block
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: $ac
+			transform: translate(-50%, -50%)
+	&__range,
+	&__line,
+	&__line-vd,
+	&__line-vn,
+	&__line-v
+		position: absolute
+		top: 0
+		bottom: 0
+	&__line-vd
+		background: #9f9f9f
+		z-index: 60
+	&__line-vn
+		background: $grey3
+		border-radius: 4px
+		z-index: 70
+	&__line-v
+		background: linear-gradient(to right, #de0f29, #ff5c25)
+		z-index: 80
+	&__range
+		z-index: 90
+	
+/* Слайдер */
+.dd
+	.bx-ui-slider-track-container
+		padding-top: 35px
+		padding-bottom: 35px
+	.bx-ui-slider-track
+		background-color: $grey1
+		position: relative
+		height: 8px
+	.bx-ui-slider-part
+		position: absolute
+		top: -6px
+		width: 1px
+		height: 17px
+		background: transparent
+		&.p1
+			left: -1px
+		&.p2
+			left: 25%
+		&.p3
+			left: 50%
+		&.p4
+			left: 75%
+		&.p5
+			right: -1px
+		&.p2, &.p3, &.p4
+			span
+				display: none
+		&.p1
+			span
+				text-align: left
+				margin-left: 0
+		&.p5
+			span
+				text-align: right
+				margin-left: -100px
+		span
+			font-size: 16px
+			line-height: 14px
+			font-weight: 400
+			color: $grey3
+			position: absolute
+			top: -27px
+			left: 50%
+			display: block
+			width: 100px
+			margin-left: -50px
+			text-align: center
+	.bx-ui-slider-range,
+	.bx-ui-slider-pricebar,
+	.bx-ui-slider-pricebar-vd,
+	.bx-ui-slider-pricebar-vn,
+	.bx-ui-slider-pricebar-v
+		position: absolute
+		top: 0
+		bottom: 0
+	.bx-ui-slider-pricebar-vd
+		background: #9f9f9f
+		z-index: 60
+	.bx-ui-slider-pricebar-vn
+		background: $grey1
+		z-index: 70
+	.bx-ui-slider-pricebar-v
+		background: $ac
+		z-index: 80
+	.bx-ui-slider-range
+		z-index: 90
+	.bx-ui-slider-handle
+		position: absolute
+		top: -6px
+		width: 20px
+		height: 20px
+		border: 3px solid #fff
+		border-radius: 50%
+		box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .19)
+		transition: .2s box-shadow ease
+		&.left,
+		&.right
+			background-color: $ac
+		&.left
+			left: 0
+			margin-left: -10px
+		&.right
+			right: 0
+			margin-right: -10px
+		&::before,
+		&::after
+			content: ""
+			display: block
+			width: 1px
+			height: 6px
+			background-color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			opacity: 0
+			transition: all .2s ease
+		&::before
+			transform: translate(-2px, -50%)
+		&::after
+			transform: translate(1px, -50%)
+		&:hover
+			box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .18)
+			&::before,
+			&::after
+				opacity: 1
+	.bx-filter-parameters-box-container-block
+		position: relative
+		font-size: 11px
+		color: #3f3f3f
+		&.bx-left,
+		&.bx-right
+			float: left
+			width: 49%
+		&.bx-left
+			margin-right: 2%
+	.bx-filter-block
+		i.bx-ft-sub
+			position: absolute
+			top: 50%
+			left: 15px
+			transform: translateY(-50%)
+			font-size: 14px
+			color: $grey2
+			font-style: normal
+			padding: 0
+	.bx-filter-input-container
+		input
+			width: 100%
+			height: 40px
+			padding-left: 40px
+			padding-right: 20px
+			text-align: right
+			border: 1px solid $grey1
+			outline: none
+			font-size: 16px
+			font-weight: 400
+			color: $grey3
+			transition: all .3s ease
+			&:hover
+				border-color: $grey2
+			&:active, &:focus
+				border-color: $ac
+
+/* Чекбокс с обычным с лейблом */
+.filter-checkbox
+	$p: &
+	&__item
+		margin-bottom: 16px
+		+b4col(100%)
+		&:last-child
+			margin: 0
+	&__label
+		display: block
+		margin: 0
+		&.bx-active
+			#{$p}__checkbox
+				&::after
+					opacity: 1
+	&__input
+		display: none
+	&__checkbox
+		position: relative
+		display: block
+		padding-left: 27px
+		cursor: pointer
+		&::before,
+		&::after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			display: block
+			width: 16px
+			height: 16px
+			transition: all .2s ease
+		&::before
+			background-color: #fff
+			border: 2px solid $grey3
+			border-radius: 4px
+		&::after
+			opacity: 0
+			background: url("#{$url-img}/ui-icon/checked.svg") 50% 50% no-repeat
+	&__text
+		font-size: 16px
+		line-height: 1
+		transition: all .2s ease
+		&:hover
+			color: $ac
+	&__input:checked + #{$p}__checkbox::after
+		opacity: 1
+
+/* Чекбокс с лейблом и картинкой */
+.filter-checkbox-img
+	.bx-filter-param-btn-block
+		width: calc(100% / 6 - 20px)
+		margin-right: 20px
+		float: left
+		input
+			display: none
+			&:checked + .bx-filter-param-label
+				.bx-filter-param-btn::before
+					background-color: rgba($ac, .5)
+				.bx-filter-param-btn::after
+					opacity: 1
+	.bx-filter-param-label
+		width: 100%
+		height: auto
+		cursor: pointer
+		&:hover
+			.bx-filter-param-btn::before
+				background-color: rgba($ac, .5)
+	.bx-filter-param-btn
+		position: relative
+		display: block
+		width: 100%
+		height: 100px
+		&::before
+			content: ""
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-color: transparent
+			transition: all .2s ease
+		&::after
+			content: url("#{$url-img}/checked.svg")
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			opacity: 0
+			transition: all .2s ease
+	.bx-filter-btn-color-icon
+		display: block
+		width: 100%
+		height: 100px
+		background-size: cover
+		background-position: 50% 50%
+	.bx-filter-param-text
+		font-size: 14px
+		line-height: 30px
+		color: $grey2
+		background-color: transparent

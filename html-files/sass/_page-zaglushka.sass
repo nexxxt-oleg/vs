@@ -1,0 +1,73 @@
+.page-zaglushka
+	&__logo
+		margin-top: 153px
+		img, svg
+			width: 100%
+			height: auto
+	&__bg
+		margin-top: 64px
+		background-image: url("#{$url-img}/zaglushka/bg.png")
+		background-position: 10% 0
+		background-size: cover
+	&__content
+		padding-top: 130px
+		padding-bottom: 130px
+	&__title
+		font-size: 54px
+		line-height: 54px
+		font-weight: 700
+		color: #ffffff
+		margin-bottom: 21px
+		span
+			font-size: 43px
+			line-height: 53px
+			font-weight: 400
+	&__contacts
+		margin-bottom: 23px
+		span
+			display: block
+			color: #ffffff
+		a
+			display: block
+			font-size: 19px
+			line-height: 23px
+			font-weight: 700
+			color: #ffffff !important
+	&__social
+		display: flex
+		justify-content: space-between
+		align-items: center
+
++media(md)
+	.page-zaglushka
+		&__bg
+			background-position: 70% 0
+
++media(sm)
+	.page-zaglushka
+		&__bg
+			background-position: 50% 0
+
++media(xs)
+	.page-zaglushka
+		&__logo
+			margin-top: 53px
+		&__bg
+			margin-top: 20px
+		&__content
+			padding-top: 90px
+			padding-bottom: 90px
+		&__title
+			font-size: 30px
+			line-height: 30px
+			font-weight: 700
+			color: #ffffff
+			margin-bottom: 21px
+			span
+				font-size: 25px
+				line-height: 25px
+				font-weight: 400
+		&__bg
+			background-position: 10% 0
+		&__social
+			margin-top: 30px

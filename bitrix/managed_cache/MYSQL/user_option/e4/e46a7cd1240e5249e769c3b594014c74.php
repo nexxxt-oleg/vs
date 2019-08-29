@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001564561762';
+$dateexpire = '001564565362';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:11:{s:11:"code_editor";a:1:{s:5:"theme";s:5:"light";}s:21:"file_copy_move_config";s:61:"a:2:{s:7:"advMode";b:1;s:10:"caseOption";s:11:"auto_rename";}";s:18:"file_dialog_config";s:29:"s1;/images/news;list;type;asc";s:11:"last_pathes";s:445:"a:10:{i:0;s:7:"/bitrix";i:1;s:21:"/bitrix/php_interface";i:2;s:5:"/news";i:3;s:11:"/about/jobs";i:4;s:73:"/local/templates/stroyka_reborn/components/bitrix/sale.order.ajax/grechka";i:5;s:65:"/local/templates/stroyka_reborn/components/bitrix/sale.order.ajax";i:6;s:49:"/local/templates/stroyka_reborn/components/bitrix";i:7;s:42:"/local/templates/stroyka_reborn/components";i:8;s:31:"/local/templates/stroyka_reborn";i:9;s:16:"/local/templates";}";s:17:"medialib_def_type";s:1:"1";s:17:"medialib_user_set";s:9:"600,450,4";s:19:"stickers_last_color";i:0;s:20:"stickers_list_filter";s:97:"a:4:{s:4:"type";s:3:"all";s:6:"status";s:6:"opened";s:4:"page";s:3:"all";s:6:"colors";s:3:"all";}";s:18:"stickers_navi_size";i:5;s:30:"taskbar_settings_FORM_TEMPLATE";s:250:"a:3:{s:19:"BXPropertiesTaskbar";a:3:{s:4:"show";b:1;s:3:"set";i:3;s:6:"active";b:1;}s:20:"BXComponents2Taskbar";a:3:{s:4:"show";b:1;s:3:"set";s:1:"2";s:6:"active";b:1;}s:21:"BXFormElementsTaskbar";a:3:{s:4:"show";b:1;s:3:"set";i:3;s:6:"active";b:1;}}";s:33:"taskbarset_settings_FORM_TEMPLATE";s:90:"a:2:{i:2;a:2:{s:4:"show";b:1;s:4:"size";i:200;}i:3;a:2:{s:4:"show";b:1;s:4:"size";i:160;}}";}}';
+return true;
+?>

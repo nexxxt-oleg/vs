@@ -1,0 +1,284 @@
+.page-catalog-product
+	&__slider
+		margin-top: 32px
+		margin-bottom: 32px
+	&__props
+		margin-top: 32px
+		margin-bottom: 32px
+
+.pc-product-slider-big
+	position: relative
+	+aspect-ratio(3, 2)
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 11
+		top: 50%
+		transform: translateY(-50%)
+		width: 40px
+		height: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+	&__mismatch-desc
+		display: none
+		opacity: 0
+		position: absolute
+		left: 50%
+		bottom: 0
+		transform: translateX(-50%)
+		max-width: 374px
+	&__prev
+		left: 0
+	&__next
+		right: 0
+	&__item
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		transition: all .2s ease
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+			object-position: 50% 50%
+		&.active
+			z-index: 10
+			opacity: 1
+
++media(xs)
+	.pc-product-slider-big
+		&__mismatch-desc
+			max-width: 100%
+	
+.pc-product-slider-small
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	padding: 20px 0
+	&__item
+		width: 100%
+		max-width: 168px
+		height: 100%
+		margin: 0 10px
+		cursor: pointer
+		transition: all .2s ease
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+			object-position: 50% 50%
+		&.active
+			border: 1px solid $ac
+	
+.pc-product-props
+	position: relative
+	background-color: #f0f0f0
+	padding: 20px
+	&__amount,
+	&__price,
+	&__price-full
+		margin-bottom: 20px
+		p
+			margin: 0
+	&__old-price,
+	&__new-price
+		margin-bottom: 10px !important
+		margin-right: 0 !important
+	&__in-stock
+		margin-bottom: 26px
+	&__delivery
+		margin-bottom: 18px
+	&__timer
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+	&_action
+		padding-bottom: 60px
+	
++media(xs)
+	.pc-product-props
+		padding: 10px
+		
+.product-amount
+	$height: 40px
+	$btnWidth: 44px
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	&_center-text
+		p
+			text-align: center
+	&__minus,
+	&__plus
+		background-color: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		width: $btnWidth
+		height: $height
+		cursor: pointer
+		svg
+			polygon,
+			path
+				transition: fill .2s ease
+				fill: #b5b5b5
+			&:hover
+				polygon,
+				path
+					fill: #ff9a9a
+			&:active
+				polygon,
+				path
+					fill: $ac
+		&.disabled
+			cursor: not-allowed
+	&__field
+		background-color: #fff
+		border: none
+		padding: 0
+		outline: none !important
+		width: calc(100% - #{$btnWidth * 2})
+		height: $height
+		max-width: 60px
+		font-size: 14px
+		font-weight: 700
+		color: $grey1
+		text-align: center
+
+.pc-product-tabs
+	&__head
+		margin-bottom: 32px
+	&__body
+		
+.pc-product-tabs-head
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	border-bottom: 1px solid $ac
+	&__item
+		margin-right: 20px
+		border-bottom: 5px solid transparent
+		transition: all .2s ease
+		+b4col(_col(2))
+		&.active
+			border-color: $ac
+	&__link
+		display: inline-block
+		padding: 15px 0 11px
+		width: 100%
+		text-align: center
+		text-decoration: none !important
+	
++media(sm)
+	.pc-product-tabs-head
+		&__item
+			+b4col(_col(3))
+
+.product-properties
+	&__title
+		margin-bottom: 32px
+	&__list
+		display: flex
+		justify-content: flex-start
+		flex-wrap: wrap
+		dt, dl
+			margin-bottom: 32px
+		dt
+			width: _col(2)
+		dl
+			width: _col(10)
+	
++media(sm)
+	.product-properties
+		&__list
+			dt
+				width: _col(4)
+			dl
+				width: _col(8)
+
+.product-comments
+	$p: &
+	&__add-btn
+		margin-bottom: 32px
+	&__container
+		margin: 0
+		padding: 0
+		list-style: none
+		display: flex
+		justify-content: flex-start
+		flex-wrap: wrap
+	&__item
+		margin-left: _col(2)
+		+b4col(_col(8))
+		&:not(:last-child)
+			margin-bottom: 32px
+		#{$p}__container
+			margin-top: 32px
+			margin-left: 100px
+			#{$p}__item
+				margin-left: 0
+				+b4col(_col(12))
+	
++media(md)
+	.product-comments
+		$p: &
+		&__item
+			+b4col(_col(12))
+			margin-left: 0
+			#{$p}__container
+				margin-left: 50px
+	
++media(xs)
+	.product-comments
+		$p: &
+		&__item
+			#{$p}__container
+				margin-left: 20px
+		
+.b-comment
+	$p: &
+	&__container
+		padding: 10px 32px
+		background-color: $grey5
+	&__info
+		margin-bottom: 20px
+	&__author,
+	&__date,
+	&__time
+		font-size: 13px
+		font-weight: 600
+		color: $grey1
+	&__author,
+	&__date
+		margin-right: 20px
+	&__content
+		margin-bottom: 20px
+	&__meta
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+	&__answer,
+	&__edit,
+	&__show,
+	&__delete,
+	&__span
+		font-size: 13px
+	&__answer,
+	&__edit,
+	&__show,
+	&__delete
+		margin-right: 20px
+	
++media(xs)
+	.b-comment
+		&__container
+			padding: 10px

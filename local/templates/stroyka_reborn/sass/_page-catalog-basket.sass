@@ -1,0 +1,153 @@
+.page-catalog-basket
+	&__basket
+		margin-bottom: 40px
+		
+.pc-basket
+	$height: 90px
+	&__head
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		width: 100%
+		height: 40px
+		background-color: $grey5
+		padding: 0 32px
+		a:not(:last-child)
+			margin-right: 10px
+	&__body
+		width: 100%
+	&__title
+	&__row
+		position: relative
+		display: flex
+		justify-content: flex-start
+		flex-wrap: wrap
+		border: 1px solid $grey3
+		&:not(:first-child)
+			border-top: none
+	&__prop-col
+		+b4col($col5)
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__img-col,
+	&__name-col,
+	&__price-col,
+	&__amount-col,
+	&__price-full-col,
+	&__del-col
+		display: flex
+		height: $height
+	&__img-col
+		justify-content: center
+	&__name-col
+		overflow: hidden
+		justify-content: flex-start
+	&__img-col,
+	&__name-col,
+	&__del-col
+		align-items: center
+	&__price-col,
+	&__amount-col,
+	&__price-full-col
+		justify-content: center
+		padding: 22px 0
+	&__img-col
+		+b4col($col4)
+	&__name-col
+		+b4col($col8)
+	&__price-col
+		+b4col($col2)
+	&__amount-col
+		+b4col($col2)
+	&__price-full-col
+		+b4col($col2)
+	&__del-col
+		+b4col($col1)
+	&__restore-name-col
+		+b4col($col10)
+	&__restore-col
+		+b4col($col2)
+		display: flex
+		justify-content: center
+	&__img
+		width: 66px
+		height: 66px
+		object-fit: contain
+		object-position: 50% 50%
+	&__del
+		width: 30px
+		height: 30px
+		border: none
+		outline: none !important
+		background-color: transparent
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+		width: 30px
+		height: 30px
+	&__removed
+		color: $ac
+		&:hover
+			color: $ac
+			transition: all .3s ease
+	&__removed-container
+		width: 100%
+		height: 90px
+		overflow: hidden
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		padding: 0 32px
+
++media(xs)
+	.pc-basket
+		&__head
+			padding: 0 12px
+		&__prop-col
+			+b4col($col12)
+			flex-wrap: wrap
+			height: auto
+			order: 0
+		&__img-col,
+		&__name-col
+			+b4col($col12)
+			justify-content: center
+			height: auto
+		&__img-col
+			padding: 32px 0 74px
+		&__amount-col
+			+b4col($col12)
+			order: 1
+			padding-bottom: 0
+			height: auto
+		&__price-col
+			+b4col($col6)
+			order: 2
+		&__price-full-col
+			+b4col($col6)
+			order: 3
+		&__del-col
+			height: auto
+			position: absolute
+			z-index: 11
+			top: 10px
+			right: 10px
+	
+.pc-basket-btm
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&__price-full
+		margin: 0
+		margin-right: 40px
+	&__btn
+		
++media(xs)
+	.pc-basket-btm
+		justify-content: space-between
+		&__price-full
+			margin: 0

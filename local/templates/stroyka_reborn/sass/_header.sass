@@ -1,0 +1,468 @@
+.header
+	position: relative
+	z-index: 100
+	&__top
+		display: flex
+		align-items: center
+		height: $headerTop
+		background-color: $grey5
+	&__link
+		display: inline-flex
+		align-items: center
+		a
+			display: inline-block
+			margin-right: 32px
+			&:last-child
+				margin-right: 0
+	&__contacts
+		display: flex
+		justify-content: space-between
+		margin-left: 45px
+	&__phone
+		display: inline-block
+		font-weight: bold
+		font-size: 16px
+		line-height: 20px
+		white-space: nowrap
+	&__login
+		position: relative
+		display: flex
+		padding-right: 32px
+		a
+			&:first-child
+				position: relative
+				padding-right: 6px
+				&::after
+					content: '/'
+					position: absolute
+					right: -2px
+					top: 0
+			&:nth-child(2)
+				padding-left: 6px
+			&:last-child
+				position: absolute
+				right: 0
+				top: -2px
+				display: none
+				width: 24px
+				height: 24px
+				img
+					width: 100%
+					height: 100%
+		img
+			position: absolute
+			right: 0
+			top: -2px
+			display: block
+			width: 24px
+			height: 24px
+	&__middle
+		display: flex
+		height: 112px
+	&__logo
+		display: block
+		width: 200px
+		margin-left: -20px
+		margin-top: 18px
+		img
+			display: block
+			width: 100%
+			height: auto
+	&__btn-catalog
+		display: flex
+		justify-content: flex-end
+		margin-top: 36px
+	&__burger
+		width: 136px
+		background-image: $gradient
+	&__search
+		display: block
+		margin-top: 36px
+	&__btns
+		margin-top: 36px
+		padding-left: 42px
+		padding-right: 30px
+
++media(md)
+	.header
+		&__logo
+			&.search-active
+				opacity: 0
+		&__burger
+			&.search-active
+				opacity: 0
+		&__search
+			&.focus
+				position: absolute
+				z-index: 1
+				left: 44px
+				width: calc(100% - 88px)
+		&__contacts
+			margin-left: 0
+		&__btns
+			padding-right: 8px
+			&.search-active
+				opacity: 0
+
++media(sm)
+	.header
+		&__link
+			a
+				margin-right: 24px
+		&__login
+			a, img
+				&:not(:last-child)
+					display: none
+				&:last-child
+					display: inline-block
+		&__middle
+			height: 124px
+		&__logo
+			width: 174px
+			margin-top: 20px
+			margin-left: -15px
+		&__btn-catalog,
+		&__search,
+		&__btns
+			margin-top: 32px
+		&__search
+			&.focus
+				position: absolute
+				z-index: 1
+				left: 24px
+				width: calc(100% - 38px)
+		&__btns
+			padding: 0
+
++media(xs)
+	.header
+		&__link
+			display: none
+		&__login
+			a
+				&:last-child
+					right: 16px
+		&__phone
+			font-size: 14px
+		&__middle
+			height: 136px
+			&_xs
+				&:nth-child(1)
+					order: 3
+				&:nth-child(2)
+					order: 1
+				&:nth-child(3)
+					order: 2
+		&__logo
+			width: 142px
+			height: auto
+			margin-left: -8px
+			margin-top: 15px
+			&.search-active
+				opacity: 1
+		&__burger
+			width: 100%
+		&__btns
+			margin-top: 17px
+			&.search-active
+				opacity: 1
+		&__btn-catalog
+			justify-content: flex-start
+		&__search
+			width: 100%
+			&.focus
+				position: absolute
+				z-index: 1
+				left: 12px
+				width: calc(100% - 24px)
+		&__btn-catalog,
+		&__search
+			margin-top: 24px
+
+.search-form
+	$p: &
+	&__field
+		position: relative
+		width: 100%
+		height: 40px
+		&:hover
+			#{$p}__input
+				border-color: #BFBFBF
+	&__input
+		position: absolute
+		display: flex
+		width: 100%
+		height: 100%
+		padding: 0 40px 0 16px
+		box-sizing: border-box
+		border-radius: 4px
+		border: solid 2px $grey3
+		background-color: #fff
+		outline: none !important
+		+trs(.2s)
+		&:focus
+			border-color: #BFBFBF
+	&__btn
+		position: absolute
+		right: 0
+		z-index: 1
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		padding: 0
+		border: none
+		outline: none !important
+		background: transparent
+		svg
+			width: 24px
+			height: 24px
+			+trs(.2s)
+		&:hover
+			svg
+				g > g
+					fill: #BFBFBF
+
++media(sm)
+	.search-form
+		&__input
+			width: calc(100% - 10px)
+		&__btn
+			right: 10px
+
++media(xs)
+	.search-form
+		&__input
+			width: 100%
+		&__btn
+			right: 0
+
+.header-btns
+	$p: &
+	display: flex
+	&__wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		width: 88px
+		height: 40px
+		&:first-child
+			margin-right: 40px
+	&__link
+		position: relative
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		&:first-child
+			&::after
+				content: attr(data-count)
+				display: block
+				font-size: 13px
+				font-weight: 600
+				line-height: 16px
+				color: $ac
+				text-align: center
+		&:hover, &:focus
+			text-decoration: none
+		&[data-count]
+			#{$p}__icon
+				&:nth-child(1)
+					display: none
+				&:nth-child(2)
+					display: block
+	&__icon
+		display: inline-block
+		width: 28px
+		height: 23px
+		&:nth-child(2)
+			display: none
+			margin-right: 4px
+		&_left
+			margin-right: 2px
+
++media(sm)
+	.header-btns
+		&__wrap
+			&:first-child
+				margin-right: 0px
+			a
+				font-size: 12px
+
++media(xs)
+	.header-btns
+		justify-content: space-between
+		&__wrap
+			width: 54px
+			a
+				margin-top: 2px
+				font-size: 10px
+
+.title-search-result
+	width: calc(#{_col(5, lg)} - 24px)
+	&__item
+		margin-bottom: 8px
+	&__list
+		display: block
+		width: 100%
+		margin: 0
+		padding: 16px 0 8px
+		border-radius: 4px
+		background-color: #fff
+		box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.29)
+		list-style-type: none
+
++media(md)
+	.title-search-result
+		width: 100%
+
++media-only(sm)
+	.title-search-result
+		width: calc(100% - 10px)
+
+.search-item
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: 40px
+	padding: 0 12px
+	font-size: 15px
+	line-height: 20px
+	cursor: pointer
+	transition: .3s ease background-color
+	&:hover
+		background-color: $grey4
+		text-decoration: none
+	&__prew
+		display: block
+		width: 32px
+		height: 32px
+		object-fit: contain
+		object-position: 50% 50%
+	&__name
+		display: block
+		width: 100%
+		margin: 0 8px
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+	&__price
+		display: block
+		min-width: 90px
+		font-weight: bold
+
+.btn-burger
+	$p: &
+	display: flex
+	align-items: center
+	padding: 0 14px
+	border-radius: 4px
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 24px
+		height: 24px
+		cursor: pointer
+		border: none
+		outline: none !important
+		span
+			display: block
+			width: 16px
+			height: 2px
+			background-color: #fff
+			transform-origin: center
+			position: relative
+			&::before, &::after
+				content: ''
+				display: block
+				position: absolute
+				transform-origin: center
+				width: inherit
+				height: inherit
+				background-color: #fff
+			&::before
+				top: -3px
+			&::after
+				bottom: -3px
+	&__desc
+		margin-left: 8px
+		font-size: 15px
+		font-weight: bold
+		line-height: normal
+		color: #fff
+		text-transform: uppercase
+	&.open
+		#{$p}__icon
+			span
+				animation: o-burger-s .5s ease-in-out forwards
+				&::before
+					animation: o-burger-b .5s ease-in-out forwards
+				&::after
+					animation: o-burger-a .5s ease-in-out forwards 
+	&.close
+		#{$p}__icon
+			opacity: 1
+			span
+				animation: c-burger-s .5s ease-in-out forwards
+				&::before
+					animation: c-burger-b .5s ease-in-out forwards
+				&::after
+					animation: c-burger-a .5s ease-in-out forwards
+
+@keyframes o-burger-b
+	0%
+		top: -5px
+	50%
+		top: 0
+		transform: rotate(0deg)
+	100%
+		top: 0
+		transform: rotate(-45deg)
+		
+@keyframes o-burger-a
+	0%
+		bottom: -5px
+	50%
+		bottom: 0
+		transform: rotate(0deg)
+	100%
+		top: 0
+		transform: rotate(45deg)
+
+@keyframes o-burger-s
+	0%
+	50%
+		background-color: rgba(#fff, 1)
+	51%,
+	100%
+		background-color: rgba(#fff, 0)
+
+@keyframes c-burger-b
+	0%
+		top: 0
+		transform: rotate(-45deg)
+	50%
+		top: 0
+		transform: rotate(0deg)
+	100%
+		top: -5px
+		
+@keyframes c-burger-a
+	0%
+		bottom: 0
+		transform: rotate(45deg)
+	50%
+		bottom: 0
+		transform: rotate(0deg)
+	100%
+		bottom: -5px
+
+@keyframes c-burger-s
+	0%, 50%
+		background-color: rgba(#fff, 0)
+	100%
+		background-color: #fff
+		

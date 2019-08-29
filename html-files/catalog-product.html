@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Каталог - Продукт</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!--	<meta name="google-site-verification" content="" />-->
+<!--	<meta name="yandex-verification" content="" />-->
+	
+	<meta property="og:image" content="path/to/image.jpg">
+	
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Цвет мобильного браузера -->
+<!--	<meta name="theme-color" content="#000">-->
+<!--	<meta name="msapplication-navbutton-color" content="#000">-->
+<!--	<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.smoothscroll.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/page-home.js"></script>
+</head>
+
+<body>
+	<div class="root">
+		<header class="header">
+			<div class="header__top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-9 col-lg-10 d-none d-sm-block">
+							<div class="header__top-menu">
+								<ul class="ht-menu">
+									<li>
+										<a href="#">О компании</a>
+									</li>
+									<li>
+										<a href="#">Доставка</a>
+									</li>
+									<li>
+										<a href="#">Оплата</a>
+									</li>
+									<li>
+										<a href="#">Контакты</a>
+									</li>
+									<li>
+										<a href="#">Дисконтная система</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-sm-3 col-lg-2">
+							<div class="header__user-panel">
+								<ul class="ht-user-panel">
+									<li>
+										<a href="#">Войти</a>
+									</li>
+									<li>
+										<a href="#">Регистрация</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-6 col-sm-2 col-lg-3">
+							<div class="header__logo">
+								<a href="#" class="hm-logo">
+									<img src="/img/logo.svg" class="img-svg hm-logo__svg">
+									<p class="hm-logo__desc">Товары для строительства и ремонта</p>
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-3 col-lg-3 d-none d-sm-block">
+							<div class="header__search">
+								<form action="" class="hm-search">
+									<div class="hm-search__text-field input-search">
+										<input type="search" class="input-search__input" placeholder="Поиск…">
+										<button class="input-search__btn">
+											<img src="/img/ui-icon/search.svg" class="img-svg">
+										</button>
+									</div>
+								</form>
+							</div>
+							<div class="header__work-time">
+								<span class="hm-work-time">пн-вс 8:00 - 21:00 по МСК</span>
+							</div>
+						</div>
+						<div class="col-sm-3 col-lg-3 d-none d-sm-block">
+							<div class="header__phone">
+								<a href="tel:79780070444" class="hm-phone h3">+7 (978) 00 70 444</a>
+							</div>
+							<div class="header__callback">
+								<span class="hm-callback link">Обратный звонок</span>
+							</div>
+						</div>
+						<div class="col-6 col-sm-4 col-lg-3">
+							<div class="header__btns">
+								<div class="header__btn-basket">
+									<div class="btn-basket">
+										<a href="#" class="btn-basket__btn">
+											<img src="/img/ui-icon/basket-fill.svg" class="img-svg">
+										</a>
+										<div class="btn-basket__desc">
+											<p class="btn-basket__count">
+												<span>В корзине товаров:</span>
+												<span>3</span>
+											</p>
+											<p class="btn-basket__price">На сумму: <span class="b-price"><span>500</span><sup>00</sup> Р</span></p>
+										</div>
+									</div>
+								</div>
+								<div class="header__btn-favorites">
+									<a href="#" class="btn-favorites">
+										<div class="btn-favorites__btn">
+											<img src="/img/ui-icon/favorites.svg" class="img-svg">
+										</div>
+										<span class="btn-favorites__desc">Избранное</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="container">
+					<div class="row d-sm-none">
+						<div class="col-12">
+							<div class="header__menu-xs">
+								<div class="hb-menu-xs">
+									<div class="hb-menu-xs__btn">
+										<button class="btn-burger close js-tgl-menu-xs">
+											<div class="btn-burger__icon">
+												<span></span>
+											</div>
+											<div class="btn-burger__desc">
+												<span>Меню</span>
+											</div>
+										</button>
+									</div>
+									<div class="hb-menu-xs__main">
+										<div class="hb-menu-xs__phone">
+											<a href="tel:79780070444" class="hm-phone h3">+7 (978) 00 70 444</a>
+										</div>
+										<div class="hb-menu-xs__search">
+											<form action="" class="hm-search">
+												<div class="hm-search__text-field input-search">
+													<input type="search" class="input-search__input" placeholder="Поиск…">
+													<button class="input-search__btn">
+														<img src="/img/ui-icon/search.svg" class="img-svg">
+													</button>
+												</div>
+											</form>
+										</div>
+										<div class="hb-menu-xs__all-products">
+											<ul class="all-products-menu">
+												<li class="is-parent">
+													<span>
+														<span>Все товары</span>
+														<img src="/img/ui-icon/arrow-bottom.svg" class="img-svg">
+													</span>
+													<ul>
+														<li>
+															<a href="#">Стройматериалы</a>
+														</li>
+														<li>
+															<a href="#">Электроинструмент</a>
+														</li>
+														<li>
+															<a href="#">Декор</a>
+														</li>
+														<li>
+															<a href="#">Освещение</a>
+														</li>
+														<li>
+															<a href="#">Стройматериалы</a>
+														</li>
+														<li>
+															<a href="#">Электроинструмент</a>
+														</li>
+														<li>
+															<a href="#">Декор</a>
+														</li>
+														<li>
+															<a href="#">Освещение</a>
+														</li>
+														<li>
+															<a href="#">Стройматериалы</a>
+														</li>
+														<li>
+															<a href="#">Электроинструмент</a>
+														</li>
+														<li>
+															<a href="#">Освещение</a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Магазины</a>
+												</li>
+												<li>
+													<a href="#">Сток</a>
+												</li>
+												<li>
+													<a href="#">Услуги</a>
+												</li>
+												<li>
+													<a href="#">Акции</a>
+												</li>
+												<li>
+													<a href="#">Новости</a>
+												</li>
+												<li>
+													<a href="#">Объявления</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row d-none d-sm-flex">
+						<div class="col-sm-3">
+							<div class="header__menu-lg">
+								<div class="hb-menu-lg">
+									<div class="hb-menu-lg__btn">
+										<button class="btn-burger js-tgl-menu-lg">
+											<div class="btn-burger__icon">
+												<span></span>
+											</div>
+											<div class="btn-burger__desc">
+												<span>Меню</span>
+											</div>
+										</button>
+									</div>
+									<div class="hb-menu-lg__main">
+										<ul>
+											<li>
+												<a href="#">
+													<span>Стройматериалы</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Электроинструмент</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Декор</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Освещение</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li class="is-parent">
+												<a href="#">
+													<span>Стройматериалы</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+												<div>
+													<div class="row">
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<span>Электроинструмент</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Декор</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Освещение</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Стройматериалы</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li class="is-parent">
+												<a href="#">
+													<span>Электроинструмент</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+												<div>
+													<div class="row">
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<span>Освещение</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="header__menu-left-lg hb-menu-left-lg">
+								<ul>
+									<li>
+										<a href="#">Магазины</a>
+									</li>
+									<li>
+										<a href="#">Сток</a>
+									</li>
+									<li>
+										<a href="#">Услуги</a>
+									</li>
+									<li>
+										<a href="#">Акции</a>
+									</li>
+									<li>
+										<a href="#">Новости</a>
+									</li>
+									<li>
+										<a href="#">Объявления</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="main">
+			<section class="bread-crumbs-sect">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs">
+								<li>
+									<a href="#">Главная</a>
+								</li>
+								<li>
+									<a href="#">Каталог</a>
+								</li>
+								<li>
+									<a href="#">Строй материалы</a>
+								</li>
+								<li>
+									<a href="#">Электроинструменты</a>
+								</li>
+								<li>
+									<a href="#">Сухие смеси, грунтовки</a>
+								</li>
+								<li>
+									<span>Кисточка</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		
+			<section class="page-all-sect">
+				<div class="container">
+					<div class="row">
+						<div class="col-8">
+							<div class="page-all-sect__top-title">
+								<h2>Кисть Любитель 2</h2>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<hr class="page-catalog__hr">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-lg-6">
+							<div class="page-catalog-product__slider pc-product-slider" id="bx_117848907_5_big_slider">
+								<span class="pc-product-slider__close" data-entity="close-popup"></span>
+								<div class="pc-product-slider-big pc-product-slider__big" data-entity="images-slider-block">
+									<span class="pc-product-slider-big__prev" data-entity="slider-control-left" style="">
+										<img src="/img/ui-icon/arrow-left.svg" class="img-svg">
+									</span>
+									<span class="pc-product-slider-big__next" data-entity="slider-control-right" style="">
+										<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+									</span>
+									<div class="pc-product-slider-big__sticker" id="bx_117848907_5_sticker" style="display: none;">
+									</div>
+									<div class="pc-product-slider-big__pict" id="bx_117848907_5_dsc_pict" style="display: none;"></div>
+									<div class="pc-product-slider-big__container" data-entity="images-container">
+										<div data-entity="image" data-id="403" class="pc-product-slider-big__item active">
+											<img src="/content/card-product/img-1.jpg" alt="картинка Штаны Жизнь в Абстракции от магазина Одежда+" title="картинка Штаны Жизнь в Абстракции магазин Одежда+ являющийся официальным дистрибьютором в России " itemprop="image">
+										</div>
+										<div data-entity="image" data-id="404" class="pc-product-slider-big__item">
+											<img src="/content/card-product/img-2.jpg" alt="картинка Штаны Жизнь в Абстракции от магазина Одежда+" title="картинка Штаны Жизнь в Абстракции магазин Одежда+ являющийся официальным дистрибьютором в России ">
+										</div>
+										<div data-entity="image" data-id="405" class="pc-product-slider-big__item">
+											<img src="/content/card-product/img-3.jpg" alt="картинка Штаны Жизнь в Абстракции от магазина Одежда+" title="картинка Штаны Жизнь в Абстракции магазин Одежда+ являющийся официальным дистрибьютором в России ">
+										</div>
+										<div data-entity="image" data-id="406" class="pc-product-slider-big__item">
+											<img src="/content/card-product/img-4.jpg" alt="картинка Штаны Жизнь в Абстракции от магазина Одежда+" title="картинка Штаны Жизнь в Абстракции магазин Одежда+ являющийся официальным дистрибьютором в России ">
+										</div>
+										<div data-entity="image" data-id="407" class="pc-product-slider-big__item">
+											<img src="/content/card-product/img-5.jpg" alt="картинка Штаны Жизнь в Абстракции от магазина Одежда+" title="картинка Штаны Жизнь в Абстракции магазин Одежда+ являющийся официальным дистрибьютором в России ">
+										</div>
+									</div>
+								</div>
+								<div class="pc-product-slider-small pc-product-slider__small" id="bx_117848907_5_slider_cont_69" style="display: ;">
+									<div class="pc-product-slider-small__item active" data-entity="slider-control" data-value="69_403">
+										<img src="/content/card-product/img-1.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="69_404">
+										<img src="/content/card-product/img-2.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="69_405">
+										<img src="/content/card-product/img-3.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="69_406">
+										<img src="/content/card-product/img-4.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="69_407">
+										<img src="/content/card-product/img-5.jpg">
+									</div>
+								</div>
+								<div class="pc-product-slider-small pc-product-slider__small" id="bx_117848907_5_slider_cont_71" style="display: none;">
+									<div class="pc-product-slider-small__item active" data-entity="slider-control" data-value="71_415">
+										<img src="/upload/iblock/740/740f9af745e4648b9c0557c4d59addf1.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="71_416">
+										<img src="/upload/iblock/f35/f35e4de5ebcba37b477a9e302c33abdd.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="71_417">
+										<img src="/upload/iblock/996/996cc0b56c3f06138f66daabad7050fd.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="71_418">
+										<img src="/upload/iblock/bc2/bc2714c14e3dab91c91377c1bc4b4714.jpg">
+									</div>
+									<div class="pc-product-slider-small__item" data-entity="slider-control" data-value="71_419">
+										<img src="/upload/iblock/443/4433442d23fcb87df58e5223fc52a4ee.jpg">
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-6 offset-lg-1 col-lg-4">
+							<div class="page-catalog-product__props pc-product-props">
+								<div class="row">
+									<div class="col-7 col-sm-6">
+										
+										<div class="pc-product-props__price card-sm-title">
+											<p>Цена за шт.:</p>
+											<span class="b-price">
+												<span class="b-price__number">
+													<span>600</span><sup>00</sup>
+												</span> <span class="b-price__rub"></span>
+											</span>
+										</div>
+										
+										<div class="pc-product-props__amount card-sm-title">
+											<p>Количество шт.:</p>
+											<div class="product-amount">
+												<span class="product-amount__minus no-select" id="bx_117848907_22_quant_down">
+													<img src="/img/ui-icon/minus.svg" class="img-svg">
+												</span>
+												<input class="product-amount__field" id="bx_117848907_22_quantity" type="number" value="1">
+												<span class="product-amount__plus no-select" id="bx_117848907_22_quant_up">
+													<img src="/img/ui-icon/plus.svg" class="img-svg">
+												</span>
+											</div>
+										</div>
+										
+										<div class="pc-product-props__price-full card-sm-title">
+											<p>Итого:</p>
+											<span class="b-price">
+												<span class="b-price__number">
+													<span>600</span><sup>00</sup>
+												</span> <span class="b-price__rub"></span>
+											</span>
+										</div>
+									
+									</div>
+									<div class="col-5 col-sm-6">
+										<div class="pc-product-props__in-stock">
+											<p><strong>В наличии:</strong> 10</p>
+										</div>
+										<div class="pc-product-props__code">
+											<p><strong>Код:</strong> 090248</p>
+										</div>
+										<div class="pc-product-props__delivery">
+											<a href="#" class="btn btn_left btn_arrow_left">
+												<img src="/img/ui-icon/delivery.svg" class="img-svg">
+												<span>Доставка</span>
+											</a>
+										</div>
+										<div class="pc-product-props__payment">
+											<a href="#" class="btn btn_left btn_arrow_left">
+												<img src="/img/ui-icon/payment.svg" class="img-svg">
+												<span>Оплата</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-6 col-sm-3 col-md-6">
+										<div class="pc-product-props__add-basket">
+											<button class="btn btn_color_ac btn_arrow_left" id="bx_117848907_22_buy_link">
+												<img src="/img/ui-icon/basket-plus.svg" class="img-svg">
+												<span>В корзину</span>
+											</button>
+										</div>
+									</div>
+									<div class="col-6 col-sm-3 col-md-6">
+										<div class="pc-product-props__add-favorites">
+											<button class="btn btn_color_grey btn_arrow_left" id="bx_117848907_22_buy_link">
+												<img src="/img/ui-icon/favorites.svg" class="img-svg">
+												<span>В избранное</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="pc-product-tabs">
+								<div class="pc-product-tabs__head pc-product-tabs-head" id="bx_117848907_22_tabs">
+									<div class="pc-product-tabs-head__item active" data-entity="tab" data-value="description">
+										<a href="javascript:void(0);" class="pc-product-tabs-head__link h3">
+											<span>Описание</span>
+										</a>
+									</div>
+									<div class="pc-product-tabs-head__item" data-entity="tab" data-value="properties">
+										<a href="javascript:void(0);" class="pc-product-tabs-head__link h3">
+											<span>Характеристики</span>
+										</a>
+									</div>
+									<div class="pc-product-tabs-head__item" data-entity="tab" data-value="comments">
+										<a href="javascript:void(0);" class="pc-product-tabs-head__link h3">
+											<span>Отзывы</span>
+										</a>
+									</div>
+								</div>
+								<div class="pc-product-tabs__body pc-product-tabs-body" id="bx_117848907_22_tab_containers">
+									<div class="pc-product-tabs-body__item" data-entity="tab-container" data-value="description" itemprop="description" style="display: ;">
+										<div class="b-content">
+											<p>Кисть Любитель 2" Hobbi 01-1-420 используется для нанесения красок на масляной основе, лаков, олифы и древесных масел. Кисть из натуральной щетины имеет свойство набирать и удерживать краску. Ручка изготовлена из дерева и предотвращает выскальзывания во время работы. Бандаж из металла крепко закрепляет рабочую части и гарантирует долгую службу. </p>
+										</div>
+									</div>
+									<div class="pc-product-tabs-body__item" data-entity="tab-container" data-value="properties" style="display: none;">
+										<div class="product-properties">
+											<h4 class="product-properties__title">Технические характеристики кисти Любитель 2</h4>
+
+											<dl class="product-properties__list">
+												<dt>Ширина, мм</dt>
+												<dl>50</dl>
+												<dt>Материал рукояти</dt>
+												<dl>Дерево</dl>
+												<dt>Щетина</dt>
+												<dl>Натуральная</dl>
+												<dt>Материал бандажа</dt>
+												<dl>Металл</dl>
+											</dl>
+										</div>
+									</div>
+									<div class="pc-product-tabs-body__item active" data-entity="tab-container" data-value="comments" style="display: none;">
+										<div class="product-comments">
+											<div class="product-comments__add-btn">
+												<a class="btn btn_color_ac" href="javascript:void(0)" onclick="return editCommentNew('0', 1)">Добавить отзыв</a>
+											</div>
+											<ul class="product-comments__container">
+												<li class="product-comments__item b-comment">
+													<div class="b-comment__container" id="blg-comment-1">
+														<div class="b-comment__info">
+															<span class="b-comment__author">Сергей</span>
+															<span class="b-comment__date">07.06.2018</span>
+															<span class="b-comment__time">11:16:13</span>
+														</div>
+														<div class="b-comment__content b-content">
+															<p>Удобная, долго использовал</p>
+														</div>
+														<div class="b-comment__meta">
+															<div class="b-comment__answer">
+																<a href="javascript:void(0)" onclick="return replyCommentNew('1', '1')">Ответить</a>
+															</div>
+															<div class="b-comment__edit">
+																<a href="javascript:void(0)" onclick="return editCommentNew('1', 1)">Редактировать</a>
+															</div>
+															<div class="b-comment__show">
+																<a href="javascript:void(0)" onclick="return hideShowComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?hide_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Скрыть">Скрыть</a>
+															</div>
+															<div class="b-comment__delete">
+																<a href="javascript:void(0)" onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?delete_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Удалить">Удалить</a>
+															</div>
+															<div class="b-comment__spam">
+																<a href="/bitrix/admin/blog_comment.php?lang=ru&amp;set_filter=Y&amp;filter_author_id=1" title="Администрировать все комментарии пользователя">Спам?</a>
+															</div>
+														</div>
+													</div>
+													<div id="err_comment_1"></div>
+													<div id="form_comment_1"></div>
+													<div id="new_comment_cont_1" style="padding-left:2.5em;"></div>
+													<div id="new_comment_1" style="display:none;"></div>
+													<!-- placeholder for past editor -->
+													<div id="record-BLOG_1-1-placeholder" class="blog-comment-edit feed-com-add-block blog-post-edit" style="display:none;"></div>
+
+													<ul class="product-comments__container">
+														<li class="product-comments__item b-comment">
+															<div class="b-comment__container" id="blg-comment-1">
+																<div class="b-comment__info">
+																	<span class="b-comment__author">admin</span>
+																	<span class="b-comment__date">07.06.2018</span>
+																	<span class="b-comment__time">11:16:13</span>
+																</div>
+																<div class="b-comment__content b-content">
+																	<p>Спасибо</p>
+																</div>
+																<div class="b-comment__meta">
+																	<div class="b-comment__answer">
+																		<a href="javascript:void(0)" onclick="return replyCommentNew('1', '1')">Ответить</a>
+																	</div>
+																	<div class="b-comment__edit">
+																		<a href="javascript:void(0)" onclick="return editCommentNew('1', 1)">Редактировать</a>
+																	</div>
+																	<div class="b-comment__show">
+																		<a href="javascript:void(0)" onclick="return hideShowComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?hide_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Скрыть">Скрыть</a>
+																	</div>
+																	<div class="b-comment__delete">
+																		<a href="javascript:void(0)" onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?delete_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Удалить">Удалить</a>
+																	</div>
+																	<div class="b-comment__spam">
+																		<a href="/bitrix/admin/blog_comment.php?lang=ru&amp;set_filter=Y&amp;filter_author_id=1" title="Администрировать все комментарии пользователя">Спам?</a>
+																	</div>
+																</div>
+															</div>
+															<div id="err_comment_1"></div>
+															<div id="form_comment_1"></div>
+															<div id="new_comment_cont_1" style="padding-left:2.5em;"></div>
+															<div id="new_comment_1" style="display:none;"></div>
+															<!-- placeholder for past editor -->
+															<div id="record-BLOG_1-1-placeholder" class="blog-comment-edit feed-com-add-block blog-post-edit" style="display:none;"></div>
+														</li>
+													</ul>
+
+												</li>
+												<li class="product-comments__item b-comment">
+													<div class="b-comment__container" id="blg-comment-1">
+														<div class="b-comment__info">
+															<span class="b-comment__author">Макс</span>
+															<span class="b-comment__date">07.06.2018</span>
+															<span class="b-comment__time">11:16:13</span>
+														</div>
+														<div class="b-comment__content b-content">
+															<p>Если надо что-то не покрасить а подкрасить то эта кисть идеально подойдет. Постоянно ее беру. К сожалению на 2 раз ее уже не хватает.</p>
+														</div>
+														<div class="b-comment__meta">
+															<div class="b-comment__answer">
+																<a href="javascript:void(0)" onclick="return replyCommentNew('1', '1')">Ответить</a>
+															</div>
+															<div class="b-comment__edit">
+																<a href="javascript:void(0)" onclick="return editCommentNew('1', 1)">Редактировать</a>
+															</div>
+															<div class="b-comment__show">
+																<a href="javascript:void(0)" onclick="return hideShowComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?hide_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Скрыть">Скрыть</a>
+															</div>
+															<div class="b-comment__delete">
+																<a href="javascript:void(0)" onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?delete_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Удалить">Удалить</a>
+															</div>
+															<div class="b-comment__spam">
+																<a href="/bitrix/admin/blog_comment.php?lang=ru&amp;set_filter=Y&amp;filter_author_id=1" title="Администрировать все комментарии пользователя">Спам?</a>
+															</div>
+														</div>
+													</div>
+													<div id="err_comment_1"></div>
+													<div id="form_comment_1"></div>
+													<div id="new_comment_cont_1" style="padding-left:2.5em;"></div>
+													<div id="new_comment_1" style="display:none;"></div>
+													<!-- placeholder for past editor -->
+													<div id="record-BLOG_1-1-placeholder" class="blog-comment-edit feed-com-add-block blog-post-edit" style="display:none;"></div>
+												</li>
+												<li class="product-comments__item b-comment">
+													<div class="b-comment__container" id="blg-comment-1">
+														<div class="b-comment__info">
+															<span class="b-comment__author">Стёпа</span>
+															<span class="b-comment__date">07.06.2018</span>
+															<span class="b-comment__time">11:16:13</span>
+														</div>
+														<div class="b-comment__content b-content">
+															<p>Если надо что-то не покрасить а подкрасить то эта кисть идеально подойдет. Постоянно ее беру. К сожалению на 2 раз ее уже не хватает.</p>
+														</div>
+														<div class="b-comment__meta">
+															<div class="b-comment__answer">
+																<a href="javascript:void(0)" onclick="return replyCommentNew('1', '1')">Ответить</a>
+															</div>
+															<div class="b-comment__edit">
+																<a href="javascript:void(0)" onclick="return editCommentNew('1', 1)">Редактировать</a>
+															</div>
+															<div class="b-comment__show">
+																<a href="javascript:void(0)" onclick="return hideShowComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?hide_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Скрыть">Скрыть</a>
+															</div>
+															<div class="b-comment__delete">
+																<a href="javascript:void(0)" onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?delete_comment_id=1&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22&amp;SITE_ID=s1&amp;sessid=74a338296840ec8509fc75bc432f0a00&amp;IBLOCK_ID=2&amp;ELEMENT_ID=22', '1');" title="Удалить">Удалить</a>
+															</div>
+															<div class="b-comment__spam">
+																<a href="/bitrix/admin/blog_comment.php?lang=ru&amp;set_filter=Y&amp;filter_author_id=1" title="Администрировать все комментарии пользователя">Спам?</a>
+															</div>
+														</div>
+													</div>
+													<div id="err_comment_1"></div>
+													<div id="form_comment_1"></div>
+													<div id="new_comment_cont_1" style="padding-left:2.5em;"></div>
+													<div id="new_comment_1" style="display:none;"></div>
+													<!-- placeholder for past editor -->
+													<div id="record-BLOG_1-1-placeholder" class="blog-comment-edit feed-com-add-block blog-post-edit" style="display:none;"></div>
+												</li>
+											</ul>
+										</div>
+										<script type="text/javascript">
+											var obCatalogComments_22 = new JCCatalogSocnetsComments({
+												'serviceList': {
+													'blog': true
+												},
+												'settings': {
+													'blog': {
+														'ajaxUrl': '/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php?IBLOCK_ID=2&ELEMENT_ID=22&SITE_ID=s1',
+														'ajaxParams': [],
+														'contID': 'bx-cat-soc-comments-blg_22'
+													}
+												},
+												'tabs': {
+													'activeTabId': 'BLOG',
+													'tabsContId': 'soc_comments_22',
+													'tabList': ['BLOG']
+												}
+											});
+										</script>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			
+			
+			<section class="page-all-sect">
+				<div class="container">
+					<div class="row">
+						<div class="col-8">
+							<div class="page-all-sect__top-title">
+								<h3>С этим товаром покупают</h3>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4 col-lg-3">
+							<div class="card-product page-all-sect__card">
+								<div class="card-product__top">
+									<button class="card-product__add-favorites active">
+										<img src="/img/ui-icon/favorites.svg" class="img-svg">
+									</button>
+									<div class="card-product__img">
+										<img src="/content/card-product/img-1.jpg">
+									</div>
+								</div>
+								<div class="card-product__middle">
+									<h5 class="card-product__title">Аксессуар Topperr 3206</h5>
+									<div class="card-product__desc b-content">
+										<p>Антивибрационные подставки</p>
+									</div>
+								</div>
+								<div class="card-product__bottom">
+									<div class="card-product__price-old">
+										<span class="b-price b-price_strike">
+											<span class="b-price__number">
+												<span>60 000</span><sup>00</sup>
+											</span> <span class="b-price__rub"></span>
+										</span>
+									</div>
+									<div class="card-product__price-current">
+										<span class="b-price b-price_ac">
+											<span class="b-price__number">
+												<span>58 999</span><sup>50</sup>
+											</span> <span class="b-price__rub"></span>
+										</span>
+									</div>
+									<button class="card-product__add-cart">
+										<img src="/img/ui-icon/basket-plus.svg" class="img-svg">
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4 col-lg-3">
+							<div class="card-product page-all-sect__card">
+								<div class="card-product__top">
+									<button class="card-product__add-favorites">
+										<img src="/img/ui-icon/favorites.svg" class="img-svg">
+									</button>
+									<div class="card-product__img">
+										<img src="/content/card-product/img-2.jpg">
+									</div>
+								</div>
+								<div class="card-product__middle">
+									<h5 class="card-product__title">Аксессуар Topperr 3206</h5>
+									<div class="card-product__desc b-content">
+										<p>Антивибрационные подставки</p>
+									</div>
+								</div>
+								<div class="card-product__bottom">
+									<div class="card-product__price-current">
+										<span class="b-price">
+											<span class="b-price__number">
+												<span>58 999</span><sup>50</sup>
+											</span> <span class="b-price__rub"></span>
+										</span>
+									</div>
+									<button class="card-product__add-cart">
+										<img src="/img/ui-icon/basket-plus.svg" class="img-svg">
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="subscribe-sect">
+				<div class="container">
+					<form class="row">
+						<div class="col-sm-5 col-lg-3 offset-lg-1">
+							<div class="subscribe-sect__sub">
+								<img src="/img/ui-icon/subscribe-mail.svg" class="img-svg subscribe-sect__icon">
+								<h3 class="subscribe-sect__title">Подписаться на рассылку</h3>
+								<p class="subscribe-sect__desc">Новости. Акции. Спецпредложения.</p>
+							</div>
+						</div>
+						<div class="col-sm-4 col-lg-4">
+							<p class="subscribe-sect__form-field">
+								<input type="mail" placeholder="Электронная почта">
+							</p>
+						</div>
+						<div class="col-sm-3 col-lg-4">
+							<div class="subscribe-sect__btn">
+								<button class="btn btn_color_white">Подписаться</button>
+							</div>
+						</div>
+					</form>
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1">
+							<div class="subscribe-sect__politconf">
+								<p>Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с политикой конфеденциальности.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-2 col-lg-4">
+						<div class="footer__logo">
+							<a href="#" class="hm-logo">
+								<img src="/img/logo.svg" class="img-svg hm-logo__svg">
+								<p class="hm-logo__desc">Товары для строительства и ремонта</p>
+							</a>
+						</div>
+					</div>
+					<div class="col-6 col-sm-2 col-lg-2">
+						<div class="footer__menu">
+							<ul class="footer-menu">
+								<li>
+									<a href="#">О компании</a>
+								</li>
+								<li>
+									<a href="#">Контакты</a>
+								</li>
+								<li>
+									<a href="#">Партнерам</a>
+								</li>
+								<li>
+									<a href="#">Вакансии</a>
+								</li>
+								<li>
+									<a href="#">Новости</a>
+								</li>
+								<li>
+									<a href="#">Статьи</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-6 col-sm-3 col-lg-3">
+						<div class="footer__menu">
+							<ul class="footer-menu">
+								<li>
+									<a href="#">Оплата</a>
+								</li>
+								<li>
+									<a href="#">Доставка</a>
+								</li>
+								<li>
+									<a href="#">Услуги</a>
+								</li>
+								<li>
+									<a href="#">Акции и скидки</a>
+								</li>
+								<li>
+									<a href="#">Отзывы</a>
+								</li>
+								<li>
+									<a href="#">Обратная связь</a>
+								</li>
+								<li>
+									<a href="#">Дисконтная система</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-sm-5 col-lg-3">
+						<div class="footer__contacts">
+							<p class="footer__map">
+								<a href="#">Наши магазины в Крыму</a>
+							</p>
+							<p class="footer__phone">
+								<a href="tel:79780070111" class="h3">+7 (978) 00-70-111</a>
+								<a href="tel:79780070222" class="h3">+7 (978) 00-70-222</a>
+								<img src="/img/crimea.png" class="footer__crimea">
+							</p>
+							<p class="footer__mail">
+								<a href="mailto:office@vs82.ru">office@vs82.ru</a>
+							</p>
+							<p class="footer__social">
+								<a href="#" target="_blank">
+									<img src="/img/social/youtube.svg" class="img-svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="/img/social/vk.svg" class="img-svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="/img/social/ok.svg" class="img-svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="/img/social/fb.svg" class="img-svg">
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="footer__cards">
+							<img src="/img/cards/mastercard.svg" class="img-svg">
+							<img src="/img/cards/visa.svg" class="img-svg">
+							<img src="/img/cards/mir.svg" class="img-svg">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="footer__politconf">
+							<p>© 2001–2017  Все права защищены. Вечная Стройка</p>
+							<a href="#">Политика конфиденциальности</a>
+							<a href="#">Пользовательское соглашение</a>
+							<a href="#">Публичная оферта</a>
+							<a href="#">Информация для потребителей о мебельной продукции </a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="footer__grechka">
+							<a href="http://grechka.digital" target="_blank">
+								<span>Создание сайта</span>
+								<img src="/img/grechka.svg" class="img-svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

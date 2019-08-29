@@ -1,0 +1,537 @@
+main.catalog-actions
+	padding-bottom: 24px
+
++media(xs)
+	main.catalog-actions
+		padding-bottom: 0
+
+.catalog-item
+	padding-top: 40px
+	padding-bottom: 24px
+	background-color: #fff
+	&__title
+		margin-bottom: 56px
+	&__preview
+		position: relative
+		display: block
+		width: 100%
+		height: 484px
+		margin-top: -88px
+		padding: 28px
+	&__product-img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: contain
+		object-position: 50% 50%
+	&__warning-img
+		position: absolute
+		right: 28px
+		bottom: 28px
+		outline: none !important
+		cursor: pointer
+		img
+			display: block
+			width: 15px
+			height: 13px
+	&__badges
+		position: absolute
+		top: 0
+		left: 0
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
++media(md)
+	.catalog-item
+		&__title
+			margin-bottom: 32px
+		&__preview
+			height: 348px
+			margin-top: 0
+			margin-bottom: 36px
+			padding: 20px
+		&__warning-img
+			bottom: 19px
+			right: 19px
+
++media(xs)
+	.catalog-item
+		padding-top: 24px
+		padding-bottom: 0
+		&__title
+			margin-bottom: 24px
+		&__preview
+			height: 264px
+			margin-bottom: 16px
+			padding: 16px
+		&__warning-img
+			bottom: 0
+			right: 0
+
+.price-list
+	+b4col(_col(4, lg) - 24px)
+	&__top
+		margin-bottom: 24px
+	&__middle
+		margin-bottom: 16px
+
++media(sm)
+	.price-list
+		+b4col(100%)
+
++media(xs)
+	.price-list
+		margin-bottom: 20px
+
+.price-list-top
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-bottom: 8px
+	border-bottom: 1px solid $grey3
+	box-sizing: border-box
+	&__exists
+		position: relative
+		display: block
+		padding-left: 20px
+		span
+			font-size: 14px
+			line-height: 16px
+			&:first-child
+				display: none
+			&:nth-child(2)
+				display: block
+		img
+			position: absolute
+			left: 0
+			top: 3px
+			display: none
+			width: 10px
+			height: 10px
+		&_true
+			img
+				display: block
+			span
+				&:first-child
+					display: block
+				&:nth-child(2)
+					display: none
+	&__code
+		span
+			display: inline-block
+			font-size: 14px
+			line-height: 17px
+			&:first-child
+				margin-right: 8px
+			&:last-child
+				font-weight: 700
+
+.price-list-middle
+	padding-bottom: 32px
+	border-bottom: 1px solid $grey3
+	box-sizing: border-box
+	&__price
+		display: flex
+		align-items: center
+		margin-bottom: 16px
+	&__total
+		display: flex
+		align-items: center
+		margin-bottom: 32px
+		padding-bottom: 32px
+		border-bottom: 1px solid $grey3
+		box-sizing: border-box
+	&__current-price,
+	&__old-price
+		display: inline-block
+		margin-bottom: 0
+	&__current-price
+		margin-right: 24px
+		color: $ac
+	&__old-price
+		color: $grey2
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 50%
+			display: block
+			width: 100%
+			height: 1px
+			background-color: $grey2
+	&__block-cnt
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 40px
+		width: 102px
+		margin-right: 24px
+	&__total-price
+		span
+			display: inline-block
+			&:first-child
+				font-size: 14px
+				line-height: 16px
+				margin-right: 8px
+			&:last-child
+				font-weight: 700
+	&__bye
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+	&__basket
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 160px
+		height: 48px
+		padding-right: 26px
+		padding-left: 18px
+		border-radius: 4px
+		background-image: $gradient2
+		border: none
+		outline: none !important
+		cursor: pointer
+		overflow: hidden
+		&::before
+			content: ""
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			opacity: 0
+			background-image: linear-gradient(to right, #ff2020, #ff8c00)
+			transition: opacity .3s ease
+		&:hover, &:focus
+			text-decoration: none
+			&::before
+				opacity: 1
+			span
+				color: #fff
+		img
+			z-index: 2
+			display: none
+			width: 24px
+			height: 24px
+			margin-right: 6px
+		&.added
+			padding: 0 20px
+			svg
+				display: none
+			img
+				display: block
+		&:hover
+			text-decoration: none
+		svg
+			z-index: 2
+			display: block
+			margin-right: 18px
+			path
+				&:first-child
+					fill: transparent
+				&:last-child
+					fill: #fff
+		span
+			z-index: 2
+			margin-bottom: 0
+			color: #fff
+	&__favorite
+		display: flex
+		align-items: center
+		padding: 0
+		cursor: pointer
+		outline: none !important
+		border: none
+		background-color: transparent
+		transition: all .2s ease
+		&.active
+			img
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					display: block
+		&:hover
+			text-decoration: none
+		span
+			display: inline-block
+			font-size: 14px
+			line-height: 16px
+			margin-right: 7px
+		img
+			display: none
+			width: 28px
+			height: 23px
+			&:nth-child(2)
+				display: block
+
++media(xs)
+	.price-list-middle
+		&__price
+			margin-bottom: 18px
+		&__total
+			justify-content: space-between
+		&__current-price
+			margin-right: 16px
+		&__basket
+			width: 150px
+			padding-right: 18px
+			svg
+				margin-right: 8px
+			span
+				font-size: 17px
+				line-height: 22px
+
+.price-list-bottom
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&__wraper
+		position: relative
+		padding-bottom: 32px
+	&__method
+		display: inline-block
+		width: 100%
+		padding: 0
+		margin: 0
+		font-size: 14px
+		line-height: 16px
+		border: none
+		border-bottom: 1px dashed $grey1
+		background: transparent
+		color: $grey1
+		cursor: pointer
+		outline: none !important
+	&__popup
+		position: absolute
+		z-index: 1
+		top: 32px
+		left: 0
+
++media(sm)
+	.price-list-bottom
+		&__wraper
+			padding-bottom: 0
+		&__popup
+			&_sm-right
+				left: auto
+				right: 0
+
++media(xs)
+	.price-list-bottom
+		&__popup
+			left: -12px
+			&_sm-right
+				left: auto
+				right: -12px
+
+.price-popup
+	display: none
+	opacity: 0
+	width: 328px
+	padding: 16px 12px 16px 16px
+	background-color: #fff
+	box-shadow: 0 15px 40px 0 rgba(0, 0, 0, .29)
+	transition: all .3s ease
+	&.display
+		display: block
+	&.visible
+		opacity: 1
+	&::before
+		content: ""
+		position: absolute
+		left: 40px
+		top: -10px
+		display: block
+		width: 0
+		height: 0
+		border-left: 10px solid transparent
+		border-right: 10px solid transparent
+		border-bottom: 20px solid #fff
+	&__title-sm
+		font-size: 15px
+		line-height: 24px
+		font-weight: 700
+	&__list
+		position: relative
+		display: block
+		width: 100%
+		margin-bottom: 16px
+		padding: 0
+		&:last-child
+			margin-bottom: 10px
+	&__item
+		position: relative
+		display: block
+		padding-left: 12px
+		font-size: 14px
+		line-height: 16px
+		list-style-type: none
+		&::before
+			content: ""
+			position: absolute
+			left: 4px
+			top: 50%
+			transform: translateY(-50%)
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background-color: $grey1
+	&__block-img
+		position: absolute
+		top: 0
+		right: 0
+		display: flex
+		height: 25px
+		align-items: center
+		img
+			display: block
+			&:first-child
+				width: 40px
+				height: 20px
+			&:nth-child(2)
+				width: 35px
+				height: 25px
+				margin-left: 4px
+				margin-right: 4px
+			&:last-child
+				width: 48px
+				height: 20px
+	&__info
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 122px
+		height: 40px
+		padding: 0 19px
+		border-radius: 4px
+		border: 1px solid $grey3
+		box-sizing: border-box
+		background-color: #fff
+		color: $grey1
+		outline: none !important
+		cursor: pointer
+		&:hover
+			text-decoration: none
+
++media(sm)
+	.price-popup
+		&_sm-right
+			&::before
+				left: auto
+				right: 40px
+
+.catalog-item-pluses
+	display: flex
+	flex-direction: column
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		margin-bottom: 16px
+		&:last-child
+			margin-bottom: 0
+		img
+			z-index: 2
+			display: block
+			width: 48px
+			height: 48px
+			margin-right: 8px
+			border-radius: 50%
+		&::before
+			content: ""
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			display: block
+			width: 48px
+			height: 48px
+			border-radius: 50%
+			background-color: $grey4
+		span
+			font-size: 14px
+			line-height: 16px
+
++media(md)
+	.catalog-item-pluses
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		&__item
+			margin-bottom: 0
+
++media(xs)
+	.catalog-item-pluses
+		flex-direction: column
+		align-items: flex-start
+		&__item
+			margin-bottom: 16px
+
+.section-content
+	padding: 32px 0
+	background-color: #ffffff
+	&__title
+		margin-bottom: 16px
+	&__item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 8px
+		&:last-child
+			margin-bottom: 0
+		span
+			font-size: 15px
+			line-height: 24px
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 152px
+		height: 40px
+		padding: 0 16px
+		margin-top: 8px
+		border-radius: 4px
+		border: 1px solid $grey3
+		box-sizing: border-box
+		background-color: #fff
+		color: $grey1
+		outline: none !important
+		cursor: pointer
+		transition: all .2s ease
+		&:hover,
+		&:focus
+			text-decoration: none
+			border-color: #bfbfbf
+
++media(sm)
+	.section-content
+		padding-top: 24px
+		padding-bottom: 32px
+		&_description
+			padding: 16px 0
+		&_characteristic
+			padding: 24px 0
+
++media(xs)
+	.section-content
+		&_description
+			padding: 24px 0
+
+.product-comments__container
+		display: none
+		margin-top: 24px
+		transition: all .3s ease
+
+.section-line
+	display: block
+	border: none
+	width: 100%
+	height: 1px
+	background-color: $grey3

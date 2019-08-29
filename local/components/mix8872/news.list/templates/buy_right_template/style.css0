@@ -1,0 +1,99 @@
+.buy-right h2 {
+    margin-left: 32px;
+    margin-bottom: 40px;
+}
+.buy-right .main-statia {
+    width: 100%;
+    height: 342px;
+    position: relative;
+    padding: 27px 32px 32px 32px;
+    margin-bottom: 30px;
+}
+.buy-right .main-statia .main-statia-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.buy-right .main-statia h3 {
+    margin: 0;
+    color: #ffffff;
+    margin-bottom: 15px;
+	position: relative;
+	z-index: 1;
+}
+.buy-right .main-statia p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+    max-width: 436px;
+	position: relative;
+	z-index: 1;
+	display: block;
+	max-height: 110px;
+	overflow: hidden;
+}
+.buy-right .btn-more-information {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+.buy-right .block-podpisatsa-na-rassilku {
+    width: 100%;
+    height: 233px;
+    background: url(images/vs-bg-red.jpg);
+    padding: 27px 32px 32px 32px;
+    position: relative;
+    margin-bottom: 26px;
+}
+.buy-right .block-podpisatsa-na-rassilku h3 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'ProximaNova-Bold';
+    margin-bottom: 15px;
+}
+.buy-right .block-podpisatsa-na-rassilku p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 14px;
+    max-width: 305px;
+}
+.buy-right .block-podpisatsa-na-rassilku .btn-more-information {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+.buy-right .statia-block {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 32px;
+    background-color: #fff;
+}
+.buy-right .statia-block  .statia-block-img {
+    height: 100%;
+    width: 200px;
+    float: left;
+}
+.buy-right .statia-block .statia-block-descr {
+    float: left;
+    padding: 8px 20px 20px 18px;    
+}
+.buy-right .statia-block .statia-block-descr h3 {
+    margin: 0;
+    max-width: 317px;
+    margin-bottom: 20px;
+}
+.buy-right .statia-block .statia-block-descr p {
+    margin: 0;
+    max-width: 317px;
+    margin-bottom: 17px;
+	display: block;
+	height: 60px;
+	overflow: hidden;
+    font-size: 14px;
+}
+.buy-right .statia-block .btn-buy-right-more-information {
+    float: right;
+    margin-right: 32px;
+}

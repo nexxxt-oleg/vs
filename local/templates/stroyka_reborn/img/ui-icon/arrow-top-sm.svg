@@ -1,0 +1,6 @@
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Стрелка-верх-малнькая" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-41" fill="#FFFFFF" opacity="0" x="0" y="0" width="30" height="30"></rect>
+        <polygon id="⌃" fill="#D62626" transform="translate(15.500000, 15.000000) scale(1, -1) rotate(90.000000) translate(-15.500000, -15.000000) " points="13.7532281 11 18 14.9966245 13.7532281 19 13 18.2911392 16.5007174 14.9966245 13 11.7088608"></polygon>
+    </g>
+</svg>

@@ -1,0 +1,7 @@
+{
+	"extends": "airbnb-base/legacy",
+	"rules": {
+		"indent": ["error", "tab"],
+		"no-tabs": 0
+	}
+}

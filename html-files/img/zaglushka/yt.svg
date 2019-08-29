@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>youtube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="youtube" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-56" fill="#D8D8D8" opacity="0" x="0" y="0" width="40" height="40"></rect>
+        <g id="youtube-copy" fill-rule="nonzero">
+            <circle id="Oval" fill="#FFFFFF" cx="20" cy="20" r="20"></circle>
+            <path d="M34.1666219,6 C41.9441232,13.7782025 41.9447956,26.3885238 34.1666219,34.1667263 C26.3891205,41.9442565 13.7781737,41.9445927 6,34.1667263 L34.1666219,6 Z" id="Shape" fill="#FFFFFF"></path>
+            <path d="M30,15.9904737 C30,14.3387537 28.6619218,13 27.0111292,13 L12.9882888,13 C11.3378288,13 10,14.3390863 10,15.9904737 L10,24.0095263 C10,25.6612463 11.3380782,27 12.9882888,27 L27.0108797,27 C28.6620049,27 29.9997506,25.6609137 29.9997506,24.0095263 L29.9997506,15.9904737 L30,15.9904737 Z M18,24 L18,16 L24,20.0001766 L18,24 Z" id="Shape" fill="#C42632"></path>
+        </g>
+    </g>
+</svg>

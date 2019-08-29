@@ -1,0 +1,229 @@
+.footer
+	background-color: $grey4
+	color: $grey1
+	&__info
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		a
+			display: inline-block
+			margin-bottom: 16px
+			&:last-child
+				margin-bottom: 0
+
++media(xs)
+	.footer
+		&__info
+			&_sm-center
+				align-items: center
+				margin-bottom: 16px
+				a
+					margin-bottom: 8px
+
+.footer-top
+	padding-top: 44px
+	padding-bottom: 32px
+	border-bottom: 1px solid $grey3
+	box-sizing: border-box
+	&__pay
+		display: block
+		margin-top: 64px
+		a
+			display: inline-block
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+			&:hover
+				text-decoration: none
+
++media(md)
+	.footer-top
+		&__wrap
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			margin-top: 32px
+			padding-top: 24px
+			border-top: 1px solid $grey3
+			box-sizing: border-box
+		&__pay
+			margin-top: 0
+			a
+				margin-right: 12px
+
++media(sm)
+	.footer-top
+		padding-bottom: 24px
+		&__wrap
+			padding-right: 20px
+
++media(xs)
+	.footer-top
+		padding-top: 32px
+		&__contacts
+			margin-bottom: 32px
+		&__wrap
+			margin-top: 24px
+			flex-direction: column
+			align-items: center
+			padding-right: 0
+
+.footer-pay
+	&__img
+		width: 60px
+		height: 18px
+		&_master-card
+			width: 52px
+			height: 42px
+
+.footer-contacts
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	&__phone
+		display: block
+		margin-bottom: 16px
+		a
+			display: inline-block
+			font-size: 18px
+			line-height: 24px
+			font-weight: 700
+	&__email
+		display: inline-block
+		margin-bottom: 16px
+	&__shops
+		display: inline-block
+		margin-bottom: 38px
+	&__soc
+		a 
+			display: inline-block
+			width: 36px
+			height: 36px
+			margin-right: 16px
+			&:last-child
+				margin-right: 0
+			img
+				width: 100%
+				height: 100%
+
++media(xs)
+	.footer-contacts
+		align-items: center
+		&__phone
+			display: flex
+			flex-direction: column
+			align-items: center
+		&__shops
+			margin-bottom: 22px
+
+.footer-middle
+	padding: 32px 0
+	border-bottom: 1px solid $grey3
+	box-sizing: border-box
+	&__title
+		margin-bottom: 8px
+	&__search
+		position: relative
+		width: 100%
+		height: 48px
+	&__politconf
+		display: block
+		margin-bottom: 0
+		font-size: 13px
+		line-height: 16px
+		color: $grey2
+		&:hover
+			color: $grey2
+
++media(md)
+	.footer-middle
+		&__link
+			display: inline-block
+			margin-bottom: 16px
+
++media(sm)
+	.footer-middle
+		padding-top: 24px
+		padding-bottom: 16px
+		&__link
+			display: inline-block
+			margin-bottom: 16px
+		&__search
+			margin-top: 8px
+
++media(xs)
+	.footer-middle
+		padding-top: 16px
+		&__title
+			margin-bottom: 0
+		&__search
+			margin-top: 0
+			margin-bottom: 24px
+
+.footer-search
+	$p: &
+	&:hover
+		#{$p}__input
+			border: solid 2px #bfbfbf
+	&__input
+		width: 100%
+		height: 100%
+		padding: 0 16px
+		border-radius: 4px
+		background-color: #fff
+		border: solid 2px transparent
+		box-sizing: border-box
+		outline: none
+		transition: all .2s ease
+		&:focus
+			border: solid 2px #bfbfbf
+	&__arrow
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		width: 40px
+		height: 40px
+		outline: none !important
+		border: none
+		background: transparent
+		svg
+			width: 100%
+			height: 100%
+			transition: all .2s ease
+		&:hover
+			svg > path
+				fill: #bfbfbf
+
+.footer-bottom
+	padding: 14px 0
+	&__rights
+		display: inline-block
+		margin-bottom: 0
+	&__rights,
+	&__grch
+		line-height: 20px
+		color: $grey2
+	&__grch
+		line-height: 20px
+		text-align: right
+		span
+			display: inline-block
+			margin-right: 10px
+		a
+			color: $grey2
+
++media(sm)
+	.footer-bottom
+		width: 100%
+
++media(xs)
+	.footer-bottom
+		padding-bottom: 12px
+		&__rights
+			margin-bottom: 24px
+			padding: 0 36px
+			text-align: center
+		&__grch
+			text-align: center
+

@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Колеровка", 
+		"/service/kolerovka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мебель", 
+		"/service/izgotovlenie-mebeli/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Окна, двери, потолки", 
+		"/service/izgotovlenie-okon/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Система скидок", 
+		"/discount/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Уценка", 
+		"/catalog/markdown/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Условия возврата", 
+		"/return/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Объявления", 
+		"/ads/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

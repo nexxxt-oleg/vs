@@ -1,0 +1,150 @@
+@import 'vars'
+@import 'snippets'
+
+html.lb-disable-scrolling
+	overflow: hidden
+	position: fixed
+	height: 100vh
+	width: 100vw
+
+.lightboxOverlay
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 9999
+	background-color: black
+	opacity: 0.8
+	display: none
+
+.lightbox
+	position: absolute
+	left: 0
+	width: 100%
+	height: calc(100vh - 100px)
+	z-index: 10000
+	text-align: center
+	line-height: 0
+	font-weight: normal
+	.lb-image
+		display: block
+		height: auto
+		max-width: inherit
+		max-height: none
+	a img
+		border: none
+
+.lb-outerContainer
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	*zoom: 1
+	width: 250px
+	height: 250px
+	margin: 0 auto
+	border-radius: 4px
+	background-color: white
+	+clearfix
+
+.lb-loader
+	position: absolute
+	top: 43%
+	left: 0
+	height: 25%
+	width: 100%
+	text-align: center
+	line-height: 0
+
+.lb-cancel
+	display: block
+	width: 32px
+	height: 32px
+	margin: 0 auto
+	background: url(../images/loading.gif) no-repeat
+
+.lb-nav
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	z-index: 10
+	a
+		outline: none
+		background-image: url('data:image/gifbase64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
+		&.lb-prev,
+		&.lb-next
+			height: 100%
+			cursor: pointer
+			display: block
+			opacity: .4
+			transition: opacity 0.6s
+			&:hover
+				opacity: 1
+		&.lb-prev
+			width: 34%
+			left: 0
+			float: left
+			background: url('#{$url-img}/lightbox/prev.png') left 48% no-repeat
+		&.lb-next
+			width: 64%
+			right: 0
+			float: right
+			background: url('#{$url-img}/lightbox/next.png') right 48% no-repeat
+
+.lb-container > .nav
+	left: 0
+
+.lb-dataContainer
+	position: absolute
+	bottom: -37px
+	left: 50%
+	transform: translateX(-50%)
+	*zoom: 1
+	width: calc(100% - 160px) !important
+
+.lb-data
+	color: #ccc
+	.lb-details
+		width: 100%
+		text-align: right
+		line-height: 1.1em
+	.lb-caption
+		font-size: 13px
+		font-weight: bold
+		line-height: 1em
+		a
+			color: #4ae
+	.lb-number
+		text-align: center
+		display: block
+		clear: left
+		padding-bottom: 1em
+		font-size: 12px
+		color: #999999
+
+.lb-close
+	position: absolute
+	top: -40px
+	right: 50px
+	display: block
+	width: 33px
+	height: 33px
+	background: url('#{$url-img}/lightbox/close.png') top right no-repeat
+	text-align: right
+	outline: none
+	opacity: 0.7
+	transition: opacity 0.2s
+	&:hover
+		cursor: pointer
+		opacity: 1
+
++media(xs)
+	.lb-nav a
+		&.lb-prev
+			background: url('#{$url-img}/lightbox/prev-xs.png') left 48% no-repeat
+		&.lb-next
+			background: url('#{$url-img}/lightbox/next-xs.png') right 48% no-repeat
+
+	.lb-close
+		right: 20px

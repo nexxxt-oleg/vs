@@ -1,0 +1,39 @@
+{
+  "name": "start-template",
+  "version": "1.0.0",
+  "description": "Start template with gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build",
+    "imagemin": "gulp imagemin"
+  },
+  "author": "Max Shevkoplias",
+  "license": "ISC",
+  "dependencies": {
+    "sass-snippets": "^1.1.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.23.6",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^1.16.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-cssbeautify": "^1.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.1",
+    "natives": "^1.1.6",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0"
+  }
+}

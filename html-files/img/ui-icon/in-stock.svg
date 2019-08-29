@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="11px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>in stock</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Страница-товара-планшет" transform="translate(-396.000000, -313.000000)" fill="#17B113" fill-rule="nonzero">
+            <g id="наличие" transform="translate(396.000000, 311.000000)">
+                <path d="M5.04074962,8.780496 L2.40008828,6.8 C1.73734658,6.30294373 0.797144552,6.4372583 0.300088278,7.1 C-0.196967997,7.7627417 -0.0626534222,8.70294373 0.600088278,9.2 L4.60008828,12.2 C5.32188587,12.7413482 6.35481313,12.5275782 6.80245299,11.7442084 L10.802453,4.74420841 C11.2134679,4.02493224 10.9635729,3.10865024 10.2442967,2.69763529 C9.52502052,2.28662033 8.60873852,2.53651542 8.19772356,3.25579159 L5.04074962,8.780496 Z" id="in-stock"></path>
+            </g>
+        </g>
+    </g>
+</svg>

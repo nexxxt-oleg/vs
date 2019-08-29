@@ -1,0 +1,1534 @@
+/* Блок с ценой */
+.b-price
+	$p: &
+	span:nth-of-type(1)
+		font-size: 18px
+		font-weight: 700
+	sup
+		font-size: 10px
+		margin-left: 2px
+	&__number
+		position: relative
+	&__rub
+		&::before
+			content: "a"
+			font-family: "Rouble", sans-serif
+			font-weight: 400
+			font-size: 18px
+	&_ac
+		color: $ac
+	&_strike
+		#{$p}__number
+			&::before
+				content: ""
+				display: block
+				position: absolute
+				width: calc(100% + 6px)
+				height: 2px
+				top: 50%
+				margin-top: -1px
+				left: -3px
+				background-color: #d62626
+	&_lg
+		span:nth-of-type(1)
+			font-size: 22px
+		sup
+			font-size: 14px
+
+/* Блок с количеством товаров */
+.b-amount
+	text-align: center
+	span
+		font-size: 18px
+		font-weight: 700
+
+/* Блок с таймером */
+.b-timer
+	font-weight: 700
+	text-transform: uppercase
+
+/* Блок с датой */
+.b-date
+	font-size: 12px
+	color: $grey2
+
+/* Блок с контентом */
+.b-content
+	*:last-child
+		margin-bottom: 0
+	blockquote
+		position: relative
+		padding-left: 32px
+		&::before
+			content: ""
+			display: block
+			width: 3px
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			+grad(v)
+	img
+		max-width: 100%
+		margin-bottom: 20px
+	ul
+		padding: 0
+		list-style: none
+		li
+			padding-left: 20px
+			position: relative
+			&::before
+				content: ""
+				display: block
+				width: 4px
+				height: 4px
+				background-color: $grey1
+				position: absolute
+				left: 2px
+				top: 7px
+				border-radius: 50%
+	p
+		display: block
+		margin-bottom: 16px
+		font-size: 15px
+		line-height: 24px
+	h1, h2, h3, h4, h5
+		display: block
+		margin-bottom: 16px
+
+/* Карточка с мелким заголовком 12px */
+.card-sm-title
+	p:first-child
+		font-size: 13px
+		margin: 0
+	.b-price,
+	.b-amount,
+	.b-timer
+		margin: 0
+	.b-price_strike
+		margin-right: 10px
+	&_center-text
+		p:first-child
+			text-align: center
+
+/* Карточка с таймером акции (красная) */
+.card-actions-timer
+	padding: 4px 0
+	background-color: $ac
+	text-align: center
+	color: #fff
+
+/* Карточка с таймером акции (новая) */
+.card-new-actions-timer
+	$p: &
+	&_product
+		#{$p}
+			&__title,
+			&__number,
+			&__desc
+				padding: 0 10px
+			&__desc
+				margin-top: -10px
+				height: 30px
+				background-color: $grey3
+			&__days-desc,
+			&__hours-desc,
+			&__minutes-desc
+				line-height: 30px
+	&__title
+		font-size: 16px
+		font-weight: 400
+		line-height: 20px
+		color: $grey1
+		margin-bottom: 5px
+	&__number,
+	&__desc
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__desc
+		margin-top: -4px
+	&__days-number,
+	&__days-desc,
+	&__hours-number,
+	&__hours-desc,
+	&__minutes-number,
+	&__minutes-desc
+		float: left
+		display: block
+	&__days-number,
+	&__days-desc
+		width: 61px
+		margin-right: 43px
+	&__hours-number,
+	&__hours-desc
+		margin-right: 47px
+	&__hours-number,
+	&__hours-desc,
+	&__minutes-number,
+	&__minutes-desc
+		width: 41px
+	&__days-number,
+	&__hours-number,
+	&__minutes-number
+		font-size: 34px
+		line-height: 41px
+		font-weight: 600
+		color: $ac
+	&__hours-number
+		position: relative
+		&::after
+			content: ":"
+			position: absolute
+			right: -23px
+			top: 3px
+			font-size: 24px
+			font-weight: 700
+			line-height: 29px
+			color: $grey2
+	&__days-desc,
+	&__hours-desc,
+	&__minutes-desc
+		font-size: 16px
+		font-weight: 400
+		line-height: 20px
+		color: $grey2
+
+/* Карточка поделить в соц. сетях */
+.card-share 
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&__icons
+		margin-left: 10px
+
+/* Надпись о несоответствии */
+.mismatch-desc
+	display: flex
+	align-items: center
+	width: 100%
+	min-height: 40px
+	padding: 9px 25px 9px 37px
+	font-size: 11px
+	line-height: 13px
+	color: #fff
+	background-color: rgba(0, 0, 0, .5)
+	transition: all .3s ease
+	&:hover
+		color: #fff
+	&::before
+		content: ""
+		position: absolute
+		z-index: 2
+		top: 50%
+		left: 11px
+		transform: translateY(-50%)
+		display: block
+		width: 16px
+		height: 16px
+		background-image: url("/img/error-triangle.svg")
+
+/* начало */
+/* Карточка продукта */
+.count-btn
+	width: 100%
+	background-color: #fff
+	&__plus-minus
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 25px
+		height: 25px
+		padding: 0
+		background-color: transparent
+		border: none
+		cursor: pointer
+		outline: none !important
+		svg
+			width: 25px
+			height: 25px
+		polygon,
+		path
+			fill: #b5b5b5
+			transition: fill .2s ease
+		&:hover
+			polygon,
+			path
+				fill: #ff9a9a
+		&:active
+			polygon,
+			path
+				fill: $ac
+
+.card-wraper
+	position: relative
+	height: 360px
+
++media(sm)
+	.card-wraper
+		height: 418px
+
++media(xs)
+	.card-wraper
+		height: 376px
+
+.card-product
+	$p: &
+	position: absolute
+	z-index: 1
+	top: 0
+	display: block
+	width: 100%
+	height: 360px
+	padding: 12px 12px 16px
+	border-radius: 4px
+	background-color: #fff
+	&__top
+		position: relative
+		display: block
+		margin-top: 8px
+		margin-bottom: 20px
+	&__badges
+		position: absolute
+		top: -8px
+		left: 0
+		z-index: 2
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&__badge
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 20px
+		min-width: 70px
+		margin-bottom: 8px
+		padding: 0 7px
+		font-size: 14px
+		line-height: 16px
+		text-transform: lowercase
+		font-weight: 700
+		border-radius: 4px
+		color: #ffffff
+		&_markdown
+			border-bottom-right-radius: 0
+			border-top-right-radius: 0
+			&::before
+				content: "?"
+				position: absolute
+				z-index: 1
+				right: -20px
+				top: 0
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				width: 20px
+				height: 20px
+				color: #fff
+				background-color: #a670de
+				border-bottom-right-radius: 4px
+				border-top-right-radius: 4px
+				font-size: 14px
+				font-weight: 700
+		&_discount
+			min-width: 56px
+		&_color
+			&_red
+				background-color: $ac
+			&_violet
+				background-color: #7c54a6
+			&_orange
+				background-color: #ff6e24
+			&_green
+				background-color: #00bc3a
+	&__markdown-wrap
+		position: absolute
+		z-index: 2
+		left: -10px
+		top: 18px
+		display: none
+		opacity: 0
+		padding-top: 8px
+		transition: all .3s ease
+		&.display
+			display: block
+		&.visible
+			opacity: 1
+	&__markdown
+		display: block
+		width: 206px
+		padding: 7px
+		font-size: 14px
+		line-height: 16px
+		font-weight: 400
+		text-transform: none
+		border-radius: 4px
+		color: #fff
+		background-color: #7c54a6
+		&::before
+			content: ""
+			position: absolute
+			z-index: 1
+			left: 90px
+			top: 7px
+			transform: translate(-50%, -50%)
+			width: 0
+			height: 0
+			border: 12px solid transparent
+			border-top: none
+			border-bottom: 12px solid #7c54a6
+	&__add-favorites
+		position: absolute
+		z-index: 3
+		right: -3px
+		top: -15px
+		display: none
+		align-items: center
+		justify-content: center
+		width: 30px
+		height: 30px
+		padding: 0
+		border: none
+		outline: none !important
+		text-decoration: none
+		background: none
+		cursor: pointer
+		&:hover, &:focus
+			text-decoration: none
+		svg, img
+			display: inline-block
+			width: 28px
+			height: 23px
+			&:last-child
+				display: none
+			&:first-child
+				display: inline-block
+		&.active
+			display: inline-flex
+			svg, img
+				&:first-child
+					display: none
+				&:last-child
+					display: block
+	&__preview
+		position: relative
+		display: block
+		width: 100%
+		height: 184px
+		a
+			display: block
+			width: 100%
+			height: 100%
+			cursor: pointer
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		width: 100%
+		height: 100%
+		object-fit: contain
+		object-position: 50% 50%
+	&__middle
+		display: block
+		margin-bottom: 18px
+	&__price
+		display: flex
+		margin-bottom: 12px
+	&__current-price,
+	&__discount
+		display: inline-block
+		line-height: 20px
+	&__current-price
+		margin-right: 12px
+		font-size: 18px
+		font-weight: 700
+	&__discount
+		position: relative
+		font-size: 13px
+		padding: 0 2px
+		&::before
+			content: ""
+			position: absolute
+			left: 1px
+			bottom: 50%
+			transform: rotate(-8deg)
+			width: 100%
+			height: 2px
+			background-color: $ac
+	&__info
+		display: block
+		margin-bottom: 8px
+		height: 60px
+		overflow: hidden
+		font-size: 15px
+		line-height: 20px
+		transition: all .3s ease
+	&__code
+		span
+			&:first-child
+				font-size: 14px
+				line-height: 16px
+				margin-right: 6px
+			&:last-child
+				font-size: 14px
+				line-height: 16px
+				font-weight: 700
+	&__bottom
+		position: relative
+		display: none
+		justify-content: space-between
+		width: 100%
+		background-color: #fff
+		transition: all .2s ease
+		&:hover
+			display: flex
+	&__block-cnt
+		z-index: 1
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 102px
+		height: 40px
+	&__basket
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 68px
+		height: 40px
+		border-radius: 4px
+		background-image: $gradient2
+		border: none
+		outline: none !important
+		cursor: pointer
+		overflow: hidden
+		&:hover, &:focus
+			text-decoration: none
+			span
+				color: #fff
+		img
+			display: none
+		svg
+			path
+				&:first-child
+					fill: transparent
+				&:last-child
+					fill: #fff
+		span
+			display: none
+			margin-bottom: 0
+			color: #fff
+		&.added
+			position: absolute
+			z-index: 2
+			left: 0
+			width: 100%
+			padding-left: 18px
+			padding-right: 18px
+			svg
+				display: none
+			img
+				display: block
+				width: 24px
+				height: 24px
+				margin-right: 6px
+			span
+				display: block
+			#{$p}
+				&__block-cnt
+					opacity: 0
+
++media-up(md)
+	.card-product
+		$p: &
+		&:hover
+			z-index: 2
+			height: 416px
+			box-shadow: 0 10px 22px 0 rgba(0, 0, 0, .17)
+			#{$p}__bottom
+				display: flex
+			#{$p}__add-favorites
+				display: inline-flex
+
++media(sm)
+	.card-product
+		height: 418px
+		&__badges
+			top: 0
+		&__add-favorites
+			display: inline-flex
+		&__top,
+		&__middle
+			margin-bottom: 24px
+		&__top
+			margin-top: 0
+		&__bottom
+			display: flex
+
++media(xs)
+	.card-product
+		height: 376px
+		padding: 12px
+		&__top
+			margin-bottom: 4px
+		&__middle
+			margin-bottom: 8px
+		&__preview
+			height: 144px
+		&__price
+			margin-bottom: 8px
+			font-size: 16px
+			line-height: 20px
+		&__discount
+			display: none
+		&__info
+			height: 48px
+			margin-bottom: 12px
+			font-size: 13px
+			line-height: 16px
+		&__bottom
+			flex-direction: column
+		&__block-cnt
+			margin-bottom: 12px
+		&__basket
+			padding-left: 18px
+			padding-right: 26px
+			width: 100%
+			&.added
+				position: relative
+				justify-content: center
+				padding: 0 12px
+				svg
+					display: none
+			svg
+				margin-right: 11px
+			span
+				display: block
+				font-size: 16px
+				line-height: 20px
+
+.block-cnt
+	padding: 0 4px
+	border: solid 1px $grey3
+	border-radius: 4px
+	&__plus,
+	&__minus
+		position: relative
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 24px
+		height: 32px
+		padding: 0
+		border: none
+		border-radius: 2px
+		outline: none !important
+		background-color: $grey4
+		cursor: pointer
+		&::after
+			position: absolute
+			left: 50%
+			top: 50%
+			display: block
+			font-size: 15px
+			font-weight: 500
+	&__plus
+		&::after
+			content: "+"
+			transform: translate(-50%, -50%)
+	&__minus
+		&::after
+			content: "-"
+			transform: translate(-50%, -60%)
+	&__field
+		display: block
+		width: 24px
+		height: 18px
+		font-size: 15px
+		line-height: 1
+		font-weight: 600
+		text-align: center
+		color: $grey1
+		outline: none !important
+		border: none
+
+.popular-category-card
+	position: relative
+	display: flex
+	align-items: flex-end
+	width: 208px
+	height: 208px
+	padding: 12px
+	border-radius: 4px
+	border: 1px solid #fff
+	background-color: $grey4
+	box-sizing: border-box
+	cursor: pointer
+	transition: all .3s ease
+	&__img
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 0
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: contain
+		object-position: 50% 50%
+	&__title
+		z-index: 2
+		margin-bottom: 0
+
++media(sm)
+	.popular-category-card
+		&__title
+			font-size: 16px
+
++media(xs)
+	.popular-category-card
+		width: 160px
+		height: 144px
+		&__title
+			width: 50%
+			font-size: 11px
+
+.categories-card
+	position: relative
+	display: block
+	width: 100%
+	height: 184px
+	padding: 28px 24px
+	background: 50% 50% no-repeat / cover
+	border-radius: 4px
+	color: #fff
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none !important
+	&__content
+		display: block
+		width: 160px
+	&__title
+		margin-bottom: 16px
+		height: 32px
+		overflow: hidden
+	&__desc
+		margin-bottom: 0
+		height: 80px
+		overflow: hidden
+		font-size: 15px
+		line-height: 20px
+	&__img
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		width: auto
+		object-fit: cover
+		object-position: 50% 50%
+
++media(md)
+	.categories-card
+		height: 344px
+		padding-bottom: 188px
+		&__img
+			top: auto
+			bottom: 0
+			right: 50%
+			transform: translateX(50%)
+			width: auto
+			height: 184px
+
++media(xs)
+	.categories-card
+		height: 184px
+		padding: 16px 0 46px 16px
+		&__title
+			margin-bottom: 8px
+			font-size: 24px
+			left: 24px
+		&__desc
+			font-size: 13px
+		&__img
+			right: 0
+			transform: translate(0)
+			width: 116px
+			height: 96px
+
+.news-card
+	display: block
+	padding-bottom: 24px
+	width: 100%
+	transition: all .3s ease
+	&:hover
+		transform: translateY(-8px)
+		text-decoration: none
+		.news-card__title
+			color: $ac
+	&__img
+		display: block
+		width: 100%
+		height: 160px
+		object-fit: cover
+		object-position: 50% 50%
+
+	&__desc
+		display: block
+		height: 80px
+		overflow: hidden
+		font-size: 15px
+		line-height: 20px
+	&__img,
+	&__title,
+	&__desc
+		margin-bottom: 8px
+	&__date
+		color: $grey2
+
+.card-parner
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		display: block
+		width: 100%
+
+/* Карточка продукта лежащего */
+.card-product-2
+	position: relative
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+	&__img,
+	&__name,
+	&__price-1,
+	&__price-2,
+	&__price-3
+		height: 90px
+		display: flex
+		align-items: center
+	&__img
+		justify-content: center
+		+b4col(15%)
+		img
+			width: 82px
+			height: 82px
+			object-fit: contain
+			object-position: 50% 50%
+	&__name
+		+b4col(36%)
+	&__price-1
+		+b4col(15%)
+	&__price-2
+		margin-left: 15%
+		+b4col(19%)
+	&__price-3
+		+b4col(15%)
+	&__link
+		font-size: 14px
+		font-weight: 700
+
++media(md)
+	.card-product-2
+		&__name
+			height: 60px
+			align-items: flex-start
+			padding: 8px 0
+		&__price-1,
+		&__price-2,
+		&__price-3
+			height: auto
+		&__img
+			position: absolute
+			top: 0
+			left: 0
+			width: 25%
+			max-width: none
+			flex: none
+		&__name
+			margin-left: 25%
+			+b4col(75%)
+		&__price-1
+			margin-left: 25%
+			+b4col(25%)
+		&__price-2
+			margin-left: 25%
+			+b4col(33%)
+		&__price-3
+			+b4col(17%)
+
++media(xs)
+	.card-product-2
+		padding: 0 20px
+		&__img
+			position: static
+			width: 150px
+			height: 150px
+			margin: 0 auto 20px
+		&__name
+			height: 81px
+			margin-left: 0
+			margin: 0 auto
+			justify-content: center
+		&__price-1,
+		&__price-2,
+		&__price-3
+			height: 44px
+		&__price-1
+			margin-left: 0
+			+b4col(_col(12))
+		&__price-2
+			margin-left: 0
+			+b4col(63%)
+		&__price-3
+			+b4col(37%)
+
+/* Блок новости */
+.card-new
+	background-color: $grey5
+	transition: all .2s ease
+	&__middle
+		padding: 20px 20px 0
+	&__bottom
+		padding: 20px
+		display: flex
+		justify-content: space-between
+	&__img
+		position: relative
+		width: 100%
+		+aspect-ratio(16, 9)
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: 50% 50%
+	&__title
+		height: 40px
+		overflow: hidden
+		display: flex
+		align-items: center
+		margin: 0 0 5px
+		*
+			margin: 0
+	&__desc
+		height: 68px
+		overflow: hidden
+	&:hover
+		transform: translateY(-8px)
+
++media(sm)
+	.card-new
+		&__desc
+			height: 64px
+
++media(xs)
+	.card-new
+		&__top
+			display: none
+		&__middle
+			padding: 10px 10px 0
+		&__bottom
+			padding: 10px
+		&__title
+			margin: 0 0 10px
+
+/* Блок партнера */
+.card-partner
+	display: flex
+	justify-content: center
+	align-items: center
+	img
+		width: 100%
+		max-width: 150px
+		height: auto
+
+/* --- Новые карточки страниц оформления заказа и личного кабинета --- */
+
+.card-head-grey
+	$p: &
+	&__head
+		position: relative
+		min-height: 30px
+		background-color: $grey5
+		padding: 0 32px
+		&_info
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-wrap: wrap
+			#{$p}
+				&__title
+					+b4col(70%)
+				&__info
+					text-align: right
+					+b4col(30%)
+	&__body
+		padding: 15px 32px
+	&__title
+		line-height: 30px
+		margin: 0
+	&__edit
+		position: absolute
+		top: 50%
+		right: 32px
+		transform: translateY(-50%)
+	&__content
+		> strong
+			display: inline-block
+			margin: 20px 32px 0
+	&__coupon
+		margin-top: 20px
+	&__item
+		border: 1px solid $grey3
+		&:not(:first-child)
+			margin-top: -1px
+	&__bottom
+		margin-top: 20px
+
++media(md)
+	.card-head-grey
+		&__head
+			padding: 0 20px
+		&__body
+			padding: 15px 20px
+		&__item
+			padding: 20px 0
+
++media(xs)
+	.card-head-grey
+		&__head
+			padding: 0 10px
+		&__body
+			padding: 5px 10px
+
+/* Поле для ввода купона */
+.card-coupon-order
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	&__input
+		width: 300px
+		margin-right: 20px
+
+/* Радиокнопки выбора способа оплаты и доставки */
+.card-order-radio
+	$p: &
+	&__input
+		display: none
+		&:checked + #{$p}__label
+			&::after
+				opacity: 1
+	&__label
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		padding-left: 52px
+		cursor: pointer
+		margin: 0
+		&::before,
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		&::before
+			left: 32px
+			width: 10px
+			height: 10px
+			border: 1px solid $ac
+		&::after
+			left: 34px
+			width: 6px
+			height: 6px
+			background-color: $ac
+			opacity: 0
+			transition: all .2s ease
+	&__img,
+	&__name,
+	&__desc,
+	&__price
+		height: 90px
+		display: flex
+		align-items: center
+	&__img
+		justify-content: center
+		+b4col(_col(1))
+	&__name
+		font-weight: 700
+		+b4col(_col(3))
+	&__desc
+		+b4col(_col(5))
+	&__price
+		justify-content: center
+		flex-direction: column
+		+b4col(_col(3))
+		p
+			margin: 0
+	&_checked
+		#{$p}__label
+			&::after
+				opacity: 1
+
++media(md)
+	.card-order-radio
+		&__label
+			padding-left: 25%
+			padding-right: 25%
+		&__img,
+		&__name,
+		&__desc,
+		&__price
+			height: auto
+		&__img
+			position: absolute
+			top: 50%
+			left: 50px
+			transform: translateY(-50%)
+			max-width: none
+			flex: none
+		&__name
+			align-items: flex-start
+			+b4col(_col(12))
+			min-height: 40px
+		&__desc
+			+b4col(_col(12))
+		&__price
+			position: absolute
+			height: 100%
+			top: 0
+			right: 20px
+			width: 25%
+			max-width: none
+			float: none
+
++media(xs)
+	.card-order-radio
+		&__img
+			position: static
+			transform: translateY(0)
+		&__img,
+		&__name,
+		&__desc,
+		&__price
+			height: auto
+			min-height: auto
+			justify-content: center
+			+b4col(_col(12))
+		&__label
+			padding: 30px 20px 0
+			&::before
+				top: 0
+				left: 20px
+				transform: translateX(0)
+			&::after
+				top: 2px
+				left: 22px
+				transform: translateX(0)
+		&__img,
+		&__name
+			margin-bottom: 20px
+		&__desc:not(:last-child)
+			margin-bottom: 47px
+		&__price
+			position: static
+
+/* Карточка услуги со страницы всех услуг */
+.card-services
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+	background-color: $grey5
+	padding: 20px
+	height: 100%
+	text-decoration: none !important
+	&__img
+		margin-bottom: 15px
+	&__title
+		margin-bottom: 10px
+	&__desc
+		text-align: center
+		margin: 0
+
+/* Карточка акции со страницы всех акций */
+.card-actions
+	$p: &
+	background-color: $grey5
+	transition: all .2s ease
+	&__img
+		position: relative
+		display: block
+		width: 100%
+		+aspect-ratio(16, 9)
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: 50% 50%
+	&__body
+		position: relative
+		height: 100%
+		padding: 20px
+	&__title
+		display: inline-block
+		margin: 0 0 20px
+	&__desc
+		max-height: 102px
+		overflow: hidden
+		text-overflow: ellipsis
+		margin-bottom: 20px
+	&__bottom
+		position: static
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+		&_timer
+			#{$p}
+				&__date
+					order: 0
+				&__more
+					order: 1
+				&__timer
+					order: 2
+				&__date,
+				&__more
+					height: 30px
+					+b4col(50%)
+				&__timer
+					+b4col(100%)
+	&__date,
+	&__more
+		+b4col(50%)
+	&_news
+		#{$p}
+			&__body
+				padding: 20px 20px 65px 0
+			&__bottom
+				position: absolute
+				bottom: 20px
+				left: 0
+				right: 20px
+	&:hover
+		transform: translateY(-8px)
+
++media(md)
+	.card-actions
+		$p: &
+		&_news
+			#{$p}
+				&__body
+					padding: 20px
+				&__bottom
+					position: static
+
++media(sm)
+	.card-actions
+		&__desc
+			max-height: 96px
+
+/* Карточка новостей (после правок) */
+.card-news
+	$p: &
+	position: relative
+	background-color: $grey5
+	padding: 0 20px 65px
+	transition: all .2s ease
+	&__img
+		position: relative
+		left: -20px
+		display: block
+		width: calc(100% + 40px)
+		margin-bottom: 20px
+		+aspect-ratio(16, 9)
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: 50% 50%
+	&__title
+		display: inline-block
+		margin: 0 0 20px
+	&__desc
+		max-height: 102px
+		overflow: hidden
+		text-overflow: ellipsis
+		margin-bottom: 20px
+	&__bottom
+		position: static
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+	&__date,
+	&__more
+		+b4col(50%)
+	&__bottom
+		position: absolute
+		bottom: 20px
+		left: 20px
+		right: 20px
+	&:hover
+		transform: translateY(-8px)
+
++media(sm)
+	.card-news
+		&__desc
+			max-height: 96px
+
+.card-actions-2
+	$p: &
+	background-color: $grey5
+	&__img
+		position: relative
+		display: block
+		width: 100%
+		+aspect-ratio(16, 9)
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: 50% 50%
+	&__body
+		position: relative
+		padding: 20px
+	&__title
+		display: inline-block
+		margin: 0 0 20px
+	&__desc
+		max-height: 102px
+		overflow: hidden
+		text-overflow: ellipsis
+		margin: 0 0 20px
+	&__bottom
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+	&__date,
+	&__more
+		+b4col(50%)
+
+/* Карточка баннера акции со страницы всех акций */
+.card-actions-banner
+	$p: &
+	position: relative
+	width: 100%
+	padding: 20px
+	+aspect-ratio(16, 9)
+	&__img
+		position: absolute
+		z-index: 0
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: 50% 50%
+	&__title
+		position: relative
+		z-index: 1
+	&__more
+		position: absolute
+		z-index: 1
+		bottom: 20px
+		right: 20px
+	&_light
+		background-color: $grey5
+		#{$p}
+			&__title
+				color: $grey1
+	&_dark
+		background-color: $ac
+		#{$p}
+			&__title
+				color: #fff
+
+/* Карточка обьявления на странице всех объявлений */
+.card-announc
+	padding: 20px
+	background-color: $grey5
+	&__tag
+		display: inline-block
+		color: $grey2
+		margin-bottom: 10px
+	&__title
+		margin-bottom: 10px
+	&__author
+		margin-bottom: 10px
+	&__desc
+		margin-bottom: 10px
+	&__bottom
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+	&__date
+		+b4col(_col(1))
+	&__contacts
+		+b4col(_col(11))
+
++media(xs)
+	.card-announc
+		&__date
+			+b4col(_col(12))
+			order: 1
+		&__contacts
+			+b4col(_col(12))
+			order: 0
+			margin-bottom: 10px
+
+/* Блок контактов (стр. контакты) */
+.card-contact
+	&__title
+		margin-bottom: 10px
+	&__desc
+		margin: 0
+		padding: 0
+		list-style: none
+
+/* Блок с возрастом компании (стр. о компании) */
+.card-company-year
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	padding: 10px 20px
+	background-color: $ac
+	color: #fff
+	&__left
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		+b4col(_col(3))
+		span:first-child
+			font-size: 72px
+			line-height: 64px
+			font-weight: 700
+		span:last-child
+			font-size: 24px
+			line-height: 16px
+			font-weight: 700
+			text-transform: uppercase
+	&__right
+		display: flex
+		align-items: center
+		padding-left: 20px
+		+b4col(_col(9))
+		span
+			font-size: 16px
+
+/* Блок с вакансией (стр. вакансии) */
+.card-careers
+	position: relative
+	background-color: $grey5
+	padding: 20px
+	+clearfix()
+	&__top
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin-bottom: 32px
+	&__title
+		+b4col(90%)
+	&__price
+		text-align: right
+		+b4col(10%)
+		span
+			color: $grey2
+	&__desc
+		margin-bottom: 40px
+	&__more
+		float: right
+
++media(sm)
+	.card-careers
+		&__title
+			+b4col(80%)
+		&__price
+			+b4col(20%)
+
++media(xs)
+	.card-careers
+		&__title
+			+b4col(75%)
+		&__price
+			+b4col(25%)
+
+/* Блок товара под заказ */
+.good-on-order
+	position: relative
+	display: block
+	width: 100%
+	background-size: cover
+	background-position: 50% 50%
+	text-decoration: none !important
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+	&__left
+		position: relative
+		z-index: 2
+		width: 80%
+		padding: 20px 0 20px 20px
+	&__title,
+	&__desc
+		color: #ffffff
+		margin-bottom: 20px
+	&__desc
+		width: 70%
+		height: 48px
+		overflow: hidden
+	&__img
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 0
+		width: auto
+		height: 100%
+	&_okna
+		&::before
+			background-color: rgba(75, 86, 143, .8)
+	&_potolki
+		&::before
+			background-color: rgba(144, 93, 152, .8)
+	&_mebel
+		&::before
+			background-color: rgba(189, 83, 83, .8)
+	&_jaluzi
+		&::before
+			background-color: rgba(#d9b65e, .8)
+
++media(xs)
+	.good-on-order
+		&__left
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			padding: 20px
+		&__desc,
+		&__link
+			display: none
+		&__img
+			position: relative
+			width: 100%
+			height: auto

@@ -1,0 +1,217 @@
+.popup
+	position: fixed
+	z-index: 99999
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: none
+	justify-content: center
+	align-items: center
+	opacity: 0
+	transition: all .3s ease
+	&__bg
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .5)
+	&__wrap
+		position: relative
+		z-index: 2
+		width: 100%
+		max-width: 368px
+		padding: 60px 30px
+		background-color: $grey4
+		max-height: 100vh
+		overflow: auto
+		&_subscription
+			max-width: 320px
+			border-radius: 4px
+			padding: 0
+			background-color: #ffffff
+			box-shadow: 0 29px 48px 0 rgba(0, 0, 0, .2)
+	&__close
+		position: absolute
+		z-index: 2
+		top: 5px
+		right: 5px
+		background-color: transparent
+		border: none
+		outline: none !important
+		padding: 0
+		cursor: pointer
+		width: 30px
+		height: 30px
+		&_subscription
+			top: 0
+			right: 0
+			width: 32px
+			height: 32px
+	&.display
+		display: flex
+	&.visible
+		opacity: 1
+
+.popup-callback
+	&__title
+		text-align: center
+		margin-bottom: 30px
+	&__desc
+		text-align: center
+		margin-bottom: 20px
+		font-size: 18px
+		line-height: 22px
+		color: $grey2
+	&__input
+		margin-bottom: 20px
+	&__politconf
+		margin-bottom: 30px
+		font-size: 11px
+		font-weight: 400
+		line-height: 13px
+		color: $grey1
+	&__button
+		text-align: center
+	&__img-success
+		display: block
+		margin: 0 auto
+
+/* БИТРИКСОВЫЙ ПОПАП */
+.popup-window
+	width: 320px !important
+	text-align: center !important
+	padding: 40px 32px 56px !important
+	background-color: #fff !important
+	&-titlebar
+		height: auto !important
+		text-align: center !important
+		&-text
+			display: block !important
+			margin-bottom: 32px !important
+			letter-spacing: normal !important
+			overflow: none !important
+			white-space: normal !important
+			font-size: 24px !important
+			line-height: 32px !important
+			font-weight: 700 !important
+			color: $grey1 !important
+			padding: 0 !important
+		&-close-icon
+			position: absolute
+			top: 0
+			right: 0
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			width: 32px
+			height: 32px
+			cursor: pointer
+			opacity: .5
+			transition: opacity .2s ease
+			&:hover
+				opacity: 1
+			&:after
+				content: ""
+				position: absolute
+				width: 100% !important
+				height: 100% !important
+				background: url("#{$url-img}/ui-icon/close.png") no-repeat 50% 50% / cover
+	&-content
+		background-color: transparent !important
+		img
+			display: block
+			margin: 0 auto 24px
+			width: 160px
+			height: 160px
+			object-fit: contain
+			object-position: 50% 50%
+		p
+			display: block
+			max-height: 72px
+			height: auto
+			margin-bottom: 24px
+			font-size: 16px
+			line-height: 24px
+			color: #616160
+			overflow: hidden
+	&-buttons
+		.btn
+			display: inline-flex !important
+			align-items: center !important
+			justify-content: center !important
+			min-width: 120px !important
+			height: 40px !important
+			border: none !important
+			outline: none !important
+			font-size: 16px !important
+			line-height: 40px !important
+			font-weight: 600 !important
+			text-align: center !important
+			cursor: pointer !important
+			text-decoration: none !important
+			white-space: nowrap !important
+			padding: 0 16px !important
+			background-image: linear-gradient(to right, #de0f29, #ff5c25)
+			border-radius: 4px !important
+			color: #fff !important
+			&:hover, &:active, &:focus
+				text-decoration: none !important
+				color: #fff !important
+
+/* Попап "В разработке" */
+.popup-testing
+	&__wrap
+		position: relative
+		padding: 30px 40px
+		width: 100%
+		max-width: 768px
+		background-color: #ffffff
+		box-shadow: 0 2px 22px 0 rgba(0, 0, 0, .1)
+	&__content
+		position: relative
+		z-index: 2
+		width: 60%
+	&__title
+		margin-bottom: 20px
+	&__desc
+		margin-bottom: 30px
+	&__link
+		margin-bottom: 20px
+	&__bq
+		margin-bottom: 20px
+	&__note
+		display: inline-block
+	&__img-hd
+		position: absolute
+		top: 0
+		right: 0
+		width: auto
+		height: 100%
+		z-index: 1
+	&__img-mob
+		display: none
+		width: 100%
+		height: auto
+
++media(sm)
+	.popup-testing
+		&__wrap
+			padding: 20px
+			max-width: _col(12, sm)
+
++media(xs)
+	.popup-testing
+		&__wrap
+			max-width: 100%
+			padding-bottom: 0
+		&__content
+			width: 100%
+		&__img-hd
+			display: none
+		&__note
+			margin-bottom: 20px
+		&__img-mob
+			display: block

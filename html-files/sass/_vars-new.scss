@@ -1,0 +1,64 @@
+// Общие настройки
+$font-formats: ("eot", "woff", "ttf"); // Доступны в snippets - eot, woff2, woff, ttf, svg
+$url-img: "../img";
+$url-font: "../fonts";
+
+/* Цвета сайта */
+$ac: #e01b1b;
+$grey1: #373737;
+$grey2: #808080;
+$grey3: #d6d6d6;
+$grey4: #f5f5f5;
+$grey5: #f5f5f5;
+$gradient: linear-gradient(to right, #552d7d, #aa2255 44%, #ff5c25);
+$gradient2: linear-gradient(to right, #de0f29, #ff5c25);
+
+// Другие переменные */
+$headerTop: 40px;
+$headerMiddle: 112px;
+$headerBottom: 50px;
+
+$headerLg: 152px;
+$headerXs: 176px;
+
+/* Миксины для сайта */
+@mixin grad($p: g) {
+	@if($p == g) {
+		background-image: linear-gradient(to right, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 79%, #f3c02c);
+	}
+	@if($p == v) {
+		background-image: linear-gradient(to bottom, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 79%, #f3c02c);
+	}
+}
+
+/* Настройки Bootstrap */
+$breakpoints: (
+	"xs": 0,
+	"sm": 768px,
+	"md": 992px,
+	"lg": 1260px
+) !default;
+
+$max-widths: (
+	"xs": 100%,
+	"sm": 744px,
+	"md": 960px,
+	"lg": 1248px
+) !default;
+
+/* Customization Bootstrap vars from "bootstrap/_variables.scss" */
+$grid-gutter-width: 24px;
+$grid-columns: 12;
+
+$grid-breakpoints: (
+	"xs": map-get($breakpoints, "xs"),
+	"sm": map-get($breakpoints, "sm"),
+	"md": map-get($breakpoints, "md"),
+	"lg": map-get($breakpoints, "lg")
+);
+
+$container-max-widths: (
+	"sm": map-get($max-widths, "sm"),
+	"md": map-get($max-widths, "md"),
+	"lg": map-get($max-widths, "lg")
+);

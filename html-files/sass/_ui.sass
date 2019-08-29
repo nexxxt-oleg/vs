@@ -1,0 +1,427 @@
+//@import "bourbon"
+//@import "snippets"
+
+html,
+body
+	overflow-x: hidden
+
+body
+	position: relative
+	min-width: 320px
+	font-family: "ProximaNova", sans-serif
+	font-weight: 400
+	font-size: 14px
+	line-height: normal
+	color: $grey1
+
+.root
+	width: 100%
+	height: 100vh
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+
+section
+	position: relative
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+strong, b
+	font-weight: 700
+
+em, i
+	font-style: italic
+
+a, .link
+	font-size: 13px
+	font-weight: 400
+	line-height: normal
+	letter-spacing: normal
+	color: $grey1
+	outline: none !important
+	cursor: pointer
+	&:hover, &:focus, &:active
+		text-decoration: underline
+		color: $grey1
+
+.arrow-link
+	display: flex
+	align-items: center
+	&_sm
+		> img, > svg
+			width: 4px
+			height: auto
+	&_right
+		justify-content: flex-end
+		> span
+			margin-right: 6px
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5
+	display: block
+	line-height: normal
+	letter-spacing: normal
+	
+h2, .h2
+	font-size: 24px
+	font-weight: 700
+
+h3, .h3
+	font-size: 18px
+	font-weight: 600
+
+h4, .h4
+	font-size: 16px
+	font-weight: 600
+
+h5, .h5
+	font-size: 14px
+	font-weight: 600
+
++media(sm)
+	body
+		font-size: 13px
+
+	h2, .h2
+		font-size: 14px
+
+	h3, .h3,
+	h4, .h4,
+	h5, .h5
+		font-size: 13px
+	
+/* Кнопки */
+.btn
+	display: inline-block
+	min-width: 120px
+	height: 40px
+	border: none
+	outline: none !important
+	font-size: 13px
+	line-height: 40px
+	font-weight: 400
+	text-align: center
+	cursor: pointer
+	text-decoration: none !important
+	background-color: transparent
+	white-space: nowrap
+	padding: 0 16px
+	$p: &
+	&_color
+		&_ac
+			background-color: $ac
+			color: #fff
+			&:hover, &:active, &:focus
+				color: #fff
+		&_white
+			background-color: #fff
+			color: $ac
+			&:hover, &:active, &:focus
+				color: $ac
+		&_grey
+			color: $grey1
+			&:hover, &:active, &:focus
+				color: $grey1
+			&#{$p}
+				&_arrow
+					&_left,
+					&_right
+						> svg
+							path
+								fill: $grey2 !important
+		&_grey-2
+			background-color: $grey3
+			color: $grey1
+			&:hover, &:active, &:focus
+				color: $grey1
+	&_arrow
+		&_left,
+		&_right
+			> img, > svg
+				display: inline-block
+				transform: translateY(5px)
+				transition: all .3s ease
+			> span
+				display: inline-block
+				line-height: 30px
+				transform: translateY(-5px)
+	&_left
+		padding: 0
+		text-align: left
+	&_right
+		padding: 0
+		text-align: right
+	&_arrow-reverse
+		&#{$p}_arrow
+			&_left,
+			&_right
+				> img, > svg
+					transform: translateY(5px) rotate(-180deg)
+	&.active
+		svg path
+			fill: $ac !important
+
+/* Кнопка на верх страницы */
+.btn-to-top
+	position: fixed
+	z-index: 10
+	bottom: 100px
+	left: 50%
+	transform: translateX(#{_col(6, lg) - 91px})
+	width: 68px
+	height: 68px
+	background-color: $grey2
+	border-radius: 4px
+	border: none
+	outline: none !important
+	padding: 0
+	cursor: pointer
+	display: none
+	opacity: 0
+	transition: all .2s ease
+	&:hover
+		background-color: darken($grey2, 20%)
+	img, svg
+		position: absolute
+		top: 10px
+		left: 50%
+		transform: translateX(-50%)
+		transition: all .2s ease
+	svg
+		polygon
+			fill: #fff
+	span
+		position: absolute
+		top: 34px
+		left: 50%
+		transform: translateX(-50%)
+		color: #fff
+	&.display
+		display: block
+	&.visible
+		opacity: 1
+	&.back
+		img, svg
+			transform: translateX(-50%) rotate(-180deg)
+
+a.btn
+	&:hover, &:active, &:focus
+		span
+			text-decoration: underline
+
++media(md)
+	.btn-to-top
+		transform: translateX(#{_col(6, md) - 84px})
+
++media(sm)
+	.btn-to-top
+		transform: translateX(#{_col(6, sm) - 84px})
+
++media(xs)
+	.btn-to-top
+		display: none
+
+/* Элементы форм */
+.form-field
+	position: relative
+	&__input
+		height: 40px
+	&__textarea
+		padding-top: 10px
+		padding-bottom: 10px
+		height: 140px
+	&__input,
+	&__textarea
+		width: 100%
+		border: 1px solid $grey3
+		padding: 0 20px
+		outline: none !important
+		&::placeholder
+			font-size: 14px
+			color: $grey2
+
+.form-checkbox
+	$p: &
+	&__input
+		display: none
+		&:checked + #{$p}__label
+			&::after
+				opacity: 1
+	&__label
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		padding-left: 30px
+		cursor: pointer
+		margin: 0
+		&::before,
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		&::before
+			left: 0
+			width: 10px
+			height: 10px
+			border: 1px solid $ac
+		&::after
+			left: 2px
+			width: 6px
+			height: 6px
+			background-color: $ac
+			opacity: 0
+			transition: all .2s ease
+
+.catalog-sort
+	$p: &
+	height: 30px
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	&_short
+		#{$p}
+			&__select
+				width: auto
+	&__title
+		margin: 0
+		margin-right: 20px
+	&__select
+		width: 100%
+		max-width: 168px
+		position: relative
+		z-index: 1
+		&.active
+			#{$p}
+				&__body
+					display: block
+	&__head
+		position: relative
+		width: 100%
+		max-width: 200px
+		height: 30px
+		border: 1px solid $grey3
+		padding-left: 10px
+		padding-right: 35px
+	&__param
+		margin: 0
+		line-height: 28px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+	&__arrow
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		padding: 0
+		width: 30px
+		height: 28px
+		border: none
+		outline: none !important
+		background-color: transparent
+		cursor: pointer
+	&__body
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		z-index: 10
+		padding: 10px
+		background-color: #ffffff
+		border: 1px solid $grey3
+		border-top: none
+		a
+			display: block
+			width: 100%
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			&.active
+				font-weight: 700
+
+/* Для Firefox стрелки инпута */
+input[type="number"]
+	-moz-appearance: textfield
+	/* Для Chrome стрелки инпута */
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		margin: 0
+
+/* Новая кнопка и анимация */
+.btn-add-product
+	position: relative
+	display: inline-flex
+	align-items: center
+	justify-content: space-between
+	width: 117px
+	height: 40px
+	outline: none !important
+	overflow: hidden
+	border: 2px solid
+	border-image-source: radial-gradient(circle at 0 0, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 79%, #f3c02c)
+	border-image-slice: 1
+	box-sizing: border-box
+	padding-left: 10px
+	padding-right: 6px
+	color: #582765
+	background-color: transparent
+	cursor: pointer
+	font-size: 14px
+	line-height: 17px
+	transition: all .5s ease
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: -1px
+		z-index: 0
+		display: block
+		width: 117px
+		height: 105%
+		opacity: 0
+		border-image-slice: 1
+		border-image-source: radial-gradient(circle at 0 0, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 89%, #f3c02c)
+		background-image: radial-gradient(circle at 0 0, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 89%, #f3c02c)
+	svg
+		path
+			&:nth-child(2)
+				fill: #582765
+				transition: fill .5s ease
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #fff
+		&::before
+			animation: opacity-width .8s ease-in-out forwards
+		svg
+			path
+				&:nth-child(2)
+					fill: #fff
+		span,
+		svg
+			z-index: 1
+
++media-only(md)
+	.btn-add-product_md
+		justify-content: center
+		padding: 0
+		width: 40px
+		span
+			display: none
+
+@keyframes opacity-width
+	0%
+		width: 200%
+		opacity: 0
+	50%
+		width: 200%
+		opacity: 1
+	100%
+		width: 105%
+		opacity: 1

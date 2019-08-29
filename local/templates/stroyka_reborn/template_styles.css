@@ -1,0 +1,44 @@
+.our-principles__title {margin-bottom: 50px!important;}
+div.center {margin-left: auto; margin-right: auto;}
+input[type=checkbox].bx-soa-pp-company-checkbox {display:none;}
+table.dostavka {max-width: 470px!important;}
+table.dostavka tr td:last-child {text-align: right;}
+.bx-soa-pickup-preview-img {height: 70px!important; width:120px!important;}
+.page-cnt-contacts__department-title {margin-bottom:5px!important;}
+.footer__cards svg:nth-child(2n) {padding: 0 10px 0 10px;}
+
+.steps{
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    margin: 0 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.advantage, .trade-marks{
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.trade-marks img{
+    height: 30px;
+    width: auto;
+    margin: 10px 0 0 0;
+    padding: 0 10px 0 10px;
+    max-width: 120px;
+    max-height: 30px;
+}
+
+.trade-marks{
+    justify-content: space-between;
+}
+
+.advantage img{
+    margin: 0;
+}
+.napravleniya div{
+    text-align: center;
+    margin-top: 20px;
+}

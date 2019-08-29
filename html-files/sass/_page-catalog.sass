@@ -1,0 +1,110 @@
+.page-catalog
+	&__submenu
+		margin-bottom: 40px
+	&__hr
+		border: none
+		border-bottom: 2px solid $ac
+		margin: 0
+	&__top-navs
+		margin-bottom: 16px
+	&__bottom-navs
+		margin-top: 48px
+	&__card
+		margin-bottom: 32px
+	&__left-menu
+		position: sticky
+		top: 100px
+		
++media(sm)
+	.page-catalog
+		&__filter
+			margin-top: 0
+			margin-bottom: 40px
+
++media(xs)
+	.page-catalog
+		&__left-menu
+			margin-bottom: 40px
+		&__top-navs
+			margin-top: 16px
+			.new-col-sm-7,
+			.new-col-sm-5
+				+b4col(_col(6, xs))
+		&__bottom-navs
+			margin-top: 24px
+		&__filter
+			margin-bottom: 0
+
+.top-navs
+	&__sort
+		margin-bottom: 16px
+	&__counter
+		justify-content: flex-end
+	
++media(xs)
+	.top-navs
+		&__sort,
+		&__counter
+			flex-wrap: wrap
+			align-items: flex-start
+			justify-content: flex-start
+			margin-bottom: 10px
+		&__sort
+			margin-top: 32px
+			&_no-mt-mb-24
+				margin-top: 0
+				margin-bottom: 24px
+
+// Дизайнерский костыль для сортировки
+@media (max-width: 420px)
+	.page-catalog
+		&__top-navs
+			.new-col-sm-7,
+			.new-col-sm-5
+				+b4col(100%)
+				display: flex
+				align-items: flex-start
+				justify-content: flex-start
+				&:first-child
+					margin-bottom: 16px
+	.top-navs
+		&__counter
+			justify-content: flex-start
+			align-items: flex-start
+
+.paginations
+	display: flex
+	align-items: center
+	height: 40px
+	a, span
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		margin-right: 8px
+		border: 2px solid $grey3
+		border-radius: 4px
+		background-color: #fff
+		text-align: center
+		cursor: pointer
+		transition: all .2s ease
+		svg
+			g
+				transition: all .2s ease
+			g > g
+				fill: $grey3
+		&:last-child
+			margin: 0
+		&:hover,
+		&:focus,
+		&.active
+			text-decoration: none
+			color: $ac
+			svg g > g
+				fill: $ac
+		&:hover,
+		&:focus
+			border-color: #8b8b8b
+		&.active
+			border-color: $ac

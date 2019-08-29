@@ -1,0 +1,215 @@
+main.main
+	position: relative
+	padding-bottom: 98px
+	min-height: calc(100vh - #{$headerLg} - 394px)
+
++media(sm)
+	main.main
+		padding-bottom: 0
+
++media(xs)
+	main.main
+		min-height: calc(100vh - #{$headerXs} - 32px)
+
+.main
+	&__paginations-sect
+		margin-bottom: 64px
+
+.page-all-sect
+	padding: 24px 0 0
+	&__top-title,
+	&__top-link
+		display: flex
+		align-items: center
+		min-height: 30px
+		margin-bottom: 24px
+		*
+			margin: 0
+	&__top-link
+		justify-content: flex-end
+	&__top-share
+		height: 30px
+		margin-bottom: 32px
+	&__card
+		margin-bottom: 32px
+	&_pt_none
+		padding-top: 0
+	&_pb_none
+		padding-bottom: 0
+	
++media(xs)
+	.page-all-sect
+		&__top-title,
+		&__top-link,
+		&__top-share
+			min-height: 20px
+			margin-bottom: 20px
+		&__card
+			margin-bottom: 20px
+	
+/* Левое меню */
+.categories-left-menu
+	padding: 20px
+	background-color: $grey5
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+	li
+		padding: 10px 0
+	a
+		text-decoration: none !important
+		&:hover, &:active, &:focus
+			color: $ac
+
+/* Левое меню аккордион */
+.left-menu-accordion
+	&__title
+		display: inline-block
+		margin-bottom: 8px
+		font-size: 16px
+		line-height: 16px
+		font-weight: 600
+		color: $grey1
+		+trs(.3s)
+		&:hover
+			color: $ac
+	&__first,
+	&__last
+		margin: 0
+		padding: 0
+		li
+			display: block
+			margin-bottom: 8px
+			list-style: none
+			a
+				display: inline-block
+				font-size: 14px
+				line-height: 16px
+				color: $grey1
+				+trs(.3s)
+				&:hover
+					color: $ac
+	&__last
+		display: none
+	&__more-btn
+		display: block
+		width: 100%
+		height: 30px
+		padding: 0
+		font-size: 15px
+		line-height: 20px
+		text-align: left
+		border: none
+		outline: none !important
+		color: $ac
+		background-color: transparent
+		cursor: pointer
+
+/* Секция подписки на рассылку */
+.subscribe-sect
+	position: absolute
+	left: 0
+	bottom: 0
+	width: 100%
+	padding: 20px 0 10px
+	+grad
+	&__message
+		color: #ffffff
+		margin-bottom: 20px
+	&__sub
+		position: relative
+	&__icon
+		position: absolute
+		top: 50%
+		left: -44px
+		transform: translateY(-50%)
+		width: 24px
+		height: auto
+	&__title,
+	&__desc
+		color: #fff
+		margin: 0
+	&__form-field
+		width: 100%
+		margin: 0
+		input
+			width: 100%
+			height: 40px
+			background-color: #fff
+			padding: 0 17px
+			border: none
+			outline: none !important
+			+placeholder
+				font-size: 11px
+				line-height: normal
+				color: #bcbcbc
+	&__politconf
+		margin-top: 15px
+		p
+			margin: 0
+			font-size: 11px
+			line-height: normal
+			color: rgba(#fff, .6)
+	
++media(sm)
+	.subscribe-sect
+		position: static
+		&__sub
+			padding-left: 44px
+		&__icon
+			left: 0
+	
++media(xs)
+	.subscribe-sect
+		&__sub
+			margin-bottom: 30px
+		&__form-field
+			margin-bottom: 20px
+		&__btn
+			text-align: center
+	
+/* Хлебные крошки */
+.bread-crumbs-sect
+	display: flex
+	align-items: center
+	min-height: 32px
+	background-color: $grey4
+
+.bread-crumbs
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	min-height: 24px
+	margin: 0
+	padding: 0
+	list-style: none
+	+trs(.3s)
+	a, span
+		display: inline-block
+		font-size: 14px
+		line-height: 16px
+		color: $grey2
+		margin-top: 4px
+		margin-bottom: 4px
+	a
+		position: relative
+		display: inline-block
+		padding-right: 12px
+		margin-right: 8px
+		&:hover
+			color: $ac
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%) rotate(-45deg)
+			display: block
+			width: 7px
+			height: 7px
+			border-bottom: 1px solid $grey2
+			border-right: 1px solid $grey2
+
+

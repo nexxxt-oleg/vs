@@ -1,0 +1,385 @@
+.page-home
+	&__slider
+		z-index: 2
+		background-color: transparent
+		&:hover
+			z-index: 3
+		&_popular
+			margin-bottom: 32px
+	&__block-title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 24px
+	&__slider-title
+		margin-bottom: 0
+	&__slider-link
+		display: flex
+		align-items: center
+		padding-right: 12px
+		span
+			&:first-child
+				font-size: 14px
+				line-height: 24px
+			&:last-child
+				position: relative
+				display: block
+				width: 12px
+				height: 12px
+				&::after
+					content: ''
+					position: absolute
+					right: 0%
+					top: 50%
+					transform: translateY(-50%) rotate(-45deg)
+					display: block
+					width: 6px
+					height: 6px
+					border-bottom: 1px solid $ac
+					border-right: 1px solid $ac
+	&__news-slider
+		margin-bottom: 32px
+	&__categories
+		position: relative
+		margin-bottom: 32px
+	&__partners
+		position: relative
+		margin-bottom: 64px
+	&__sale-slider
+
++media(sm)
+	.page-home
+		&__slider
+			&_popular
+				margin-bottom: 48px
+
++media(xs)
+	.page-home
+		&__sale-slider
+			margin-left: 0
+			padding: 0
+		&__block-title
+			margin-bottom: 12px
+		&__slider-link
+			padding-right: 0
+			span
+				&:first-child
+					display: none
+				&:last-child
+					width: 24px
+					height: 24px
+					&::after
+						right: 40%
+		&__news-slider
+			margin-bottom: 24px
+		&__principles
+			margin: 20px 0
+		&__categories
+
+//Общие ксласс стрелок, внешний вид
+.slider-arrow-next,
+.slider-arrow-prev
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 32px
+	height: 32px
+	padding: 0
+	border-radius: 4px
+	border: solid 1px #ededed
+	background-color: #fff
+	outline: none !important
+	cursor: pointer
+	> svg
+		polygon
+			fill: $ac
+
+/* Слайдер новостей*/
+.news-slider
+	position: relative
+	width: 100%
+	height: 288px
+	overflow: hidden
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 2
+		top: 50%
+		transform: translateY(-50%)
+	&__prev
+		left: -4px
+	&__next
+		right: -4px
+	&__dots
+		position: absolute
+		z-index: 2
+		bottom: 16px
+		right: 180px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		button
+			position: relative
+			width: 20px
+			height: 20px
+			padding: 0
+			border: none
+			outline: none !important
+			background-color: transparent
+			color: transparent
+			cursor: pointer
+			margin-left: 6px
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background-color: $grey3
+				+trs(.3s)
+			&.active
+				&::before
+					width: 7px
+					height: 7px
+					background-color: #fff
+	&__slick
+		position: relative
+		z-index: 1
+		height: 100%
+		opacity: 0
+		.slick-list,
+		.slick-track
+			height: 100%
+	&__item
+		height: 288px
+	&__link
+		display: block
+		position: relative
+		height: 100%
+	&__img
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: cover
+		object-position: 50% 50%
+		border-radius: 4px
+
++media(sm)
+	.news-slider
+		&__dots
+			right: 80px
+
++media(xs)
+	.news-slider
+		height: 100%
+		max-height: 170px
+		&__slick
+			padding-bottom: 28px
+		&__prev,
+		&__next
+			display: none
+		&__dots
+			bottom: 0
+			right: 50%
+			transform: translate(50%)
+			button.active::before
+				background-color: $ac
+		&__item
+			max-height: 140px
+			height: 100%
+			+aspect-ratio(4)
+
+.sale-slider
+	position: relative
+	&__new,
+	&__discount,
+	&__discount-all
+		position: relative
+	&__slick
+		position: relative
+		margin-bottom: -48px
+		opacity: 0
+		&_popular
+			margin-bottom: 0
+	&__item
+		position: relative
+		height: 436px
+		margin: 10px 0
+		opacity: 1
+		&:not(.slick-active)
+			.card-product
+				box-shadow: none
+	&__dots
+		position: absolute
+		z-index: 2
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		display: none
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 5
+		top: 45%
+		transform: translateY(-50%)
+	&__prev
+		left: -4px
+	&__next
+		right: -4px
+
+//Класс точек слайдеров
+.sliders-dots
+	button
+		position: relative
+		display: block
+		width: 10px
+		height: 10px
+		padding: 0
+		border: none
+		outline: none !important
+		background-color: transparent
+		color: transparent
+		cursor: pointer
+		margin-left: 4px
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background-color: #e4e4e4
+			+trs(.3s)
+		&.active
+			&::before
+				background-color: $ac
+
++media-up(md)
+	.sale-slider
+		&__slick
+			.slick-list
+				padding: 0 12px
+				margin: 0 -12px
+			&_popular
+				.slick-list
+					margin: 0
+					padding: 0
+
++media(sm)
+	.sale-slider
+		&__slick
+			margin-bottom: 36px
+			padding-bottom: 24px
+			&_popular
+				margin-bottom: 0
+				padding-bottom: 0
+		&__item
+			height: 416px
+			padding: 0
+		&__dots
+			display: flex
+		&__next,
+		&__prev
+			display: none
+
++media(xs)
+	.sale-slider
+		width: 100%
+		&__slick
+			margin-bottom: 36px
+			padding-bottom: 18px
+			&_popular
+				margin-bottom: 0
+				padding-bottom: 0
+		&__item
+			height: 376px
+
+.categories-sliders
+	position: relative
+	&__dots
+		position: absolute
+		z-index: 2
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		display: none
+	&__item
+		margin: 0 12px
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 5
+		top: 50%
+		transform: translateY(-50%)
+		display: none
+	&__prev
+		left: -4px
+	&__next
+		right: -4px
+
++media(xs)
+	.categories-sliders
+		&__slider
+			padding-bottom: 16px
+		&__dots
+			display: flex
+
+.all-news-sliders
+	z-index: 1
+	&__dots
+		position: absolute
+		z-index: 2
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		display: none
+	&__item
+		margin: 8px 12px 0
+
++media(sm)
+	.all-news-sliders
+		&__slick
+			padding-bottom: 16px
+		&__dots
+			display: flex
+
+.partners-slider
+	position: relative
+	$p: &
+	&__item
+		padding: 0 18px
+	&__slick
+		margin: 0 -18px
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 2
+		top: 50%
+		transform: translateY(-50%)
+	&__prev
+		left: -14px
+	&__next
+		right: -14px
+	.slick-slide
+		div:first-child:not(:last-child)
+			#{$p}
+				&__item
+					margin-bottom: 20px
+
++media(xs)
+	.partners-slider
+		&__slick
+			margin: 0
+		&__prev
+			left: -9px
+		&__next
+			right: -9px

@@ -1,0 +1,9 @@
+node_modules/
+.git/
+**/Thumbs.db
+**/*.DS_Store
+css/*.min.*
+js/*.min.*
+reports/
+css/bootstrap.css
+css/lightbox.css

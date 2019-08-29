@@ -1,0 +1,680 @@
+html,
+body
+	overflow-x: hidden
+
+body
+	min-width: 320px
+	position: relative
+	font-family: "ProximaNova", sans-serif
+	font-size: 14px
+	font-weight: 400
+	line-height: normal
+	color: $grey1
+
+.root
+	width: 100%
+	height: 100vh
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+
+section
+	position: relative
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+
++media(sm)
+	body
+		font-size: 13px
+
+strong, b
+	font-weight: 700
+
+em, i
+	font-style: italic
+
+a, .link
+	font-size: 14px
+	line-height: 17px
+	font-weight: 400
+	letter-spacing: normal
+	color: $grey1
+	outline: none !important
+	cursor: pointer
+	&:hover, &:focus, &:active
+		text-decoration: underline
+		color: $grey1
+
+.arrow-link
+	display: flex
+	align-items: center
+	&_sm
+		> img, > svg
+			width: 4px
+			height: auto
+	&_right
+		justify-content: flex-end
+		> span
+			margin-right: 6px
+
+.h1-new, .h2-new, .h3-new, .h4-new, .h5-new
+	display: block
+	letter-spacing: normal
+
+.h1-new, .h2-new, .h3-new, .h4-new
+	font-weight: 700
+
+.h1-new
+	font-size: 32px
+	line-height: 1
+
++media(xs)
+	.h1-new
+		font-size: 24px
+
+.h2-new
+	font-size: 24px
+	line-height: 32px
+
++media(xs)
+	.h2-new
+		font-size: 20px
+
+.h3-new
+	font-size: 20px
+	line-height: 1.2
+
++media(xs)
+	.h3-new
+		font-size: 18px
+		line-height: 1.33
+
+.h4-new
+	font-size: 18px
+	line-height: 1.33
+
++media(xs)
+	.h4-new
+		font-size: 16px
+		line-height: 1.25
+
+.h5-new
+	font-size: 16px
+	line-height: 1.25
+	font-weight: 600
+
++media(xs)
+	.h5-new
+			font-size: 13px
+			line-height: 1.23
+
+.col-no-padding
+	padding: 0 !important
+	
+/* Кнопки */
+.btn
+	display: inline-block
+	min-width: 120px
+	height: 40px
+	border: none
+	outline: none !important
+	font-size: 13px
+	line-height: 40px
+	font-weight: 400
+	text-align: center
+	cursor: pointer
+	text-decoration: none !important
+	background-color: transparent
+	white-space: nowrap
+	padding: 0 16px
+	$p: &
+	&_new
+		min-width: 106px
+		font-size: 16px
+		line-height: 20px
+		font-weight: 600
+		border-radius: 4px
+	&_color
+		&_transparent
+			color: $grey2
+			&:hover, &:focus
+				background-color: $grey4
+		&_gradient
+			color: #fff
+			background: $gradient2
+			&:hover, &:active, &:focus
+				color: #fff
+				text-decoration: none
+		&_ac
+			background-color: $ac
+			color: #fff
+			&:hover, &:active, &:focus
+				color: #fff
+		&_white
+			background-color: #fff
+			color: $ac
+			&:hover, &:active, &:focus
+				color: $ac
+		&_grey
+			color: $grey1
+			&:hover, &:active, &:focus
+				color: $grey1
+			&#{$p}
+				&_arrow
+					&_left,
+					&_right
+						> svg
+							path
+								fill: $grey2 !important
+		&_grey-2
+			background-color: $grey3
+			color: $grey1
+			&:hover, &:active, &:focus
+				color: $grey1
+	&_arrow
+		&_left,
+		&_right
+			> img, > svg
+				display: inline-block
+				transform: translateY(5px)
+				transition: all .3s ease
+			> span
+				display: inline-block
+				line-height: 30px
+				transform: translateY(-5px)
+	&_left
+		padding: 0
+		text-align: left
+	&_right
+		padding: 0
+		text-align: right
+	&_arrow-reverse
+		&#{$p}_arrow
+			&_left,
+			&_right
+				> img, > svg
+					transform: translateY(5px) rotate(-180deg)
+	&.active
+		svg path
+			fill: $ac !important
+
+/* Кнопка на верх страницы */
+.btn-to-top
+	position: fixed
+	z-index: 10
+	bottom: 100px
+	left: 50%
+	transform: translateX(#{_col(6, lg) - 91px})
+	width: 68px
+	height: 68px
+	background-color: $grey2
+	border-radius: 4px
+	border: none
+	outline: none !important
+	padding: 0
+	cursor: pointer
+	display: none
+	opacity: 0
+	transition: all .2s ease
+	&:hover
+		background-color: darken($grey2, 20%)
+	img, svg
+		position: absolute
+		top: 10px
+		left: 50%
+		transform: translateX(-50%)
+		transition: all .2s ease
+	svg
+		polygon
+			fill: #fff
+	span
+		position: absolute
+		top: 34px
+		left: 50%
+		transform: translateX(-50%)
+		color: #fff
+	&.display
+		display: block
+	&.visible
+		opacity: 1
+	&.back
+		img, svg
+			transform: translateX(-50%) rotate(-180deg)
+
+a.btn
+	&:hover, &:active, &:focus
+		span
+			text-decoration: underline
+
++media(md)
+	.btn-to-top
+		transform: translateX(#{_col(6, md) - 84px})
+
++media(sm)
+	.btn-to-top
+		transform: translateX(#{_col(6, sm) - 84px})
+
++media(xs)
+	.btn-to-top
+		display: none
+
+/* Элементы форм */
+.form-field
+	position: relative
+	&__input,
+	&__textarea
+		width: 100%
+		border: 1px solid $grey3
+		padding: 0 20px
+		outline: none !important
+		&::placeholder
+			font-size: 14px
+			color: $grey2
+	&__input
+		height: 40px
+	&__textarea
+		padding-top: 10px
+		padding-bottom: 10px
+		height: 140px
+
+/* Чекбокс */
+.form-checkbox
+	$p: &
+	&__input
+		display: none
+		&:checked + #{$p}__label
+			&::after
+				opacity: 1
+	&__label
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		padding-left: 30px
+		cursor: pointer
+		margin: 0
+		&::before,
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		&::before
+			left: 0
+			width: 10px
+			height: 10px
+			border: 1px solid $ac
+		&::after
+			left: 2px
+			width: 6px
+			height: 6px
+			background-color: $ac
+			opacity: 0
+			transition: all .2s ease
+
+/* Select */
+.formselect-radio
+	$p: &
+	position: relative
+	z-index: 1
+	&.open
+		z-index: 15
+		#{$p}__list
+			display: block
+	&__value
+		width: 100%
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		cursor: pointer
+		&_with-arrow
+			&_up
+				&::after
+					transform: rotate(180deg)
+			&::after
+				content: ""
+				position: absolute
+				right: 30px
+				top: 10px
+				display: block
+				height: 20px
+				width: 20px
+				background: url("#{$url-img}/ui-icon/dropdown-near.svg") 50% 50%
+	&__list
+		position: absolute
+		z-index: 1
+		top: calc(100% + 4px)
+		left: 0
+		display: none
+		width: 100%
+		max-height: 25vh
+		overflow: auto
+		margin: 0
+		padding: 0
+		background-color: #fff
+		border-radius: 4px
+		box-shadow: 0 10px 22px 0 rgba(0, 0, 0, .17)
+		ul
+			margin: 0
+			padding: 0
+		a
+			padding: 0 16px
+	&__search
+		position: relative
+		display: block
+		width: 100%
+		height: 40px
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		list-style-type: none
+		width: 100%
+		height: 40px
+		margin: 0
+		padding: 0
+		line-height: 20px
+		cursor: pointer
+		transition: all .2s ease
+		input[type="radio"]
+			display: none
+		label
+			display: flex
+			align-items: center
+			width: 100%
+			height: 100%
+			padding: 0 16px
+			margin-bottom: 0
+			cursor: pointer
+		&:hover, &:focus
+			background: $grey4
+			text-decoration: none
+		&.active
+			background: $grey4
+		&_with-arrow
+			&_up
+				&::after
+					transform: rotate(180deg)
+			&.active
+				&::after
+					content: ""
+					position: absolute
+					right: 10px
+					top: 10px
+					display: block
+					height: 20px
+					width: 20px
+					background: url("#{$url-img}/ui-icon/dropdown-near.svg") 50% 50%
+
+.formselect-search
+	$p: &
+	&__img
+		position: absolute
+		right: 0
+		top: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		background-color: transparent
+		svg
+			display: block
+			width: 24px
+			height: 24px
+			transition: all .2s ease
+			&:hover
+				g > g
+					fill: #bfbfbf
+	&__search-field
+		display: block
+		width: 100%
+		height: 100%
+		padding: 0 40px 0 16px
+		font-size: 14px
+		line-height: 17px
+		border: 2px solid transparent
+		border-radius: 4px
+		outline: none !important
+		background-color: #fff
+		color: $grey1
+		transition: border-color .2s ease
+		&:focus, &:hover
+			border-color: #bfbfbf
+	&__nothing-found
+		display: none
+		align-items: center
+		width: 100%
+		height: 40px
+		margin: 0
+		padding: 0 16px
+		font-size: 14px
+		line-height: 16px
+		background-color: #fff
+		border-radius: 4px
+		box-shadow: 0 10px 22px 0 rgba(0, 0, 0, .17)
+
+.form-box
+	display: flex
+	align-items: center
+	height: 40px
+	padding: 0 16px
+	outline: none !important
+	border-radius: 4px
+	border: solid 2px $grey3
+	background-color: #ffffff
+	font-size: 14px
+	line-height: 17px
+	color: $grey1
+	transition: all .2s ease
+
+.form-wraper
+	&:hover,
+	&.open
+		.form-box
+			border-color: #bfbfbf
+		svg
+			transition: all .2s ease
+			path
+				stroke: #bfbfbf
+	&__box
+		height: 40px
+	span
+		display: block
+		font-size: 14px
+		line-height: 17px
+	&__button
+		position: absolute
+		right: 0
+		top: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 32px
+		height: 40px
+		padding: 0
+		border: none
+		background-color: transparent
+		outline: none !important
+		cursor: pointer
+
+.catalog-sort
+	$p: &
+	min-height: 40px
+	display: flex
+	align-items: center
+	&_right
+		justify-content: flex-end
+		min-width: 182px
+	&__title
+		margin: 0
+		margin-right: 20px
+	&__select
+		position: relative
+		z-index: 1
+		width: 100%
+		max-width: 182px
+		&_short
+			max-width: 78px
+			margin-right: 0
+
++media(sm)
+	.catalog-sort
+		$p: &
+		&_column
+			width: 100%
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			#{$p}__title
+				margin-bottom: 8px
+				margin-right: 0
+
++media(xs)
+	.catalog-sort
+		&_right
+			justify-content: flex-start
+		&__title
+			margin-right: 0
+			margin-bottom: 8px
+
+.catalog-counter
+	min-height: 40px
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
++media(sm)
+	.catalog-counter
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-end
+
+/* Для Firefox стрелки инпута */
+input[type="number"]
+	-moz-appearance: textfield
+	padding: 0
+	border-radius: 0
+
+/* Для Chrome стрелки инпута */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	margin: 0
+
+// Новая кнопка и анимация
+.btn-add-product
+	position: relative
+	display: inline-flex
+	align-items: center
+	justify-content: space-between
+	width: 117px
+	height: 40px
+	outline: none !important
+	overflow: hidden
+	border: 2px solid
+	border-image-source: radial-gradient(circle at 0 0, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 79%, #f3c02c)
+	border-image-slice: 1
+	box-sizing: border-box
+	padding-left: 10px
+	padding-right: 6px
+	color: #582765
+	background-color: transparent
+	cursor: pointer
+	font-size: 14px
+	line-height: 17px
+	transition: all .5s ease
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: -1px
+		z-index: 0
+		display: block
+		width: 117px
+		height: 105%
+		opacity: 0
+		border-image-slice: 1
+		border-image-source: radial-gradient(circle at 0 0, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 89%, #f3c02c)
+		background-image: radial-gradient(circle at 0 0, #1d2b6e, #7b245f 23%, #d62626 40%, #d62626 58%, #ff871c 89%, #f3c02c)
+	path
+		&:nth-child(2)
+			fill: #582765
+			transition: fill .5s ease
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #fff
+		span,
+		svg
+			z-index: 1
+		path
+			&:nth-child(2)
+				fill: #fff
+		&::before
+			animation: opacity-width .8s ease-in-out forwards
+
++media-only(md)
+	.btn-add-product_md
+		justify-content: center
+		padding: 0
+		width: 40px
+		span
+			display: none
+
+@keyframes opacity-width
+	0%
+		width: 200%
+		opacity: 0
+	50%
+		width: 200%
+		opacity: 1
+	100%
+		width: 105%
+		opacity: 1
+
+.gradient-btn
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 40px
+	padding: 0 20px
+	border: none
+	outline: none !important
+	border-radius: 4px
+	color: #fff
+	background-image: linear-gradient(to right, #de0f29, #ff5c25)
+	cursor: pointer
+	overflow: hidden
+	span
+		z-index: 2
+		display: block
+		font-size: 16px
+		line-height: 20px
+		font-weight: 600
+	&::before
+		content: ""
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: block
+		opacity: 0
+		background-image: linear-gradient(to right, #ff2020, #ff8c00)
+		transition: opacity .2s ease
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none
+		&::before
+			opacity: 1
+
+.error-text
+	font-size: 14px
+	line-height: 16px
+	color: $ac

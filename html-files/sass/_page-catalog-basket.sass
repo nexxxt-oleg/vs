@@ -1,0 +1,481 @@
+.page-catalog-basket
+	&__title
+		margin-bottom: 8px
+	&__quantity
+		display: block
+		width: 100%
+		margin-bottom: 16px
+		text-align: center
+		font-size: 14px
+		line-height: 16px
+	&__basket
+		margin-bottom: 36px
+	&__clear-block
+		display: block
+		width: calc(#{_col(2, lg)} - 3px)
+		margin-left: calc(#{_col(7, lg)} + 3px)
+	&__clear
+		display: inline-flex
+		align-items: center
+		justify-content: flex-end
+		padding: 0
+		border: none
+		background: transparent
+		outline: none !important
+		cursor: pointer
+		&:hover
+			text-decoration: none
+			span
+				color: $ac
+			svg
+				path
+					fill: $ac
+		span
+			display: block
+			margin-right: 8px
+			font-size: 15px
+			line-height: 24px
+			color: $ac
+		svg
+			display: block
+			width: 24px
+			height: 24px
+			path
+				transition: fill .2s ease
+
++media(md)
+	.page-catalog-basket
+		&__clear-block
+			width: calc(#{_col(3, md)} - 34px)
+			margin-left: calc(#{_col(5, md)} + 34px)
+
++media(sm)
+	.page-catalog-basket
+		&__title
+			margin-bottom: 16px
+		&__quantity
+			&_right
+				padding-right: 16px
+				text-align: right
+		&__clear-block
+			width: calc(#{_col(3, sm)} - 7px)
+			margin-left: calc(#{_col(9, sm)} + 7px)
+
++media(xs)
+	.page-catalog-basket
+		&__clear-block
+			width: auto
+			margin-left: auto
+			text-align: right
+
+.pc-basket
+	&__body
+		width: 100%
+	&__row
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		width: 100%
+		min-height: 96px
+		padding: 8px 0
+		border-top: 1px solid $grey3
+		border-bottom: 1px solid $grey3
+		&:not(:first-child)
+			border-top: none
+	&__prop-col
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		width: calc(#{_col(4, lg)} - 24px)
+	&__img-col,
+	&__name-col,
+	&__price-col,
+	&__amount-col,
+	&__price-full-col,
+	&__del-col,
+	&__block-cnt
+		display: flex
+	&__img-col,
+	&__name-col,
+	&__del-col,
+	&__amount-col,
+	&__block-cnt,
+	&__price-col
+		align-items: center
+	&__price-col,
+	&__amount-col,
+	&__price-full-col,
+	&__img-col,
+	&__del-col
+		justify-content: center
+	&__img-col
+		width: calc(#{_col(1, lg)} - 24px)
+		margin-right: 24px
+	&__name-col
+		justify-content: flex-start
+		width: calc(#{_col(3, lg)} - 24px)
+	&__name
+		display: block
+		&_del
+			span
+				opacity: .3
+		span
+			display: block
+			width: 100%
+			line-height: 24px
+			font-size: 15px
+	&__amount-col
+		position: relative
+		flex-wrap: wrap
+		width: calc(#{_col(2, lg)} - 24px)
+	&__block-cnt
+		justify-content: space-between
+		width: 102px
+		height: 40px
+	&__price-one-item
+		position: absolute
+		bottom: -20px
+		display: block
+		width: 100%
+		font-size: 14px
+		line-height: 16px
+		text-align: center
+	&__price-col
+		width: calc(#{_col(2, lg)} - 24px)
+		flex-wrap: wrap
+		flex-direction: column
+		span
+			position: relative
+			display: inline-block
+			font-size: 20px
+			line-height: 24px
+			font-weight: 600
+			&:first-child:not(:last-child)
+				margin-bottom: 2px
+				font-size: 14px
+				line-height: 16px
+				&::before
+					content: ""
+					position: absolute
+					top: 6px
+					left: -4px
+					display: block
+					width: calc(100% + 8px)
+					height: 2px
+					background-color: $ac
+					transform: rotate(-10deg)
+	&__del-col
+		width: calc(#{_col(1, lg)} - 24px)
+		&_more-one
+			margin-bottom: 20px
+	&__restore-col
+		display: flex
+		justify-content: center
+	&__img
+		display: block
+		width: 80px
+		height: 80px
+		object-fit: contain
+		object-position: 50% 50%
+		&_del
+			opacity: .3
+	&__del
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 30px
+		height: 30px
+		padding: 0
+		border: none
+		outline: none !important
+		background-color: transparent
+		cursor: pointer
+		&:hover
+			svg
+				path
+					fill: $ac
+		svg
+			display: block
+			object-fit: contain
+			object-position: 50% 50%
+			path
+				transition: fill .2s ease
+	&__notice
+		display: block
+		width: calc(#{_col(3, lg)} - 28px)
+		font-size: 15px
+		line-height: 24px
+	&__removed
+		display: block
+		font-size: 15px
+		line-height: 24px
+		color: $ac
+		transition: all .3s ease
+		&:hover
+			color: $ac
+	&__removed-container
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		height: 96px
+		padding-right: 8px
+		overflow: hidden
+	&__right-block
+		position: sticky
+		top: 60px
+		display: block
+
++media(md)
+	.pc-basket
+		&__prop-col
+			width: calc(#{_col(3, md)} - 24px)
+		&__img-col
+			width: calc(#{_col(1, md)} - 24px)
+		&__amount-col
+			width: calc(#{_col(2, md)} - 48px)
+		&__name-col
+			width: _col(3, md)
+		&__price-col
+			width: calc(#{_col(2, md)} - 48px)
+		&__notice
+			width: calc(#{_col(3, md)} - 20px)
+		&__del-col
+			width: _col(1, md)
+
++media(sm)
+	.pc-basket
+		&__prop-col
+			width: calc(#{_col(6, sm)} - 24px)
+			margin-right: 24px
+		&__img-col
+			width: calc(#{_col(2, sm)} - 44px)
+		&__amount-col
+			width: calc(#{_col(2, sm)} - 24px)
+		&__name-col
+			width: _col(4, sm)
+		&__price-col
+			width: _col(3, sm)
+		&__notice
+			width: _col(4, sm)
+		&__del-col
+			width: _col(1, sm)
+			justify-content: flex-end
+		&__right-block
+			position: relative
+			top: auto
+			margin: 40px auto 48px
+
++media(xs)
+	.pc-basket
+		&__row
+			height: auto
+			padding-bottom: 24px
+			padding-top: 8px
+		&__removed-container
+			position: relative
+			flex-wrap: wrap
+			height: 136px
+			padding-right: 0
+		&__prop-col
+			width: 100%
+			margin-right: 0
+			margin-bottom: 8px
+		&__img-col
+			width: calc(#{_col(3, xs)} - 18px)
+		&__name-col
+			width: calc(#{_col(9, xs)} - 24px)
+		&__img
+			width: 56px
+			height: 56px
+		&__amount-col
+			width: calc(#{_col(4, xs)} + 4px)
+		&__price-col
+			width: calc(#{_col(6, xs)} - 12px)
+			align-items: flex-end
+			span
+				font-size: 18px
+		&__notice
+			width: _col(4, xs)
+		&__del-col
+			width: calc(#{_col(2, xs)} - 12px)
+
+.basket-right-block
+	$p: &
+	width: 100%
+	padding: 27px 32px 32px
+	background-color: $grey4
+	border-radius: 4px
+	span
+		display: block
+		font-size: 15px
+		line-height: 20px
+	&__on-head,
+	&__weight,
+	&__delivery,
+	&__discount,
+	&__price-full
+		display: flex
+		justify-content: space-between
+	&__on-head
+		margin-bottom: 24px
+	&__title
+		display: block
+		font-size: 20px
+		line-height: 24px
+		font-weight: 700
+	&__change
+		display: block
+		font-size: 16px
+		line-height: 20px
+		color: $ac
+		cursor: pointer
+		outline: none !important
+		border: none
+		&:hover, &:focus, &:active
+			color: $ac
+			text-decoration: none
+	&__head
+		display: block
+		margin-bottom: 20px
+		span
+			display: block
+			font-size: 16px
+			line-height: 20px
+			font-weight: 600
+		a
+			display: flex
+			justify-content: space-between
+			&:hover, &:focus, &:active
+				cursor: default
+				text-decoration: none
+	&__weight
+		margin-bottom: 8px
+	&__delivery
+		margin-bottom: 16px
+		span
+			&:last-child
+				max-width: 115px
+				text-align: right
+	&__weight,
+	&__delivery
+		padding-bottom: 12px
+		border-bottom: solid 1px $grey3
+		box-sizing: border-box
+	&__body
+		position: relative
+		display: block
+		width: 100%
+		padding-bottom: 24px
+		margin-bottom: 24px
+		border-bottom: solid 1px $grey3
+		box-sizing: border-box
+	&__display-block
+		display: none
+		&.display
+			display: block
+	&__if
+		display: block
+		margin-bottom: 8px
+		font-size: 14px
+		line-height: 16px
+	&__input-block
+		position: relative
+		display: block
+		width: 100%
+		height: 40px
+		margin-bottom: 24px
+		&_mb-16
+			margin-bottom: 16px
+		&:hover
+			#{$p}__input
+				border: solid 2px #bfbfbf
+	&__input
+		display: block
+		width: 100%
+		height: 100%
+		padding: 0 36px 0 18px
+		font-size: 15px
+		line-height: 20px
+		box-sizing: border-box
+		border: solid 2px $grey3
+		border-radius: 4px
+		outline: none !important
+		background-color: #fff
+		color: $grey1
+		transition: all .2s ease
+		&:focus
+			border: solid 2px #bfbfbf
+	&__send-promo
+		position: absolute
+		right: 2px
+		top: 2px
+		display: block
+		width: 36px
+		height: 36px
+		padding: 0
+		outline: none !important
+		border: none
+		background-color: transparent
+		cursor: pointer
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: 50% 50%
+	&__success
+		display: block
+		margin-top: 8px
+		font-size: 14px
+		line-height: 16px
+	&__one-more
+		display: block
+		margin-bottom: 24px
+		font-size: 14px
+		line-height: 16px
+		color: $ac
+		text-decoration: underline
+		&:hover, &:focus, &:active
+			color: $ac
+	&__discount
+		padding-top: 18px
+		border-top: solid 1px $grey3
+		span
+			display: block
+			font-size: 16px
+			line-height: 20px
+			font-weight: 600
+			&:last-child
+				color: $ac
+	&__price-full
+		span
+			display: block
+			font-size: 20px
+			line-height: 24px
+			font-weight: 700
+	&__send-btn
+		margin-top: 24px
+		width: 100%
+
++media(sm)
+	.basket-right-block
+		max-width: calc(#{_col(8, sm)} - 24px)
+		padding: 32px 32px 24px
+		&__head
+			margin-bottom: 28px
+
++media(xs)
+	.basket-right-block
+		display: block
+		width: 100%
+		padding: 27px 32px 32px
+		&__head
+			margin-bottom: 24px
+		&__body
+			margin-bottom: 16px
+			padding-bottom: 16px
+			border-bottom: solid 1px $grey3

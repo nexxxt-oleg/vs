@@ -1,0 +1,2902 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Каталог с фильтром</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!--	<meta name="google-site-verification" content="" />-->
+	<!--	<meta name="yandex-verification" content="" />-->
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Цвет мобильного браузера -->
+	<!--	<meta name="theme-color" content="#000">-->
+	<!--	<meta name="msapplication-navbutton-color" content="#000">-->
+	<!--	<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
+
+	<link rel="stylesheet" href="css/new-bootstrap.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/new-main.css">
+
+	<script src="js/libs/jquery-3.2.1.min.js"></script>
+	<script src="js/libs/jquery.smoothscroll.js"></script>
+	<script src="js/libs/slick.min.js"></script>
+	<script src="js/libs/switchPopup.js"></script>
+	<script src="js/common-new.js"></script>
+	<script src="js/page-home.js"></script>
+</head>
+
+<body>
+	<div class="root">
+
+			<header class="header">
+					<div class="header__top">
+						<div class="new-container">
+							<div class="new-row">
+								<div class="new-col-sm-8 new-col-md-7 new-col-lg-5">
+									<div class="header__link">
+										<a href="#">Быстрая доставка</a>
+										<a href="#">Удобная оплата</a>
+										<a href="#">Легкий возврат</a>
+										<a href="#">Скидки</a>
+									</div>
+								</div>
+								<div class="new-col-sm-4 new-col-md-5 new-offset-lg-2 new-col-lg-5">
+									<div class="header__contacts">
+										<a href="#" class="header__phone">+7 (978) 00 70 444</a>
+										<div class="header__login">
+											<a href="#">Вход</a>
+											<a href="#">Регистрация</a>
+											<img src="img/header/user.svg" alt="">
+											<a href="#"><img src="img/header/user.svg" alt=""></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__middle">
+						<div class="new-container">
+							<div class="new-row">
+								<div class="new-col-6 new-col-sm-3 new-col-lg-2">
+									<a href="#" class="header__logo">
+										<img src="img/header/logo.svg" alt="Вечная стройка">
+									</a>
+								</div>
+								<div class="new-col-6 new-col-sm-3 new-col-lg-2 header__middle_xs">
+									<div class="header__btn-catalog">
+										<button class="header__burger btn-burger btn js-btn-burger close">
+											<div class="btn-burger__icon">
+												<span></span>
+											</div>
+											<span class="btn-burger__desc">Каталог</span>
+										</button>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-3 new-col-lg-5 header__middle_xs">
+									<div class="header__search">
+										<form action="" class="search-form">
+											<div class="search-form__field">
+												<input type="search" class="search-form__input" placeholder="Поиск…">
+												<button class="search-form__btn" type="submit">
+													<img src="img/ui-icon/search.svg" class="img-svg">
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-3 new-col-lg-3 header__middle_xs">
+									<div class="header__btns header-btns">
+										<div class="header-btns__wrap">
+											<a href="#" class="header-btns__link">
+												<img src="img/ui-icon/favorite.svg" alt="" class="header-btns__icon">
+												<img src="img/ui-icon/favorite-fill.svg" alt="" class="header-btns__icon">
+											</a>
+											<a href="#" class="header-btns__link">Избранное</a>
+										</div>
+										<div class="header-btns__wrap">
+											<a href="#" class="header-btns__link" data-count="2">
+												<img src="img/ui-icon/basket.svg" alt="" class="header-btns__icon header-btns__icon_left">
+												<img src="img/ui-icon/basket-fill.svg" alt="" class="header-btns__icon">
+											</a>
+											<a href="#" class="header-btns__link">Корзина</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="new-menu js-menu display">
+						<div class="new-container">
+							<div class="new-row">
+								<div class="new-col-12 new-offset-sm-2 new-col-sm-4 new-offset-lg-1 new-col-lg-3">
+									<ul class="new-menu__left left-menu">
+										<li class="left-menu__item">
+											<button class="left-menu__link active">Стройматериалы</button>
+											<div class="new-menu__middle js-new-menu-middle display">
+												<a href="#" class="new-menu__middle-title h3-new">
+													Стройматериалы
+													<span>
+														<img src="img/ui-icon/arrow-right.svg" alt="" class="img-svg">
+													</span>
+												</a>
+												<div class="new-menu__blocks">
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/sukhie_smesi/" class="new-menu__subtitle h5-new">Сухие смеси</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/gidroizolyatsionnye_smesi/">Гидроизоляционные смеси</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/klei_dlya_plitki_kamnya_i_izolyatsii/">Клеи для плитки, камня и изоляции</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/melkaya_fasovka/">Мелкая фасовка</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/montazhnye_i_kladochnye_smesi/">Монтажные и кладочные смеси</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/smesi_dlya_pola/">Смеси для пола</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/smesi_dlya_teploizolyatsii/">Смеси для теплоизоляции</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/sypuchie_smesi_tsement_pesok_shcheben/">Сыпучие смеси (цемент, песок, щебень)</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/shpaklevki/">Шпаклевки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sukhie_smesi/shtukaturki/">Штукатурки</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/" class="new-menu__subtitle h5-new">Строение стен и перегородок</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/armatura_kompozitnaya/">Арматура композитная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/armopoyas/">Армопояс</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/gazobeton/">Газобетон</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/gipsokarton_/">Гипсокартон</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/kirpich/">Кирпич</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/krymskiy_kirpich/">Крымский кирпич</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/magnezitovaya_plita/">Магнезитовая плита</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/reyki_mayachnye/">Рейки маячные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/serpyanki_dlya_gipsokartona_i_lenty_malyarnye/">Серпянки для гипсокартона и ленты малярные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/serpyanki_shtukaturnye_shirina_1m/">Серпянки штукатурные (ширина 1м)</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stroenie_sten_i_peregorodok/ugly_perforirovannye/">Углы перфорированные</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/krovlya_i_vodostok/" class="new-menu__subtitle h5-new">Кровля и водосток</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/krovlya_i_vodostok/akvastok_drenazhn/">Аквасток-дренажн</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/krovlya_i_vodostok/vodostochnaya_sistema_plastikovaya_/">Водосточная система пластиковая </a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/krovlya_i_vodostok/krovlya_v_nalichii/">Кровля в наличии</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/krovlya_i_vodostok/list_otsinkovannyy/">Лист оцинкованный</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/krovlya_i_vodostok/polikarbonat_komplektuyushchie/">Поликарбонат, комплектующие</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/krovlya_i_vodostok/profnastil_v_nalichii/">Профнастил в наличии</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/krovlya_i_vodostok/shifer_raznyy/">Шифер</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/" class="new-menu__subtitle h5-new">Изоляционные материалы</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/bitumnaya_mastika_praymera/">Битумная мастика, праймера</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/lenty_bitumnye_samokleyushchiesya/">Ленты битумные самоклеющиеся</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/germetiki/">Герметики</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/lenta_uplotnitelnaya/">Лента уплотнительная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/montazhnye_peny/">Монтажные пены</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/paroizolyatsiya_gidroizolyatsiya_vetroizolyatsiya/">Пароизоляция, гидроизоляция, ветроизоляция</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/penoplast/">Пенопласт</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/izolyatsionnye_materialy/utepliteli/">Утеплители</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/grunty_i_dobavki/" class="new-menu__subtitle h5-new">Грунты и добавки</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/grunty_i_dobavki/grunty_akrilovye/">Грунты акриловые</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/grunty_i_dobavki/grunty_antikoroziynye/">Грунты антикорозийные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/grunty_i_dobavki/grunty_biozashchita/">Грунты биозащита</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/grunty_i_dobavki/dobavki_dlya_betona/">Добавки для бетона</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/izvest/" class="new-menu__subtitle h5-new">Известь</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/stolyarnye_i_pilomaterialy/" class="new-menu__subtitle h5-new">Столярные и пиломатериалы</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stolyarnye_i_pilomaterialy/lesomaterialy/">Лесоматериалы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stolyarnye_i_pilomaterialy/listovye_materialy/">Листовые материалы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/stolyarnye_i_pilomaterialy/stolyarnye_izdeliya/">Столярные изделия</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/raskhodnye_materialy/" class="new-menu__subtitle h5-new">Расходные материалы</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/raskhodnye_materialy/meshki/">Мешки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/raskhodnye_materialy/pakety_dlya_prodazhi/">Пакеты для продажи</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/raskhodnye_materialy/poddony_upakovochnaya_tara/">Поддоны, упаковочная тара</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/raskhodnye_materialy/skotch_izolenta/">Скотч, изолента</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/setki_metallicheskie/" class="new-menu__subtitle h5-new">Сетки металлические</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/setki_metallicheskie/setka_metallicheskaya_neotsinkovannaya/">Сетка металлическая неоцинкованная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/setki_metallicheskie/setka_metallicheskaya_otsinkovannaya/">Сетка металлическая оцинкованная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/setki_metallicheskie/setka_rabitsa/">Сетка рабица</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/sredstva_zashchity/" class="new-menu__subtitle h5-new">Средства защиты</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/kaski_naushniki_nakolenniki/">Каски, наушники, наколенники</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/lenta_alyuminevaya_i_signalnaya/">Лента алюминевая и сигнальная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/maski_zashchitnye_respiratory/">Маски защитные, респираторы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/ochki_zashchitnye/">Очки защитные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/perchatki/">Перчатки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/plashch_dozhdevik/">Плащ-дождевик</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/spetsodezhda/">Спецодежда</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/stroymaterialy/sredstva_zashchity/tenty_zashchitnye_plenki/">Тенты, защитные пленки</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/stroymaterialy/truby_asbestotsementnye/" class="new-menu__subtitle h5-new">Трубы асбестоцементные</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Инструмент и оборудование</button>
+											<div class="new-menu__middle js-new-menu-middle display">
+												<a href="#" class="new-menu__middle-title h3-new">
+													Инструмент и оборудование
+													<span></span>
+												</a>
+												<div class="new-menu__blocks">
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/" class="new-menu__subtitle h5-new">Электроинструмент</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/benzogeneratory/">Бензогенераторы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/betonomeshalki/">Бетономешалки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/aksessuary_dlya_elektroinstrumentov/">Аксессуары для электроинструментов</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/bolgarki/">Болгарки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/dreli/">Дрели</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/kleevye_pistolety/">Клеевые пистолеты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/kompressory/">Компрессоры</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/kraskopulty/">Краскопульты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/lazernye_urovni/">Лазерные уровни</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/lobziki/">Лобзики</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/moyki_vysokogo_davleniya/">Мойки высокого давления</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/payalniki_dlya_polipropilenovykh_trub/">Паяльники для полипропиленовых труб</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/perforatory/">Перфораторы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/svarochnye_apparaty/">Сварочные аппараты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/tochilnoe_i_frezernoe_oborudovanie/">Точильное и фрезерное оборудование</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/feny_stroitelnye/">Фены строительные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/shlifmashiny/">Шлифмашины</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/shurupoverty/">Шуруповерты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/elektropily_i_benzopily/">Электропилы и бензопилы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/elektroinstrument/elektrorubanki/">Электрорубанки</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/" class="new-menu__subtitle h5-new">Ручной инструмент</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/napilniki/">Напильники</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/zaklepochniki_zaklepki/">Заклепочники, заклепки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/nabory_instrumentov/">Наборы инструментов</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/otvertki/">Отвертки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/pistolety_sshivateli/">Пистолеты, сшиватели</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/kryuki_dlya_armatury_i_provoloki/">Крюки для арматуры и проволоки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/slesarnyy_instrument/">Слесарный инструмент</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/stolyarnyy_instrument/">Столярный инструмент</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/shpatelya/">Шпателя</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/ruchnoy_instrument/vedra/">Ведра</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/malyarnyy_instrument/" class="new-menu__subtitle h5-new">Малярный инструмент</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/malyarnyy_instrument/valiki/">Валики</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/malyarnyy_instrument/kisti_maklovitsy/">Кисти, макловицы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/malyarnyy_instrument/kyuvety_emkost_dlya_raskatki_valika/">Кюветы (Емкость для раскатки валика)</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/malyarnyy_instrument/trafarety/">Трафареты</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/izmeritelno_razmetochnyy_instrument/" class="new-menu__subtitle h5-new">Измерительно-разметочный инструмент</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/izmeritelno_razmetochnyy_instrument/ruletki/">Рулетки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/izmeritelno_razmetochnyy_instrument/ugolniki_lineyki/">Угольники, линейки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/izmeritelno_razmetochnyy_instrument/urovni/">Уровни</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/izmeritelno_razmetochnyy_instrument/razmetochnyy_instrument/">Разметочный инструмент</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/" class="new-menu__subtitle h5-new">Газосварочное оборудование</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/gorelki/">Горелки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/zazhim_klemmy_magnitnye_derzhateli/">Зажим, клеммы, магнитные держатели</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/kabel_provoloka_shlang/">Кабель, проволока, шланг</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/lampa_payalnaya/">Лампа паяльная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/reduktor/">Редуктор</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/rezaki/">Резаки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/elektrododerzhatel/">Электрододержатель</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/karbid/">Карбид</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/gazosvarochnoe_oborudovanie/elektrody/">Электроды</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/shtukaturnyy_instrument/" class="new-menu__subtitle h5-new">Штукатурный инструмент</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shtukaturnyy_instrument/pravila/">Правила</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shtukaturnyy_instrument/gladilki/">Гладилки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shtukaturnyy_instrument/zatirki_tyerki/">Затирки, тёрки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shtukaturnyy_instrument/masterki_kelmy_kovshi_rasshivki/">Мастерки, Кельмы,Ковши,Расшивки</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/abrazivnye_materialy/" class="new-menu__subtitle h5-new">Абразивные материалы</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/abrazivnye_materialy/setki_abrazivnye_gubki_remni/">Сетки абразивные,губки,ремни</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/abrazivnye_materialy/shlifshkurka/">Шлифшкурка</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/abrazivnye_materialy/shchetki_po_metallu_kratsovki/">Щетки по металлу, крацовки</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/buleryany/" class="new-menu__subtitle h5-new">Булерьяны</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/instrument_dlya_rezki/" class="new-menu__subtitle h5-new">Инструмент для резки</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/instrument_dlya_rezki/steklorezy_truborezy/">Стеклорезы, труборезы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/instrument_dlya_rezki/nozhi_lezviya_skrebki/">Ножи, лезвия, скребки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/instrument_dlya_rezki/nozhnitsy/">Ножницы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/instrument_dlya_rezki/nozhovki_pily_polotna_/">Ножовки, пилы, полотна</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/instrument_dlya_rezki/plitkorezy/">Плиткорезы</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/instrumenty_dlya_ukladki_plitki/" class="new-menu__subtitle h5-new">Инструменты для укладки плитки</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/instrumenty_dlya_ukladki_plitki/klinya/">Клинья</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/instrumenty_dlya_ukladki_plitki/krestiki/">Крестики</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/stremyanki_lestnitsy/" class="new-menu__subtitle h5-new">Стремянки, Лестницы</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/tachki_i_komplektuyushchie/" class="new-menu__subtitle h5-new">Тачки и комплектующие</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/" class="new-menu__subtitle h5-new">Шпагаты. Веревки. Канаты. Шнуры. Цепи.</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/verevki/">Веревки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/kanaty/">Канаты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/nit/">Нить</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/styazhka_bagazhnaya/">Стяжка багажная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/trosa/">Троса</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/fal/">Фал</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/tsepi/">Цепи</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/shnur/">Шнур</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/instrument_i_oborudovanie/shpagaty_verevki_kanaty_shnury_tsepi/shpagaty_dzhutovye_polipropilenovye/">Шпагаты джутовые, полипропиленовые</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Двери и комплектующие</button>
+											<div class="new-menu__middle js-new-menu-middle display">
+												<a href="#" class="new-menu__middle-title h3-new">
+													Двери и комплектующие
+													<span></span>
+												</a>
+												<div class="new-menu__blocks">
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/" class="new-menu__subtitle h5-new">Двери входные</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_linedoor_1/">Двери LINEDOOR</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_milano/">Двери MILANO</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_tritet/">Двери ТРИТЭТ</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_arma/">Двери АРМА</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_ferroni/">Двери FERRONI</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_tandoor/">Двери TANDOOR</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_torex/">Двери TOREX</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_bunker/">Двери БУНКЕР</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_vkhodnye/dveri_promet/">Двери ПРОМЕТ</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/" class="new-menu__subtitle h5-new">Двери межкомнатные</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_velldoris/">Двери VELLDORIS</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_novyy_stil_/">Двери НОВЫЙ СТИЛЬ</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_linedoor/">Двери LINEDOOR</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_tandoor_1/">Двери TANDOOR</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_vladimirskaya_fabrika_dverey/">Двери ВЛАДИМИРСКАЯ ФАБРИКА ДВЕРЕЙ</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_garmoshka/">Двери ГАРМОШКА</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_kovrovskaya_dvernaya_kompaniya/">Двери КОВРОВСКАЯ ДВЕРНАЯ КОМПАНИЯ</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_kovrovskaya_fabrika_dverey/">Двери КОВРОВСКАЯ ФАБРИКА ДВЕРЕЙ</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_maksimum/">Двери МАКСИМУМ</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/rasprodazha_dveri/">РАСПРОДАЖА Двери</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/dveri_mezhkomnatnye/dveri_stolyarnye/">Двери СТОЛЯРНЫЕ</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/" class="new-menu__subtitle h5-new">Замки, комплектующие и аксессуары</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/zavertki_nakladki/">Завертки, накладки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/zamki_vreznye/">Замки врезные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/zamki_navesnye/">Замки навесные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/knobsety/">Кнобсеты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/tsilindry/">Цилиндры</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/shpingalety_zasovy/">Шпингалеты, засовы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/zamki_nakladnye/">Замки накладные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/otvetnye_planki/">Ответные планки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/zamki_komplektuyushchie_i_aksessuary/ruchki_dvernye/">Ручки дверные</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/" class="new-menu__subtitle h5-new">Коробки, наличники и доборные планки</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_novyy_stil_/">Комплектующие Новый Стиль </a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_kfd_verda/">Комплектующие КФД VERDA</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_vladimirskaya_fabrika_dverey/">Комплектующие Владимирская Фабрика Дверей</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_dveri_geometriya/">Комплектующие Двери Геометрия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_linedoor/">Комплектующие LINEDOOR</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_kdk_platan/">Комплектующие КДК Платан</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_kfd_kovrov_/">Комплектующие КФД Ковров </a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_maksimum/">Комплектующие Максимум</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_kdk_modeli_platan/">Комплектующие КДК Модели Платан</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_omis/">Комплектующие Омис</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_stolyarka/">Комплектующие Столярка</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/komplektuyushchie_tandoor/">Комплектующие TANDOOR</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/korobki_nalichniki_i_dobornye_planki/rasprodazha_pogonazh/">Распродажа Погонаж</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/dveri_i_komplektuyushchie/furnitura_dlya_dverey/" class="new-menu__subtitle h5-new">Фурнитура для дверей</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/furnitura_dlya_dverey/glazki_kryuchki_tsepochki_pruzhiny/">Глазки, крючки, цепочки, пружины</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/furnitura_dlya_dverey/nomerki_na_dveri/">Номерки на двери</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/furnitura_dlya_dverey/petli/">Петли</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/furnitura_dlya_dverey/dovodchiki/">Доводчики</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/furnitura_dlya_dverey/razdvizhnaya_sistema/">Раздвижная</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/dveri_i_komplektuyushchie/furnitura_dlya_dverey/stopora/">Стопора</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/dveri_i_komplektuyushchie/dvernye_zvonki_nochniki/" class="new-menu__subtitle h5-new">Дверные звонки</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Напольные покрытия</button>
+											<div class="new-menu__middle js-new-menu-middle display">
+												<a href="#" class="new-menu__middle-title h3-new">
+													Напольные покрытия
+													<span></span>
+												</a>
+												<div class="new-menu__blocks">
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/napolnye_pokrytiya/linoleum/" class="new-menu__subtitle h5-new">Линолеум</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_forum_rossiya/">Коллекция Juteks Forum Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_glamour_rossiya/">Коллекция Juteks Glamour Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_imperator_rossiya/">Коллекция Juteks Imperator Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_megapolis_rossiya/">Коллекция Juteks Megapolis Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_optimal/">Коллекция Juteks Optimal</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_planeta_rossiya/">Коллекция Juteks Planeta Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_premier_rossiya/">Коллекция Juteks Premier Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_respect_rossiya_km2/">Коллекция Juteks Respect Россия КМ2</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_sirius_km2/">Коллекция Juteks Sirius КМ2</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_strong_plus_rossiya_km2/">Коллекция Juteks Strong Plus Россия КМ2</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_trend_ru_rossiya/">Коллекция Juteks Trend-Ru Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_juteks_venus_rossiya/">Коллекция Juteks Venus Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_polystyl_space/">Коллекция Polystyl Space</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_polystyl_taifun/">Коллекция Polystyl Taifun</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_polystyl_titan/">Коллекция Polystyl Titan</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/kollektsiya_tarkett_/">Коллекция Tarkett </a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/linoleum/linoleum_gomogennyy/">Линолеум гомогенный</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/napolnye_pokrytiya/plintusa/" class="new-menu__subtitle h5-new">Плинтуса</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/plintusa/plintus_tarkett/">Плинтус TARKETT</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/plintusa/plintus_rico_leo/">Плинтус RICO LEO</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/plintusa/plintus_salag_ngf56/">Плинтус SALAG NGF56</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/plintusa/plintus_ideal/">Плинтус ИДЕАЛ</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/napolnye_pokrytiya/porogi/" class="new-menu__subtitle h5-new">Пороги</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/porogi/russkiy_profil/">Русский Профиль</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/porogi/porogi_rico_flex/">Пороги Rico Flex</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/porogi/porogi_ideal/">Пороги Идеал</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/porogi/porogi_luka/">Пороги Лука</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/napolnye_pokrytiya/podlozhka/" class="new-menu__subtitle h5-new">Подложка</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/napolnye_pokrytiya/laminat/" class="new-menu__subtitle h5-new">Ламинат</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/ne_dlya_sayta/">НЕ ДЛЯ САЙТА</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_kastamonu_floorpan_red_1380kh193kh8mm_8sht_v_up_2_131_m_kv_rossiya/">Ламинат Kastamonu Floorpan RED 1380х193х8мм /8шт.в уп./2,131 м.кв./ Россия</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_brilliance/">Ламинат Brilliance</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_grunhof/">Ламинат Grunhof</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_mf/">Ламинат MF</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_amoage/">Ламинат Amoage</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_bode/">Ламинат Bode</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_canada/">Ламинат Canada</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_kastamonu_floorpan_1380kh193kh8mm_8sht_v_up_2_131_m_kv_rossiya/">Ламинат Kastamonu Floorpan</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_kronooriginal_kostello_1285kh192kh8_9sht_v_up_2_2204_m_kv_polsha/">Ламинат KronoOriginal Костелло</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_tarkett/">Ламинат Tarkett</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_evropa/">Ламинат Европа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_otkrytie_2_156_m_kv/">Ламинат Открытие 2,156 м.кв.</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_versale/">Ламинат Versale</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_kareliya_plyus/">Ламинат Карелия Плюс</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/napolnye_pokrytiya/laminat/laminat_sibir/">Ламинат Сибирь</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Плитка</button>
+											<div class="new-menu__middle js-new-menu-middle">
+												<a href="/catalog/plitka/" class="new-menu__middle-title h3-new">
+													Плитка <span></span>
+												</a>
+												<div class="new-menu__blocks">
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/plitka/kollektsii_rabochie/" class="new-menu__subtitle h5-new">Коллекции</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_gran_pale/">Kerama Marazzi Гран Пале</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/ceramica_classic_afina/">Ceramica Classic Afina</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/ceramica_classic_arena/">Ceramica Classic Arena</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/ceramica_classic_efes/">Ceramica Classic Efes</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/ceramica_classic_persey/">Ceramica Classic Persey</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/ceramica_classic_platan/">Ceramica Classic Platan</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/ceramica_classic_etyud/">Ceramica Classic Этюд</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/cersanit_jungle_rasprodazha/">Cersanit Jungle распродажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/cersanit_navi/">Cersanit Navi</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/cersanit_novella_raspradazha/">Cersanit Novella Распрадажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/cersanit_tropikana_raspradazha/">Cersanit Tropikana распрадажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/cersanit_villa/">Cersanit Villa</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/cersanit_zanda_raspradazha/">Cersanit Zanda распрадажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_albori/">Kerama Marazzi Альбори</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_bakkara_bezh/">Kerama Marazzi Баккара беж</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_birmingem_rasprodazha/">Kerama Marazzi Бирмингем распродажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_gratsiya/">Kerama Marazzi Грация</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_dvoryanskoe_gnezdo/">Kerama Marazzi Дворянское Гнездо</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_komfort_rasprodazha/">Kerama Marazzi Комфорт распродажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_luiza/">Kerama Marazzi Луиза</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_tuari/">Kerama Marazzi Туари</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/kerama_marazzi_elegiya_raspradazha/">Kerama Marazzi Элегия распрадажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/lasselsberger_astrid/">LASSELSBERGER Астрид</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/lasselsberger_karrarskiy_mramor/">LASSELSBERGER Каррарский мрамор</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/lasselsberger_ornella/">LASSELSBERGER Орнелла</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/lasselsberger_siena/">LASSELSBERGER Сиена</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/lasselsberger_shebbi_shik/">LASSELSBERGER Шебби шик</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/dekorativnyy_gips/">Декоративный Гипс</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_rabochie/muza/">МУЗА</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/plitka/ugly_dlya_plitki/" class="new-menu__subtitle h5-new">Углы для плитки</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/ugly_dlya_plitki/ugly_d_plitki_7_8mm_ideal/">Углы д/плитки 7-8мм Идеал</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/ugly_dlya_plitki/ugly_d_plitki_9_10mm_ideal/">Углы д/плитки 9-10мм Идеал</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/ugly_dlya_plitki/ugol_d_plitki_7mm/">Угол д/плитки 7мм</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/ugly_dlya_plitki/ugol_d_plitki_8mm/">Угол д/плитки 8мм</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/ugly_dlya_plitki/ugol_d_plitki_9mm/">Угол д/плитки 9мм</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/plitka/zatirki_dlya_shvov/" class="new-menu__subtitle h5-new">Затирки для швов</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/zatirki_dlya_shvov/zatirki_dlya_shvov_ceresit/">Затирки для швов CERESIT</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/zatirki_dlya_shvov/zatirki_dlya_shvov_mapei/">Затирки для швов MAPEI</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/zatirki_dlya_shvov/zatirki_dlya_shvov_deko/">Затирки для швов ДЕКО</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/plitka/napolnaya_plitka/" class="new-menu__subtitle h5-new">Напольная плитка</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/plitka/fasadnaya_plitka/" class="new-menu__subtitle h5-new">Фасадная плитка</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/plitka/kollektsii_pod_zakaz/" class="new-menu__subtitle h5-new">КОЛЛЕКЦИИ/ подзаказ/</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_pod_zakaz/dekorativnyy_kamen_beton_interkam/">Декоративный камень бетон интеркам</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/plitka/kollektsii_pod_zakaz/dekarativnyy_kamen_gips_kapitel/">Декаративный камень гипс Капитель</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<div>
+																<a href="/catalog/plitka/2y_sort_i_ostatki/" class="new-menu__subtitle h5-new">2й сорт и остатки</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Сантехника</button>
+											<div class="new-menu__middle js-new-menu-middle">
+												<a href="/catalog/santekhnika/" class="new-menu__middle-title h3-new">
+													Сантехника <span></span>
+												</a>
+												<div class="new-menu__blocks">
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/moyki_kukhonnye/" class="new-menu__subtitle h5-new">Мойки кухонные</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/potato_2/"> Potato</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/haiba_2/">HAIBA</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/sunklinght/">SUNKLINGHT</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/kitay_0_4_mm/">Китай 0,4 мм</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/kitay_0_6_mm/">Китай 0,6 мм</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/kitay_0_8_mm/">Китай 0,8 мм</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/mixline_1/">MIXLINE</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/moyki_kukhonnye/granitnye_moyki/">Гранитные мойки</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/dushevye_kabiny/" class="new-menu__subtitle h5-new">Душевые кабины</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/dushevye_kabiny/dushevye_kabiny_1/">Душевые кабины</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/dushevye_kabiny/komplektuyushchie_2/">Комплектующие</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/dushevye_kabiny/poddony_akril_metall/">Поддоны</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/mebel_dlya_vannoy/" class="new-menu__subtitle h5-new">Мебель для ванной</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/mebel_dlya_vannoy/tumby_pod_rakovinu/">Тумбы под раковину</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/mebel_dlya_vannoy/shkafy_i_penaly_briz/">Шкафы и пеналы Бриз</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/zerkala/" class="new-menu__subtitle h5-new">Зеркала</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/zerkalnye_shkafy_mirsant/">Зеркальные шкафы MIRSANT</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/zerkalnye_shkafy_style_line/">Зеркальные шкафы STYLE LINE</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/zerkalnye_shkafy_triton/">Зеркальные шкафы Тритон</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/zerkala_dlya_vannoy_komnaty_mixline/">Зеркала для ванной комнаты MixLine</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/kubanskaya_zerkalno_stekolnaya_kompaniya/">Кубанская зеркально-стекольная компания</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/santidon_1/">Сантидон</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/zerkalnye_shkafy_briz/">Зеркальные шкафы Бриз</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/zerkala/zerkala_plastik/">Зеркала пластик</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/vanny/" class="new-menu__subtitle h5-new">Ванны</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vanny/vanny_bas_/">Ванны BAS </a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vanny/vanny_cersanit/">Ванны Cersanit</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vanny/vanny_triton/">Ванны Triton</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vanny/vanny_stalnye/">Ванны стальные</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vanny/vanny_1/">Ванны</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vanny/komplektuyushchie_dlya_vann/">Комплектующие для ванн</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/sanfayans/" class="new-menu__subtitle h5-new">Санфаянс</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/sanfayans/unitazy_i_bide/">Унитазы и биде</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/sanfayans/umyvalniki_i_rakoviny/">Умывальники и раковины</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/smesiteli/" class="new-menu__subtitle h5-new">Смесители</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/potato_3/">POTATO</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/bravat/">BRAVAT</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/troya/">TROYA</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/solone/">SOLONE</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/komplektuyushchie_dlya_smesiteley/">Комплектующие для смесителей</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/g_lauf/">G-Lauf</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/ledeme_1/">LEDEME</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/nami/">NAMI</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/vidima/">VIDIMA</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/zegor/">ZEGOR</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/haiba_1/">HAIBA</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/d_k/">D&amp;K</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/smesiteli_prochie/">Смесители прочие</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/smesiteli/triton_3/">Triton</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/vodoprovod_1/" class="new-menu__subtitle h5-new">Водопровод</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/kzto/">КЗТО</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/armatura_alca_plast/">Арматура Alca plast</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/vodonagrevateli/">Водонагреватели</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/krany_rezbovye/">Краны резьбовые</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/baki_gidroakkumulyatory/">Баки, гидроаккумуляторы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/metalloplastik/">Металлопластик</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/nasosy/">Насосы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/payka_/">Пайка</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/payka_belaya/">Пайка БЕЛАЯ</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/radiatory/">Радиаторы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/fiting_khrom/">Фитинг Хром</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/fiting_latun/">Фитинг латунь</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/gazovye_kolonki_kotly_pod_zakaz/">Газовые колонки, котлы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/kanalizatsiya/">Канализация</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/sifony/">Сифоны</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/vodoprovod_1/filtry/">Фильтры</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/" class="new-menu__subtitle h5-new">Аксуссеары для ванной комнаты и тулета</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/potato_1/">POTATO</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/haiba_/">HAIBA</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/ledeme_/">LEDEME</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/leyki_dlya_dusha/">Лейки для душа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/derzhateli_dlya_polotenets/">Держатели для полотенец</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/moyushchie_i_chistyashchie_sredstva/">Моющие и чистящие средства</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a
+																		href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/polotentsesushiteli/">Полотенцесушители</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/polki_dlya_vannoy_komnaty/">Полки для ванной комнаты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/bumagoderzhateli/">Бумагодержатели</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/vantuzy/">Вантузы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/ershiki_dlya_unitaza_/">Ершики для унитаза </a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/karnizy_dlya_vannoy/">Карнизы для ванной</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/kryshki_dlya_unitaza/">Крышки для унитаза</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/mylnitsy_dozatory_dlya_myla/">Мыльницы, дозаторы для мыла</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/aksessuary_dlya_vannoy_komnaty/">Аксессуары для ванной комнаты</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/podstavki_dlya_zubnykh_prinadlezhnostey/">Подставки для зубных принадлежностей</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/shtory_dlya_vannoy/">Шторыдля ванной</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/santekhnika/aksusseary_dlya_vannoy_komnaty_i_tuleta/tualetnaya_bumaga_polotentsa/">Туалетная бумага, полотенца</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Электротовары</button>
+											<div class="new-menu__middle js-new-menu-middle">
+												<a href="/catalog/elektrotovary/" class="new-menu__middle-title h3-new">
+													Электротовары <span></span>
+												</a>
+												<div class="new-menu__blocks">
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/" class="new-menu__subtitle h5-new">Осветительные приборы и элементы питания</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilniki_leek/">Светильники LEEK</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/batareyki_1/">Батарейки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/lampochki/">Лампочки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/lyustry/">Люстры</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilnik_rasprodazha/">Светильник Распродажа</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilniki_nastolnye_i_novyy_god/">Светильники настольные и новый год</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilniki_general/">Светильники General</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilniki_maxel/">Светильники MAXEL</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilniki_kometa/">Светильники Комета</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilniki_prochie/">Светильники прочие</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/svetilniki_jazzway_navigator/">Светильники JazzWay, Navigator</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/tochechnye_svetilniki/">Точечные светильники</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/trekovoe_osveshchenie/">Трековое освещение</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/osvetitelnye_pribory_i_elementy_pitaniya/fonari/">Фонари</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/kabel_i_montazh/" class="new-menu__subtitle h5-new">Кабель и монтаж</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/kabel_i_montazh/instrument_elektricheskiy/">Инструмент электрический</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/kabel_i_montazh/kabel_kanal_gofra/">Кабель-канал, Гофра</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/kabel_i_montazh/komplektuyushchie_tv/">Комплектующие TV</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/kabel_i_montazh/payalniki_elektricheskie_i_komplektuyushchie/">Паяльники электрические и комплектующие</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/kabel_i_montazh/provoda/">Провода</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/kabel_i_montazh/raspredelitelnye_korobki/">Распределительные коробки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/kabel_i_montazh/sip_komplektuyushchie/">Сип комплектующие</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/ventilyatory_i_aksessuary/" lass="new-menu__subtitle h5-new">Вентиляторы и аксессуары</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/ventilyatory_i_aksessuary/ventilyatory_1/">Вентиляторы</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/ventilyatory_i_aksessuary/reshetki_ventilyatsionnye_i_lyuki/">Решетки вентиляционные и люки</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/ventilyatory_i_aksessuary/ventilyatsionnaya_sistema/">Вентиляционная система</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/ventilyatory_i_aksessuary/vozdukhootvody/">Воздухоотводы</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/" class="new-menu__subtitle h5-new">Розетки, выключатели</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/glossa_tsvet_belyy/">GLOSSA цвет белый</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/atlas_design_bezh/">ATLAS Design беж.</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/glossa_tsvet_alyuminiy/">GLOSSA цвет алюминий</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/glossa_tsvet_bezh/">GLOSSA цвет беж.</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/glossa_tsvet_shokolad/">GLOSSA цвет шоколад</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/legrand_etika/">Legrand Etika</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/schnaider_prima_vstroenaya_sp_rasprodazha/">SCHNAIDER Прима встроеная СП РАСПРОДАЖА</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/schnaider_prima_nakladnaya_op/">SCHNAIDER Прима накладная ОП</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/schnaider_rondo_nakladnaya_op/">SCHNAIDER Рондо накладная ОП</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/viko/">VIKO</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/viko_vera/">Viko VERA</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/rozetki_vyklyuchateli/asorti_rasprodazha/">АСОРТИ РАСПРОДАЖА</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/klimaticheskie_sistemy/" class="new-menu__subtitle h5-new">Климатические системы</a>
+															<ul class="middle-menu">
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/klimaticheskie_sistemy/konditsionery_1/">Кондиционеры</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/klimaticheskie_sistemy/obogrevateli/">Обогреватели</a>
+																</li>
+																<li class="middle-menu__item">
+																	<a href="/catalog/elektrotovary/klimaticheskie_sistemy/teplyy_pol/">Теплый пол</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/modulnoe_oborudovanie/" class="new-menu__subtitle h5-new">Модульное оборудование</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/stabilizatory_napryazheniya/" class="new-menu__subtitle h5-new">Стабилизаторы напряжения</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/raspredelitelnye_shchity/" class="new-menu__subtitle h5-new">Распределительные щиты</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/prochee_elektrotovary/" class="new-menu__subtitle h5-new">Прочее электротовары</a>
+														</div>
+													</div>
+													<div class="new-menu__block">
+														<div>
+															<a href="/catalog/elektrotovary/setevye_filtry_udliniteli/" class="new-menu__subtitle h5-new">Сетевые фильтры, удлинители</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Крепеж и такелаж</button>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Отделочные материалы</button>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Лакокрасочные материалы</button>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Товары для дома</button>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Сад и огород</button>
+										</li>
+										<li class="left-menu__item">
+											<button class="left-menu__link">Под заказ</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+
+		<section class="bread-crumbs-sect">
+			<div class="new-container">
+				<div class="new-row">
+					<div class="new-col-12">
+						<ul class="bread-crumbs">
+							<li>
+								<a href="#">Главная</a>
+							</li>
+							<li>
+								<span>Каталог</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<main class="main">
+			<section class="page-all-sect">
+				<div class="new-container">
+					<div class="new-row">
+						<div class="new-col-8">
+							<div class="page-all-sect__top-title">
+								<span class="h1-new">Стройматериалы</span>
+							</div>
+						</div>
+					</div>
+					<div class="new-row">
+						<div class="new-col-md-4 new-col-lg-3">
+							<div class="filter page-catalog__filter">
+								<form name="_form" action="/catalog/dresses/" method="get" class="smartfilter">
+									<div class="new-row">
+										<div class="new-col-6">
+											<button class="filter__btn-more js-subcategories-btn-more" type="button">
+												<span>Подкатегории</span>
+											</button>
+										</div>
+										<div class="new-col-6">
+											<button class="filter__btn-more js-filter-btn-more" type="button">
+												<img src="img/ui-icon/filter.svg" alt="" class="img-svg">
+												<span>Фильтры</span>
+											</button>
+										</div>
+										<div class="new-col-12 filter__item filter__item_small filter__item_xs filter-box bx-filter-parameters-box bx-active js-filter-categories-hidden">
+											<ul class="filter__categories">
+												<li>
+													<a href="#">Электротовары</a>
+												</li>
+												<li>
+													<a href="#">Крепеж и такелаж</a>
+												</li>
+												<li>
+													<a href="#">Валики</a>
+												</li>
+												<li>
+													<a href="#">Лакокрасочные материалы</a>
+												</li>
+												<li>
+													<a href="#">Товары для дома</a>
+												</li>
+												<li>
+													<a href="#">Электротовары</a>
+												</li>
+												<li>
+													<a href="#">Крепеж и такелаж</a>
+												</li>
+												<li>
+													<a href="#">Отделочные материалы</a>
+												</li>
+												<li>
+													<a href="#">Лакокрасочные материалы</a>
+												</li>
+												<li>
+													<a href="#">Товары для дома</a>
+												</li>
+												<li>
+													<a href="#">Электротовары</a>
+												</li>
+												<li>
+													<a href="#">Крепеж и такелаж</a>
+												</li>
+												<li>
+													<a href="#">Валики</a>
+												</li>
+												<li>
+													<a href="#">Лакокрасочные материалы</a>
+												</li>
+											</ul>
+											<div class="left-menu-accordion">
+												<a href="#" class="left-menu-accordion__title h5-new">Линолеум</a>
+												<ul class="left-menu-accordion__first">
+													<li>
+														<a href="#">Электротовары</a>
+													</li>
+													<li>
+														<a href="#">Крепеж и такелаж</a>
+													</li>
+													<li>
+														<a href="#">Валики</a>
+													</li>
+													<li>
+														<a href="#">Лакокрасочные материалы</a>
+													</li>
+													<li>
+														<a href="#">Товары для дома</a>
+													</li>
+												</ul>
+												<ul class="left-menu-accordion__last">
+													<li>
+														<a href="#">Электротовары</a>
+													</li>
+													<li>
+														<a href="#">Крепеж и такелаж</a>
+													</li>
+													<li>
+														<a href="#">Валики</a>
+													</li>
+													<li>
+														<a href="#">Лакокрасочные материалы</a>
+													</li>
+													<li>
+														<a href="#">Товары для дома</a>
+													</li>
+												</ul>
+												<button type="button" class="left-menu-accordion__more-btn">Показать все</button>
+											</div>
+										</div>
+										<script type="text/javascript">
+											BX.ready(function () {
+												window['trackBarc4ca4238a0b923820dcc509a6f75849b'] = new BX.Iblock.SmartFilter({
+													'leftSlider': 'left_slider_c4ca4238a0b923820dcc509a6f75849b',
+													'rightSlider': 'right_slider_c4ca4238a0b923820dcc509a6f75849b',
+													'tracker': 'drag_tracker_c4ca4238a0b923820dcc509a6f75849b',
+													'trackerWrap': 'drag_track_c4ca4238a0b923820dcc509a6f75849b',
+													'minInputId': 'arrFilter_P1_MIN',
+													'maxInputId': 'arrFilter_P1_MAX',
+													'minPrice': '2999',
+													'maxPrice': '4999',
+													'curMinPrice': '',
+													'curMaxPrice': '',
+													'fltMinPrice': '2999',
+													'fltMaxPrice': '4999',
+													'precision': '',
+													'colorUnavailableActive': 'colorUnavailableActive_c4ca4238a0b923820dcc509a6f75849b',
+													'colorAvailableActive': 'colorAvailableActive_c4ca4238a0b923820dcc509a6f75849b',
+													'colorAvailableInactive': 'colorAvailableInactive_c4ca4238a0b923820dcc509a6f75849b'
+												});
+											});
+										</script>
+										<div class="filter__hidden">
+											<div class="new-col-12 filter__item filter-box bx-filter-parameters-box bx-active">
+												<span class="filter-box__title h3-new">Подбор параметров</span>
+												<span class="filter-box__sub-title h5-new">Цена</span>
+												<div class="filter-box__params filter-slider" data-role="bx_filter_block">
+													<div class="filter-slider__field filter-slider__field_left">
+														<div class="filter-field">
+															<i class="filter-field__ph">от</i>
+															<input class="filter-field__input" type="text" name="arrFilter_P1_MIN"
+																id="arrFilter_P1_MIN" value="" size="5" onkeyup="smartFilter.keyup(this)">
+														</div>
+													</div>
+													<div class="filter-slider__field filter-slider__field_right">
+														<div class="filter-field">
+															<i class="filter-field__ph">до</i>
+															<input class="filter-field__input" type="text" name="arrFilter_P1_MAX"
+																id="arrFilter_P1_MAX" value="" size="5" onkeyup="smartFilter.keyup(this)">
+														</div>
+													</div>
+
+													<div class="filter-slider__slider-track">
+														<div class="filter-track" id="drag_track_c4ca4238a0b923820dcc509a6f75849b">
+															<div class="filter-track__container">
+																<div class="filter-track__part p1"><span>2 999</span></div>
+																<div class="filter-track__part p2"><span>3 499</span></div>
+																<div class="filter-track__part p3"><span>3 999</span></div>
+																<div class="filter-track__part p4"><span>4 499</span></div>
+																<div class="filter-track__part p5"><span>4 999</span></div>
+
+																<div class="filter-track__line-vd" style="left: 21.7021%; right: 31.0638%;" id=""></div>
+																<div class="filter-track__line-vn" style="left: 0%; right: 0%;" id=""></div>
+																<div class="filter-track__line-v" style="left: 21.7021%; right: 31.0638%;" id=""></div>
+																<div class="filter-track__range" id="" style="left: 0%; right: 0%;">
+																	<a class="filter-track__btn left" style="left: 21.7021%;" href="javascript:void(0)"
+																		id=""></a>
+																	<a class="filter-track__btn right" style="right: 31.0638%;" href="javascript:void(0)"
+																		id=""></a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new-col-12 filter__item filter-box bx-filter-parameters-box bx-active">
+												<span class="filter-box__sub-title h5-new">Фасовка</span>
+												<div class="filter-box__params filter-checkbox" data-role="bx_filter_block">
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label bx-active"
+															for="arrFilter_10_1776166634">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1776166634" id="arrFilter_10_1776166634"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="интерьерная">интерьерная&nbsp;(<span
+																		data-role="count_arrFilter_10_1776166634">3</span>)</span>
+															</span>
+														</label>
+													</div>
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label"
+															for="arrFilter_10_1776166775">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1776166775" id="arrFilter_10_1776166775"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="фасадная">фасадная&nbsp;(<span
+																		data-role="count_arrFilter_10_1776166775">2</span>)</span>
+															</span>
+														</label>
+													</div>
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label "
+															for="arrFilter_10_1776166776">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1776166776" id="arrFilter_10_1776166776"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="универсальная">универсальная&nbsp;(<span
+																		data-role="count_arrFilter_10_1776166776">1</span>)</span>
+															</span>
+														</label>
+													</div>
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label "
+															for="arrFilter_10_1776166776">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1776166776" id="arrFilter_10_1776166776"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="текстурная">текстурная&nbsp;(<span
+																		data-role="count_arrFilter_10_1776166776">1</span>)</span>
+															</span>
+														</label>
+													</div>
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label "
+															for="arrFilter_10_1776166776">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1776166776" id="arrFilter_10_1776166776"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="для декоративной отделки">для декоративной
+																	отделки&nbsp;(<span data-role="count_arrFilter_10_1776166776">1</span>)</span>
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="new-col-12 filter__item filter-box bx-filter-parameters-box bx-active">
+												<span class="filter-box__sub-title h5-new">Степень блеска</span>
+												<div class="filter-box__params filter-checkbox" data-role="bx_filter_block">
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label bx-active"
+															for="arrFilter_10_1745166634">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1745166634" id="arrFilter_10_1745166634"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="глянцевая">глянцевая&nbsp;(<span
+																		data-role="count_arrFilter_10_1745166634">3</span>)</span>
+															</span>
+														</label>
+													</div>
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label"
+															for="arrFilter_10_1745166775">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1745166775" id="arrFilter_10_1774566775"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="матовая">матовая&nbsp;(<span
+																		data-role="count_arrFilter_10_1745166775">2</span>)</span>
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="new-col-12 filter__item filter-box bx-filter-parameters-box bx-active">
+												<span class="filter-box__sub-title h5-new">Тип продукта</span>
+												<div class="filter-box__params filter-checkbox" data-role="bx_filter_block">
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label bx-active"
+															for="arrFilter_10_1745166634">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1745166634" id="arrFilter_10_1745166634"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="водоэмульсионная краска">водоэмульсионная
+																	краска&nbsp;(<span data-role="count_arrFilter_10_1745166634">3</span>)</span>
+															</span>
+														</label>
+													</div>
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label"
+															for="arrFilter_10_1745166775">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1745166775" id="arrFilter_10_1774566775"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="краска декоративная">краска
+																	декоративная&nbsp;(<span data-role="count_arrFilter_10_1745166775">2</span>)</span>
+															</span>
+														</label>
+													</div>
+													<div class="filter-checkbox__item">
+														<label data-role="label_arrFilter_10_1776166634" class="filter-checkbox__label"
+															for="arrFilter_10_1745166775">
+															<span class="filter-checkbox__checkbox">
+																<input class="filter-checkbox__input" type="checkbox" value="Y"
+																	name="arrFilter_10_1745166775" id="arrFilter_10_1774566775"
+																	onclick="smartFilter.click(this)">
+																<span class="filter-checkbox__text" title="краска">краска&nbsp;(<span
+																		data-role="count_arrFilter_10_1745166775">2</span>)</span>
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+												<div class="new-col-12 filter__item filter__item_last">
+													<div class="new-row">
+														<div class="new-col-5">
+															<button class="btn btn_new btn_color_gradient filter__set-btn" type="button" id="set_filter"
+																name="set_filter">Показать</button>
+														</div>
+														<div class="new-col-5">
+															<button class="btn btn_new btn_color_transparent filter__del-btn" type="button" id="del_filter"
+																name="del_filter">Сбросить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="new-col-12 new-col-md-8 new-offset-lg-1 new-col-lg-8">
+							<div class="page-catalog__top-navs top-navs new-row">
+									<div class="new-col-sm-6 new-col-md-7 new-col-lg-7">
+										<div class="catalog-sort">
+											<span class="catalog-sort__title">Сортировка:</span>
+											<div class="catalog-sort__select form-wraper formselect-radio">
+												<div class="form-wraper__box formselect-radio__value formselect-radio__value_with-arrow form-box" title="По популярности">
+													<span>По популярности</span>
+												</div>
+												<button type="button" class="form-wraper__button formselect-radio__arrow">
+													<img src="img/ui-icon/dropdown.svg" alt="" class="img-svg">
+												</button>
+												<div class="formselect-radio__list">
+													<a href="#" class="formselect-radio__item formselect-radio__item_with-arrow active">По популярности</a>
+													<a href="#" class="formselect-radio__item formselect-radio__item_with-arrow">По названию</a>
+													<a href="#" class="formselect-radio__item formselect-radio__item_with-arrow">По новизне</a>
+													<a href="#" class="formselect-radio__item formselect-radio__item_with-arrow">По цене</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="new-col-sm-6 new-col-md-5 new-col-lg-5">
+										<div class="catalog-counter top-navs__counter">
+											<span class="catalog-sort__title">Товаров на странице:</span>
+											<div class="catalog-sort__select catalog-sort__select_short form-wraper formselect-radio">
+												<div class="form-wraper__box formselect-radio__value form-box" title="30">
+													<span>30</span>
+												</div>
+												<button type="button" class="form-wraper__button formselect-radio__arrow">
+													<img src="img/ui-icon/dropdown.svg" alt="" class="img-svg">
+												</button>
+												<div class="formselect-radio__list">
+													<a href="#" class="formselect-radio__item active">30</a>
+													<a href="#" class="formselect-radio__item">60</a>
+													<a href="#" class="formselect-radio__item">90</a>
+													<a href="#" class="formselect-radio__item">все</a>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+							<div class="new-row">
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-6 new-col-sm-4 new-col-md-4 new-col-lg-3 col-no-padding">
+									<div class="card-wraper">
+										<div class="card-product">
+											<div class="card-product__top">
+												<div class="card-product__badges">
+													<span class="card-product__badge card-product__badge_color_green d-none">Новинка</span>
+													<span class="card-product__badge card-product__badge_color_red d-none">Акция</span>
+													<span class="card-product__badge card-product__badge_color_violet d-none">Уценка</span>
+													<span class="card-product__badge card-product__badge_discount card-product__badge_color_red">-30%</span>
+												</div>
+												<div class="card-product__preview">
+													<a href="#">
+														<img src="img/drel.png" alt="" class="card-product__img">
+													</a>
+												</div>
+												<button class="card-product__add-favorites">
+													<img src="img/ui-icon/favorite.svg" alt="">
+													<img src="img/ui-icon/favorite-fill.svg" alt="">
+												</button>
+											</div>
+											<div class="card-product__middle">
+												<div class="card-product__price">
+													<span class="card-product__current-price">912 265 ₽</span>
+													<span class="card-product__discount">12 265 ₽</span>
+												</div>
+												<a href="#" class="card-product__info">Шлифмашина угловая DWT WS 08-125V</a>
+												<div class="card-product__code">
+													<span>Код:</span>
+													<span>101 978</span>
+												</div>
+											</div>
+											<div class="card-product__bottom">
+												<div class="card-product__block-cnt block-cnt">
+													<button class="block-cnt__minus"></button>
+													<input class="block-cnt__field" id="" type="number" value="1">
+													<button class="block-cnt__plus"></button>
+												</div>
+												<button class="card-product__basket">
+													<img src="img/ui-icon/basket.svg" alt="" class="img-svg">
+													<span class="h5-new">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="new-row">
+							<div class="new-offset-md-4 new-col-md-8 new-offset-lg-4 new-col-lg-8">
+								<div class="page-catalog__bottom-navs new-row">
+									<div class="new-col-12">
+										<div class="paginations">
+											<a href="#">
+												<img src="/img/ui-icon/arrow-left.svg" class="img-svg">
+											</a>
+											<a href="#" class="active">1</a>
+											<a href="#">2</a>
+											<a href="#">3</a>
+											<a href="#">
+												<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="new-container">
+				<div class="new-row">
+					<div class="new-col-lg-12">
+						<div class="footer__top footer-top">
+							<div class="new-row">
+								<div class="new-col-sm-4 new-col-lg-3">
+									<div class="footer-top__contacts footer-contacts">
+										<div class="footer-contacts__phone">
+											<a href="#">+7 (978) 00-70-111</a>
+											<a href="#">+7 (978) 00-70-222</a>
+										</div>
+										<a href="#" class="footer-contacts__email">office@vs82.ru</a>
+										<a href="#" class="footer-contacts__shops">Наши магазины в Крыму</a>
+										<div class="footer-contacts__soc">
+											<a href="#">
+												<img src="img/social/vk.svg" alt="">
+											</a>
+											<a href="#">
+												<img src="img/social/fb.svg" alt="">
+											</a>
+											<a href="#">
+												<img src="img/social/ok.svg" alt="">
+											</a>
+											<a href="#">
+												<img src="img/social/insta.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="new-col-5 new-col-sm-2 new-offset-lg-1 new-col-lg-1">
+									<div class="footer__info">
+										<a href="#">О компании</a>
+										<a href="#">Реквизиты</a>
+										<a href="#">Партнерам</a>
+										<a href="#">Вакансии</a>
+										<a href="#">Новости</a>
+										<a href="#">Статьи</a>
+									</div>
+								</div>
+								<div class="new-col-7 new-offset-sm-2 new-col-sm-4 new-offset-lg-2 new-col-lg-2">
+									<div class="footer__info">
+										<a href="#">Колеровка</a>
+										<a href="#">Мебель</a>
+										<a href="#">Окна, двери, потолки</a>
+										<a href="#">Система скидок</a>
+										<a href="#">Уценка</a>
+										<a href="#">Условия возврата</a>
+										<a href="#">Объявления</a>
+									</div>
+								</div>
+								<div class="new-col-md-11 new-col-lg-3">
+									<div class="footer-top__wrap">
+										<div class="footer__info footer__info_sm-center">
+											<a href="#">Публичная оферта</a>
+											<a href="#">Политика конфиденциальности</a>
+											<a href="#">Пользовательское соглашение</a>
+										</div>
+										<div class="footer-top__pay footer-pay">
+											<a href="#">
+												<img src="img/cards/visa.svg" alt="" class="footer-pay__img">
+											</a>
+											<a href="#">
+												<img src="img/cards/mastercard.svg" alt="" class="footer-pay__img footer-pay__img_master-card">
+											</a>
+											<a href="#">
+												<img src="img/cards/mir.svg" alt="" class="footer-pay__img">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="new-col-lg-12">
+						<div class="footer__middle footer-middle">
+							<div class="new-row">
+								<div class="new-col-sm-6 new-col-lg-4">
+									<span class="footer-middle__title h2-new">Подпишитесь на рассылку</span>
+									<a href="#" class="footer-middle__link">Новости. Акции. Спецпредложения.</a>
+								</div>
+								<div class="new-col-sm-6 new-col-lg-3">
+									<form class="footer-middle__search footer-search">
+										<input type="email" class="footer-search__input" placeholder="Ваш email">
+										<button class="footer-search__arrow" type="submit">
+											<img src="img/ui-icon/send.svg" alt="" class="img-svg">
+										</button>
+									</form>
+								</div>
+								<div class="new-col-lg-5">
+									<p class="footer-middle__politconf">Подписываясь, я соглашаюсь на обработку персональных данных в
+										соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="new-col-lg-12">
+						<div class="footer__bottom footer-bottom">
+							<div class="new-row">
+								<div class="new-col-12 new-col-sm-6 new-col-lg-4">
+									<p class="footer-bottom__rights">© 2001–2018 Все права защищены. Вечная Стройка</p>
+								</div>
+								<div class="new-col-12 new-offset-sm-2 new-col-sm-4 new-offset-lg-6 new-col-lg-2">
+									<div class="footer-bottom__grch">
+										<span>Разработка сайта:</span>
+										<a href="#">Гречка</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

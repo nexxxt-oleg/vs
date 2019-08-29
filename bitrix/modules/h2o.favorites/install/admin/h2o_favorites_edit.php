@@ -1,0 +1,1 @@
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/h2o.favorites/admin/h2o_favorites_edit.php");?>

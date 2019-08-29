@@ -1,0 +1,5 @@
+<?php
+$MESS['MODULE_YANDEX_METRIKA_NAME'] = 'Яндекс.Метрика';
+$MESS['MODULE_YANDEX_METRIKA_DESC'] = '';
+$MESS['MODULE_YANDEX_METRIKA_VENDOR_NAME'] = 'Art of Bitrix, Россия';
+$MESS['MODULE_YANDEX_METRIKA_VENDOR_URL'] = 'http://bxart.ru';

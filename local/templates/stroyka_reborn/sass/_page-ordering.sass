@@ -1,0 +1,426 @@
+.page-ordering
+	&__card
+		margin-bottom: 40px
+	&__right-block
+		margin-bottom: 40px
+	&__ready-img
+		margin-bottom: 20px
+	&__order-id-title
+		display: block
+		width: 100%
+		height: 50px
+		text-align: center
+		padding: 14px 0
+		margin-bottom: 20px
+		background-color: $grey5
+		color: $grey1
+	&__order-success
+		display: block
+		width: 100%
+		color: #78c025
+		text-align: center
+		margin-bottom: 32px
+	&__description
+		display: block
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+		color: $grey1
+	&__small-text
+		text-align: center
+		width: 368px
+		color: $grey2
+
+.page-ordering-ready
+	&__btn-profile
+		margin-top: 40px
+	
+.po-cards-btm
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	&__prev-btn
+		order: 0
+	&__next-btn
+		order: 2
+		&:first-child
+			margin-left: auto
+	&__politconf
+		order: 1
+		margin-left: auto
+		width: auto
+		max-width: 300px
+		font-size: 11px
+		color: $grey2
+		margin-right: 32px
+	
++media(md)
+	.po-cards-btm
+		&__prev-btn
+			order: 1
+		&__politconf
+			order: 0
+			+b4col($col12)
+			margin-right: 0
+			margin-bottom: 20px
+	
+
+/* Блок с развернутой ценой справа */
+.po-price-block
+	.bx-soa-cart-total
+		background-color: $grey5
+		padding: 20px
+		border: none
+		border-radius: 0 !important
+		transition: opacity .2s ease
+		.bx-soa-cart-total-line
+			padding: 5px 7px
+			font-size: 13px
+			border-top: 1px solid $grey3
+			line-height: 25px
+			overflow: hidden
+			+clearfix
+			&:nth-child(2)
+				border-color: #bfbfbf
+			.bx-soa-cart-t
+				float: left
+			.bx-soa-cart-d
+				float: right
+				.bx-price-old
+					white-space: nowrap
+					text-decoration: line-through
+					color: #b8b8b8
+					font-size: 13px
+		.bx-soa-cart-total-line
+			&.bx-soa-cart-total-line-highlighted
+				background-color: #ffacac
+				border-color: transparent
+				+ .bx-soa-cart-total-line-total
+					border-top: 0
+		.bx-soa-cart-total-button-container
+			margin-top: 20px
+			a
+				display: inline-block
+				min-width: 120px
+				height: 40px
+				border: none
+				outline: none !important
+				font-size: 13px
+				line-height: 40px
+				font-weight: 400
+				text-align: center
+				cursor: pointer
+				text-decoration: none !important
+				background-color: transparent
+				white-space: nowrap
+				padding: 0 16px
+				background-color: $ac !important
+				color: #fff
+				&:hover, &:active, &:focus
+					color: #fff
+
+/* Развернутый блок с информацией о покупателе */
+.bx-soa-customer
+	padding-top: 10px
+
+.bx-soa-customer-field
+	margin-bottom: 10px
+	.bx-soa-custom-label
+		.bx-authform-starrequired
+			color: $error
+	.soa-property-container
+		.form-control
+			width: 100%
+			border: 1px solid $grey3
+			padding: 0 20px
+			outline: none !important
+			+placeholder
+				font-size: 14px
+				color: $grey2
+			&.bx-soa-customer-input
+				height: 40px
+			&:not(.bx-soa-customer-input)
+				padding-top: 10px
+				padding-bottom: 10px
+				height: 140px
+
+/* Купон */
+.bx-soa-coupon-item-danger
+	position: relative
+	.bx-soa-tooltip-coupon
+		position: absolute
+		bottom: 100%
+		left: 0
+		.tooltip-inner
+			white-space: nowrap
+
+#bx-soa-total,
+#bx-soa-total-mobile
+	margin-bottom: 40px !important
+#bx-soa-total-mobile
+	display: none
+
+/* Блок с уведомлением */
+#bx-soa-main-notifications
+	.alert.alert-success,
+	.alert.alert-danger,
+		border: 1px solid $grey3
+		padding-top: 10px
+		padding-bottom: 10px
+		margin-bottom: 30px
+
+/* Блок с информацией о заказе */
+.page-current-order
+	&__title
+		margin-bottom: 32px
+	&__item
+		margin-bottom: 30px
+		border-bottom: 1px solid $ac
+
+.sale-order-info
+	&__list-change-payment
+		margin-bottom: 10px
+
+.sale-order-list-inner-title-line
+	padding: 0
+	margin-top: 40px
+	margin-bottom: 20px
+	text-transform: none
+	&.first
+		margin-top: 0
+	.sale-order-list-inner-title-line-item
+		font-size: 16px
+		font-weight: 700
+		letter-spacing: 0
+		color: $grey1
+		white-space: nowrap
+		margin: 0 16px 0 0
+	.sale-order-list-inner-title-line-border
+		margin: 7px 0 8px
+		height: 2px
+		background-color: $grey3
+
+.sale-order-list-status-restricted,
+.sale-order-list-status-alert,
+.sale-order-list-status-success,
+.sale-order-list-shipment-status-block,
+.sale-order-detail-payment-options-methods-info-title-status-alert,
+.sale-order-detail-payment-options-methods-info-title-status-success
+	display: inline-block
+	padding: 7px 7.5px
+	border-radius: 0
+	font-size: 14px
+	line-height: normal
+	color: #d0021b
+
+//.sale-order-list-payment
+	.sale-order-list-payment-title
+		font-weight: 400
+		color: $grey1
+
+.sale-order-list-button-container
+	margin-top: 20px
+
+.sale-order-list-status-success,
+.sale-order-detail-payment-options-methods-info-title-status-success
+	border: 1px solid #417505
+	background: #e3efbf
+	color: #417505
+
+.sale-order-list-status-alert,
+.sale-order-detail-payment-options-methods-info-title-status-alert
+	border: 1px solid $ac
+	background: #ffe4e7
+	color: $ac
+
+.sale-order-list-shipment-status-block
+	border: 1px solid $grey2
+	background: $grey4
+	color: $grey1
+
+.sale-order-list-accomplished-date,
+.sale-order-list-accomplished-date-number
+	margin: 0
+	font-size: 14px
+	font-weight: 400
+	line-height: normal
+
+.sale-order-list-accomplished-date
+	color: #417505
+
+/* Оформление заказа */
+.page-ordering__order
+	/* Блок с суммой заказа */
+	.bx-soa-cart-total-ghost
+		display: none !important
+	.bx-soa-cart-total
+		&.bx-soa-cart-total-fixed
+			top: auto !important
+			position: relative !important
+	/* Этапы оформления заказов */
+	.bx-soa-section
+		margin-bottom: 10px
+		border-radius: 0
+		/* Состояния */
+		&.bx-step-completed
+			border: 1px solid #87c73d
+			.bx-soa-section-title-count
+				background: #87c73d
+				border-color: #87c73d
+				&:after
+					color: #fff
+				&:before
+					display: block
+					background-position: center 0
+		&.bx-step-warning
+			border: 1px solid #CCBE71
+			.bx-soa-section-title-count
+				background: #f8c11a
+				border-color: #f8c11a
+				&:after
+					color:#000
+				&:before
+					display:block
+					background-position:center -37px
+		&.bx-step-error
+			border: 1px solid #db4a29
+			.bx-soa-section-title-count
+				background: #db4c4c
+				border-color: #db4c4c
+				&:after
+					color: #fff
+				&:before
+					display:block
+					background-position: center -20px
+		&.bx-selected
+			border: 1px solid #91cedc
+		/* Верхняя часть */
+		.bx-soa-section-title-container
+			background-color: $grey5
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+			padding: 15px 0
+			.text-right
+				text-align: right
+			.bx-soa-section-title
+				font-size: 16px
+				font-weight: 700
+				line-height: normal
+				color: $grey1
+				/* Иконка этапа */
+				&-count
+					width: auto !important
+					margin: -10px 5px 0 0
+					padding: 0
+					background: transparent !important /* Пока всегда прозрачный фон */
+					border-color: transparent !important
+					&:before
+						display: none
+					&:after
+						font-size: 16px
+						font-weight: 700
+						line-height: normal
+						color: $grey1
+			/* Кнопка изменить */
+			.bx-soa-editstep
+				border: none
+		/* Кнопки вперед/назад */
+		.bx-soa-more
+			.bx-soa-more-btn
+				width: 100%
+				padding: 0 15px
+				.pull-left
+					float: left
+				.pull-right
+					float: right
+				.pull-left,
+				.pull-right
+					display: inline-block
+					min-width: 120px
+					height: 40px
+					border: none
+					outline: none !important
+					font-size: 13px
+					line-height: 40px
+					font-weight: 400
+					text-align: center
+					cursor: pointer
+					text-decoration: none !important
+					background-color: transparent
+					white-space: nowrap
+					padding: 0 16px
+					background-color: #d62626 !important
+					color: #fff
+		/* Блок корзины - Изображение */
+		.bx-soa-item-imgcontainer
+			border-radius: 0
+		/* Блок купона */
+		.bx-soa-coupon-input
+			.form-control
+				height: 40px !important
+		/* Блок покупателя - Комментарий */
+		.bx-soa-custom-label
+			display: block
+		.form-control
+			width: 100%
+			border-radius: 0 !important
+			border: 1px solid $grey3
+			padding: 0 20px
+			outline: none !important
+			+placeholder
+				font-size: 14px
+				color: $grey2
+			&.bx-soa-customer-input
+				height: 40px
+			&:not(.bx-soa-customer-input):not(.dropdown-block)
+				padding-top: 10px
+				padding-bottom: 10px
+				height: 140px
+			&.dropdown-block
+				padding: 0 35px
+				.bx-ui-sls-container
+					min-height: 33px
+
+/* Информация о заказе */
+.page-profile__order-current
+	.sale-order-detail-general
+		border: 1px solid $grey3
+		&-head
+			background-color: $grey3
+		&-item
+			font-size: 16px
+			font-weight: 700
+			line-height: normal
+			color: $grey1
+	.sale-order-detail-about-order-inner-container,
+	.sale-order-detail-payment-options-inner-container
+		border: none
+	.sale-order-detail-order-section
+		border: none
+
+/* Блок самовывоза */
+.bx-soa-pickup-preview-img
+	width: 100px
+	object-fit: contain
+	object-position: cover
+
+/* Блок для картинки подтверждения заказа */
+.order-confirm-img-block
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+
+/* Блок маленького текста */
+.small-text-box
+	display: flex
+	width: 100%
+	position: relative
+	justify-content: center
+	margin-bottom: 32px
+
+.order-button
+	display: flex
+	justify-content: center

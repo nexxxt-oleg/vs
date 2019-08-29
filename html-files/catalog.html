@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Каталог</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!--	<meta name="google-site-verification" content="" />-->
+<!--	<meta name="yandex-verification" content="" />-->
+	
+	<meta property="og:image" content="path/to/image.jpg">
+	
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Цвет мобильного браузера -->
+<!--	<meta name="theme-color" content="#000">-->
+<!--	<meta name="msapplication-navbutton-color" content="#000">-->
+<!--	<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.smoothscroll.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/page-catalog.js"></script>
+</head>
+
+<body>
+	<div class="root">
+		<header class="header">
+			<div class="header__top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-9 col-lg-10 d-none d-sm-block">
+							<div class="header__top-menu">
+								<ul class="ht-menu">
+									<li>
+										<a href="#">О компании</a>
+									</li>
+									<li>
+										<a href="#">Доставка</a>
+									</li>
+									<li>
+										<a href="#">Оплата</a>
+									</li>
+									<li>
+										<a href="#">Контакты</a>
+									</li>
+									<li>
+										<a href="#">Дисконтная система</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-sm-3 col-lg-2">
+							<div class="header__user-panel">
+								<ul class="ht-user-panel">
+									<li>
+										<a href="#">Войти</a>
+									</li>
+									<li>
+										<a href="#">Регистрация</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-6 col-sm-2 col-lg-3">
+							<div class="header__logo">
+								<a href="#" class="hm-logo">
+									<img src="/img/logo.svg" class="img-svg hm-logo__svg">
+									<p class="hm-logo__desc">Товары для строительства и ремонта</p>
+								</a>
+							</div>
+						</div>
+						<div class="col-sm-3 col-lg-3 d-none d-sm-block">
+							<div class="header__search">
+								<form action="" class="hm-search">
+									<div class="hm-search__text-field input-search">
+										<input type="search" class="input-search__input" placeholder="Поиск…">
+										<button class="input-search__btn">
+											<img src="/img/ui-icon/search.svg" class="img-svg">
+										</button>
+									</div>
+								</form>
+							</div>
+							<div class="header__work-time">
+								<span class="hm-work-time">пн-вс 8:00 - 21:00 по МСК</span>
+							</div>
+						</div>
+						<div class="col-sm-3 col-lg-3 d-none d-sm-block">
+							<div class="header__phone">
+								<a href="tel:79780070444" class="hm-phone h3">+7 (978) 00 70 444</a>
+							</div>
+							<div class="header__callback">
+								<span class="hm-callback link">Обратный звонок</span>
+							</div>
+						</div>
+						<div class="col-6 col-sm-4 col-lg-3">
+							<div class="header__btns">
+								<div class="header__btn-basket">
+									<div class="btn-basket">
+										<a href="#" class="btn-basket__btn">
+											<img src="/img/ui-icon/basket-fill.svg" class="img-svg">
+										</a>
+										<div class="btn-basket__desc">
+											<p class="btn-basket__count">
+												<span>В корзине товаров:</span>
+												<span>3</span>
+											</p>
+											<p class="btn-basket__price">На сумму: <span class="b-price"><span>500</span><sup>00</sup> Р</span></p>
+										</div>
+									</div>
+								</div>
+								<div class="header__btn-favorites">
+									<a href="#" class="btn-favorites">
+										<div class="btn-favorites__btn">
+											<img src="/img/ui-icon/favorites.svg" class="img-svg">
+										</div>
+										<span class="btn-favorites__desc">Избранное</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="container">
+					<div class="row d-sm-none">
+						<div class="col-12">
+							<div class="header__menu-xs">
+								<div class="hb-menu-xs">
+									<div class="hb-menu-xs__btn">
+										<button class="btn-burger close js-tgl-menu-xs">
+											<div class="btn-burger__icon">
+												<span></span>
+											</div>
+											<div class="btn-burger__desc">
+												<span>Меню</span>
+											</div>
+										</button>
+									</div>
+									<div class="hb-menu-xs__main">
+										<div class="hb-menu-xs__phone">
+											<a href="tel:79780070444" class="hm-phone h3">+7 (978) 00 70 444</a>
+										</div>
+										<div class="hb-menu-xs__search">
+											<form action="" class="hm-search">
+												<div class="hm-search__text-field input-search">
+													<input type="search" class="input-search__input" placeholder="Поиск…">
+													<button class="input-search__btn">
+														<img src="/img/ui-icon/search.svg" class="img-svg">
+													</button>
+												</div>
+											</form>
+										</div>
+										<div class="hb-menu-xs__all-products">
+											<ul class="all-products-menu">
+												<li class="is-parent">
+													<span>
+														<span>Все товары</span>
+														<img src="/img/ui-icon/arrow-bottom.svg" class="img-svg">
+													</span>
+													<ul>
+														<li>
+															<a href="#">Стройматериалы</a>
+														</li>
+														<li>
+															<a href="#">Электроинструмент</a>
+														</li>
+														<li>
+															<a href="#">Декор</a>
+														</li>
+														<li>
+															<a href="#">Освещение</a>
+														</li>
+														<li>
+															<a href="#">Стройматериалы</a>
+														</li>
+														<li>
+															<a href="#">Электроинструмент</a>
+														</li>
+														<li>
+															<a href="#">Декор</a>
+														</li>
+														<li>
+															<a href="#">Освещение</a>
+														</li>
+														<li>
+															<a href="#">Стройматериалы</a>
+														</li>
+														<li>
+															<a href="#">Электроинструмент</a>
+														</li>
+														<li>
+															<a href="#">Освещение</a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Магазины</a>
+												</li>
+												<li>
+													<a href="#">Сток</a>
+												</li>
+												<li>
+													<a href="#">Услуги</a>
+												</li>
+												<li>
+													<a href="#">Акции</a>
+												</li>
+												<li>
+													<a href="#">Новости</a>
+												</li>
+												<li>
+													<a href="#">Объявления</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row d-none d-sm-flex">
+						<div class="col-sm-3">
+							<div class="header__menu-lg">
+								<div class="hb-menu-lg">
+									<div class="hb-menu-lg__btn">
+										<button class="btn-burger js-tgl-menu-lg">
+											<div class="btn-burger__icon">
+												<span></span>
+											</div>
+											<div class="btn-burger__desc">
+												<span>Меню</span>
+											</div>
+										</button>
+									</div>
+									<div class="hb-menu-lg__main">
+										<ul>
+											<li>
+												<a href="#">
+													<span>Стройматериалы</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Электроинструмент</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Декор</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Освещение</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li class="is-parent">
+												<a href="#">
+													<span>Стройматериалы</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+												<div>
+													<div class="row">
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<span>Электроинструмент</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Декор</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Освещение</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span>Стройматериалы</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+											<li class="is-parent">
+												<a href="#">
+													<span>Электроинструмент</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+												<div>
+													<div class="row">
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Сухие смеси, грунтовки</a>
+																	</li>
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+														<div class="col-12 col-sm-6 col-lg-4">
+															<div class="hb-menu-lg__submenu section-menu-lg">
+																<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+																<ul class="section-menu-lg__links">
+																	<li>
+																		<a href="#">Крепежный материал</a>
+																	</li>
+																	<li>
+																		<a href="#">Изоляционные материалы</a>
+																	</li>
+																	<li>
+																		<a href="#">Кровля и водосток</a>
+																	</li>
+																	<li>
+																		<a href="#">Гидроизоляция</a>
+																	</li>
+																	<li>
+																		<a href="#">Внешняя канализация</a>
+																	</li>
+																</ul>
+																<a href="#" class="section-menu-lg__more arrow-link arrow-link_sm arrow-link_right">
+																	<span>В раздел</span>
+																	<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+																</a>
+															</div>													
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<span>Освещение</span>
+													<img src="/img/ui-icon/arrow-right.svg" class="img-svg">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="header__menu-left-lg hb-menu-left-lg">
+								<ul>
+									<li>
+										<a href="#">Магазины</a>
+									</li>
+									<li>
+										<a href="#">Сток</a>
+									</li>
+									<li>
+										<a href="#">Услуги</a>
+									</li>
+									<li>
+										<a href="#">Акции</a>
+									</li>
+									<li>
+										<a href="#">Новости</a>
+									</li>
+									<li>
+										<a href="#">Объявления</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="main">
+			<section class="bread-crumbs-sect">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs">
+								<li>
+									<a href="#">Главная</a>
+								</li>
+								<li>
+									<span>Каталог</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		
+			<section class="page-all-sect page-catalog__categories">
+				<div class="container">
+					<div class="row">
+						<div class="col-8">
+							<div class="page-all-sect__top-title">
+								<h2>Каталог</h2>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-lg-3">
+							<div class="page-catalog__left-menu categories-left-menu">
+								<ul>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="1">СТРОЙМАТЕРИАЛЫ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="2">ИНСТРУМЕНТ И ОБОРУДОВАНИЕ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="3">ДВЕРИ И КОМПЛЕКТУЮЩИЕ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="4">НАПОЛЬНЫЕ ПОКРЫТИЯ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="5">ПЛИТКА</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="6">САНТЕХНИКА</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="7">ЭЛЕКТРОТОВАРЫ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="8">КРЕПЕЖ и ТАКЕЛАЖ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="9">ОТДЕЛОЧНЫЕ МАТЕРИАЛЫ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="10">ЛАКОКРАСОЧНЫЕ МАТЕРИАЛЫ</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="11">ТОВАРЫ ДЛЯ ДОМА</a>
+									</li>
+									<li>
+										<a href="#" class="scroll-to-sect h3" data-sect="12">САД и ОГОРОД</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-8 col-lg-9">
+							<div class="page-all-sect__top-title scroll-sect" data-sect="1">
+								<h3>Двери</h3>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">СТРОЙМАТЕРИАЛЫ</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-1.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">ИНСТРУМЕНТ И ОБОРУДОВАНИЕ</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-2.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Ручной инструмент</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-3.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Крупногабаритная техника</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-4.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Распродажа</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-5.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-6.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Моющая техника</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-7.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Ручной инструмент</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-8.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Крупногабаритная техника</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-9.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Распродажа</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-10.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+																<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Электроинструменты</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-11.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Моющая техника</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/new-12.png">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+							</div>
+							
+							<div class="page-all-sect__top-title scroll-sect" data-sect="2">
+								<h3>Герметики</h3>
+							</div>
+							
+							<div class="row">
+								
+							</div>
+
+							<div class="page-all-sect__top-title scroll-sect" data-sect="3">
+								<h3>Заборы</h3>
+							</div>
+							
+							<div class="row">
+
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Ручной инструмент</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/img-1.jpg">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Крупногабаритная техника</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/img-2.jpg">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="col-sm-6 col-lg-4">
+									<div class="page-catalog__submenu section-menu-lg">
+										<div class="section-menu-lg__top">
+											<a href="#" class="section-menu-lg__title h3">Распродажа</a>
+											<div class="section-menu-lg__img">
+												<img src="/content/card-product/img-3.jpg">
+											</div>
+										</div>
+										<ul class="section-menu-lg__links">
+											<li>
+												<a href="#">Сухие смеси, грунтовки</a>
+											</li>
+											<li>
+												<a href="#">Крепежный материал</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+											<li>
+												<a href="#">Изоляционные материалы</a>
+											</li>
+											<li>
+												<a href="#">Кровля и водосток</a>
+											</li>
+											<li>
+												<a href="#">Гидроизоляция</a>
+											</li>
+											<li>
+												<a href="#">Внешняя канализация</a>
+											</li>
+										</ul>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="subscribe-sect">
+				<div class="container">
+					<form class="row">
+						<div class="col-sm-5 col-lg-3 offset-lg-1">
+							<div class="subscribe-sect__sub">
+								<img src="/img/ui-icon/subscribe-mail.svg" class="img-svg subscribe-sect__icon">
+								<h3 class="subscribe-sect__title">Подписаться на рассылку</h3>
+								<p class="subscribe-sect__desc">Новости. Акции. Спецпредложения.</p>
+							</div>
+						</div>
+						<div class="col-sm-4 col-lg-4">
+							<p class="subscribe-sect__form-field">
+								<input type="mail" placeholder="Электронная почта">
+							</p>
+						</div>
+						<div class="col-sm-3 col-lg-4">
+							<div class="subscribe-sect__btn">
+								<button class="btn btn_color_white">Подписаться</button>
+							</div>
+						</div>
+					</form>
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1">
+							<div class="subscribe-sect__politconf">
+								<p>Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с политикой конфеденциальности.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-2 col-lg-4">
+						<div class="footer__logo">
+							<a href="#" class="hm-logo">
+								<img src="/img/logo.svg" class="img-svg hm-logo__svg">
+								<p class="hm-logo__desc">Товары для строительства и ремонта</p>
+							</a>
+						</div>
+					</div>
+					<div class="col-6 col-sm-2 col-lg-2">
+						<div class="footer__menu">
+							<ul class="footer-menu">
+								<li>
+									<a href="#">О компании</a>
+								</li>
+								<li>
+									<a href="#">Контакты</a>
+								</li>
+								<li>
+									<a href="#">Партнерам</a>
+								</li>
+								<li>
+									<a href="#">Вакансии</a>
+								</li>
+								<li>
+									<a href="#">Новости</a>
+								</li>
+								<li>
+									<a href="#">Статьи</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-6 col-sm-3 col-lg-3">
+						<div class="footer__menu">
+							<ul class="footer-menu">
+								<li>
+									<a href="#">Оплата</a>
+								</li>
+								<li>
+									<a href="#">Доставка</a>
+								</li>
+								<li>
+									<a href="#">Услуги</a>
+								</li>
+								<li>
+									<a href="#">Акции и скидки</a>
+								</li>
+								<li>
+									<a href="#">Отзывы</a>
+								</li>
+								<li>
+									<a href="#">Обратная связь</a>
+								</li>
+								<li>
+									<a href="#">Дисконтная система</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-sm-5 col-lg-3">
+						<div class="footer__contacts">
+							<p class="footer__map">
+								<a href="#">Наши магазины в Крыму</a>
+							</p>
+							<p class="footer__phone">
+								<a href="tel:79780070111" class="h3">+7 (978) 00-70-111</a>
+								<a href="tel:79780070222" class="h3">+7 (978) 00-70-222</a>
+								<img src="/img/crimea.png" class="footer__crimea">
+							</p>
+							<p class="footer__mail">
+								<a href="mailto:office@vs82.ru">office@vs82.ru</a>
+							</p>
+							<p class="footer__social">
+								<a href="#" target="_blank">
+									<img src="/img/social/youtube.svg" class="img-svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="/img/social/vk.svg" class="img-svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="/img/social/ok.svg" class="img-svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="/img/social/fb.svg" class="img-svg">
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="footer__cards">
+							<img src="/img/cards/mastercard.svg" class="img-svg">
+							<img src="/img/cards/visa.svg" class="img-svg">
+							<img src="/img/cards/mir.svg" class="img-svg">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="footer__politconf">
+							<p>© 2001–2017  Все права защищены. Вечная Стройка</p>
+							<a href="#">Политика конфиденциальности</a>
+							<a href="#">Пользовательское соглашение</a>
+							<a href="#">Публичная оферта</a>
+							<a href="#">Информация для потребителей о мебельной продукции </a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="footer__grechka">
+							<a href="http://grechka.digital" target="_blank">
+								<span>Создание сайта</span>
+								<img src="/img/grechka.svg" class="img-svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

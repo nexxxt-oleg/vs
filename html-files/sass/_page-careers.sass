@@ -1,0 +1,46 @@
+.page-careers
+	&__content
+		margin: 0 0 40px
+	&__img
+		margin: 0 0 40px
+		padding: 0 30px
+		img
+			width: 100%
+			height: auto
+	&__card
+		margin-bottom: 32px
+	
++media(sm)
+	.page-careers
+		&__img
+			padding: 0
+	
++media(xs)
+	.page-careers
+		&__callback
+			padding-bottom: 40px
+	
+.careers-callback-form
+	background-color: $grey5
+	padding: 32px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	&__input
+		margin: 0
+		+b4col(#{calc((100% - 120px) / 3 - 92px)})
+	
++media(sm)
+	.careers-callback-form
+		&__input
+			+b4col(#{calc((100% - 120px) / 3 - 32px)})
+	
++media(sm)
+	.careers-callback-form
+		&__input
+			+b4col(100%)
+			margin-bottom: 32px
+		&__button
+			+b4col(100%)
+			text-align: center

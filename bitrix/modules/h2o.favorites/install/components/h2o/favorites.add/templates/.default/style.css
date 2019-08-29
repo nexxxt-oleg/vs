@@ -1,0 +1,110 @@
+#favorites_popup_wrap{
+    /*width: 600px!important;*/
+    min-height: 100%;
+    padding: 0px;
+    position: relative;
+    display: inline-block;
+    color: #4d4c4c;
+}
+#favorites_popup_wrap .modal-header {
+    min-height: 16.42857143px;
+    padding: 0px 0px;
+    border: none;
+    font-size: 30px;
+}
+#favorites_popup_wrap .modal-body{
+	position: relative;
+    padding: 30px;
+    font-size: 18px;
+}
+#favorites_popup_wrap .modal-body p{
+	
+}
+#favorites_popup_wrap .form-row{
+	max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px 0;
+}
+#favorites_popup_wrap .form-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#favorites_popup_wrap .form-row:first-child {
+    margin-top: 0; 
+}
+#favorites_popup_wrap .form-cell-3 {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 30%;
+}
+#favorites_popup_wrap .form-cell-3:last-child {
+    margin-right: 0; 
+}
+#favorites_popup_wrap .form-cell-9 {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 68%;
+}
+#favorites_popup_wrap .form-cell-9:last-child {
+    margin-right: 0; 
+}
+#favorites_popup_wrap label{
+	font-weight: normal;
+	font-size: 18px;
+ 	
+}
+#favorites_popup_wrap input[type=text]{
+	height: 32px;
+}
+#favorites_popup_wrap input[type=text].error{
+	box-shadow: 0 0 0 1px red;
+}
+#favorites_popup_wrap textarea{
+	height: 112px;
+}
+#favorites_popup_wrap input[type=text], #favorites_popup_wrap textarea{
+	width: 100%;
+	border: 1px #b7b7b7 solid;
+  	padding: 0px 5px;
+  	transition: all .25s;
+ 	-webkit-transition: all .25s;
+    -o-transition: all .25s;
+}
+#favorites_popup_wrap .button_wrap{
+	text-align: right;
+}
+#favorites_popup_wrap button{
+	font-size: 18px;
+	border: none;
+	background-color: rgb(221, 221, 221);
+	transition: all .25s;
+ 	-webkit-transition: all .25s;
+    -o-transition: all .25s;
+}
+#favorites_popup_wrap button:hover {
+    box-shadow: 0 0 0 3px rgba(204,204,204,1);
+}
+#favorites_popup_wrap small.error{
+	color: red;
+}
+@media screen and (min-width: 600px){
+	#favorites_popup_wrap{
+		width: 600px;
+	}
+}
+@media screen and (max-width: 600px){
+	#favorites_popup_wrap .form-cell-3{
+		float: none;
+	}
+	#favorites_popup_wrap .form-cell-9{
+		float: none;
+		width: 100%;
+	}
+	#favorites_popup_wrap .modal-header{
+		font-size: 25px;
+	}
+}

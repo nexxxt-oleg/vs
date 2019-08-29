@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001562330936';
+$dateexpire = '001562417336';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:6:{s:9:"client_id";s:26:"bx.58d37d658c1254.44024164";s:4:"type";s:1:"B";s:6:"domain";s:7:"vs82.ru";s:12:"redirect_uri";s:42:"http://vs82.ru/bitrix/tools/seo_client.php";s:5:"scope";a:1:{i:0;s:3:"seo";}s:6:"engine";a:1:{s:13:"yandex_direct";a:4:{s:4:"user";a:7:{s:10:"first_name";s:12:"Степан";s:9:"last_name";s:18:"Сачевский";s:12:"display_name";s:15:"NКВАДРАТ";s:9:"real_name";s:31:"Степан Сачевский";s:5:"login";s:11:"ya-nkvadrat";s:3:"sex";s:4:"male";s:2:"id";s:9:"323092083";}s:12:"clientDataId";s:5:"15659";s:10:"expires_in";i:1521791255;s:8:"settings";a:2:{s:4:"AUTH";a:4:{s:12:"access_token";s:39:"AQAAAAATQf5zAAKBwYxBpapwwELknsediOCToWw";s:10:"expires_in";i:1521791255;s:13:"refresh_token";s:94:"1:PBw9VPG6Hhut5Vxq:wrvTC2_4mX8AZzdgTA9lHgwIACcTkBiNDKJtq67ymN_E_Q-_Ne7G:6Zuv3UOnShaZHrU7TkwCLg";s:5:"scope";a:0:{}}s:4:"USER";a:7:{s:10:"first_name";s:12:"Степан";s:9:"last_name";s:18:"Сачевский";s:12:"display_name";s:15:"NКВАДРАТ";s:9:"real_name";s:31:"Степан Сачевский";s:5:"login";s:11:"ya-nkvadrat";s:3:"sex";s:4:"male";s:2:"id";s:9:"323092083";}}}}}}';
+return true;
+?>

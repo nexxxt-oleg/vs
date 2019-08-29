@@ -1,0 +1,9 @@
+<?
+$MESS["FAVORITES_ENTITY_ID_FIELD"] = "Ид";
+$MESS["FAVORITES_ENTITY_ACTIVE_FIELD"] = "Активность";
+$MESS["FAVORITES_ENTITY_DATE_INSERT_FIELD"] = "Дата создания";
+$MESS["FAVORITES_ENTITY_DATE_UPDATE_FIELD"] = "Дата изменения";
+$MESS["FAVORITES_ENTITY_USER_ID_FIELD"] = "Ид пользователя";
+$MESS["FAVORITES_ENTITY_COOKIE_USER_ID_FIELD"] = "Идентификатор незарегистривонаго пользователя";
+$MESS["FAVORITES_ENTITY_ELEMENT_ID_FIELD"] = "Товар";
+?>
