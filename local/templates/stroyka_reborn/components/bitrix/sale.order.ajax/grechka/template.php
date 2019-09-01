@@ -245,6 +245,7 @@ $this->addExternalCss('/bitrix/css/main/bootstrap.css');
 $APPLICATION->SetAdditionalCSS('/bitrix/css/main/themes/' . $arParams['TEMPLATE_THEME'] . '/style.css', true);
 $APPLICATION->SetAdditionalCSS($templateFolder . '/style.css', true);
 $this->addExternalJs($templateFolder . '/order_ajax.js');
+$this->addExternalJs($templateFolder.'/order_ajax_ext.js');
 \Bitrix\Sale\PropertyValueCollection::initJs();
 $this->addExternalJs($templateFolder . '/script.js');
 ?>
@@ -549,7 +550,7 @@ $messages = Loc::loadLanguageFile(__FILE__);
 ?>
     <script>
         BX.message(<?=CUtil::PhpToJSObject($messages)?>);
-        BX.Sale.OrderAjaxComponent.init({
+        BX.Sale.OrderAjaxComponentExt.init({
             result: <?=CUtil::PhpToJSObject($arResult['JS_DATA'])?>,
             locations: <?=CUtil::PhpToJSObject($arResult['LOCATIONS'])?>,
             params: <?=CUtil::PhpToJSObject($arParams)?>,
@@ -614,8 +615,8 @@ if ($arParams['SHOW_PICKUP_MAP'] === 'Y' || $arParams['SHOW_MAP_IN_PROPS'] === '
         <script src="<?= $scheme ?>://api-maps.yandex.ru/2.1.50/?load=package.full&lang=<?= $locale ?>"></script>
         <script>
             (function bx_ymaps_waiter() {
-                if (typeof ymaps !== 'undefined' && BX.Sale && BX.Sale.OrderAjaxComponent)
-                    ymaps.ready(BX.proxy(BX.Sale.OrderAjaxComponent.initMaps, BX.Sale.OrderAjaxComponent));
+                if (typeof ymaps !== 'undefined' && BX.Sale && BX.Sale.OrderAjaxComponentExt)
+                    ymaps.ready(BX.proxy(BX.Sale.OrderAjaxComponentExt.initMaps, BX.Sale.OrderAjaxComponentExt));
                 else
                     setTimeout(bx_ymaps_waiter, 100);
             })();
@@ -632,8 +633,8 @@ if ($arParams['SHOW_PICKUP_MAP'] === 'Y' || $arParams['SHOW_MAP_IN_PROPS'] === '
         </script>
         <script>
             function bx_gmaps_waiter() {
-                if (BX.Sale && BX.Sale.OrderAjaxComponent)
-                    BX.Sale.OrderAjaxComponent.initMaps();
+                if (BX.Sale && BX.Sale.OrderAjaxComponentExt)
+                    BX.Sale.OrderAjaxComponentExt.initMaps();
                 else
                     setTimeout(bx_gmaps_waiter, 100);
             }

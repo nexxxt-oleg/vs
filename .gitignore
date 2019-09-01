@@ -7,3 +7,5 @@
 /*.dt
 /.idea
 /urlrewrite.php
+/bitrix/managed_cashe/*
+/bitrix/cashe/*
