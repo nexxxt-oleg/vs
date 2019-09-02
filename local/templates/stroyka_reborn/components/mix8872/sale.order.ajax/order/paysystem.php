@@ -55,6 +55,7 @@
 		<span class="ordering-form__title h3-new">Способ оплаты</span>
         <div class="ordering-form__flex form-flex">
 		<?
+		$arPaySystemDesc = [];
 		if ($arResult["PAY_FROM_ACCOUNT"] == "Y")
 		{
 			$accountOnly = ($arParams["ONLY_FULL_PAY_FROM_ACCOUNT"] == "Y") ? "Y" : "N";
@@ -88,6 +89,8 @@
 
 		foreach($arResult["PAY_SYSTEM"] as $arPaySystem)
 		{
+			$arPaySystemDesc[$arPaySystem["ID"]] = $arPaySystem["DESCRIPTION"];
+			
 			if (strlen(trim(str_replace("<br />", "", $arPaySystem["DESCRIPTION"]))) > 0 || intval($arPaySystem["PRICE"]) > 0)
 			{
 				if (count($arResult["PAY_SYSTEM"]) == 1)
@@ -222,4 +225,15 @@
 		}
 		?>
         </div>
+        <div class="ordering-form__info">
+		<?php
+        if($_REQUEST["PAY_SYSTEM_ID"]){
+			$key = intval(htmlspecialchars($_REQUEST["PAY_SYSTEM_ID"]));
+			echo $arPaySystemDesc[$key];
+		} else {
+			echo array_shift($arPaySystemDesc);
+		}
+         
+         ?>
+         </div>
 	</div>

@@ -13,8 +13,7 @@ if (is_array($arResult["GRID"]["ROWS"])) {
         $productCount += $product["data"]["QUANTITY"];
     }
 }
-echo '<pre>';
-var_dump($_REQUEST["DELIVERY_ID"]);echo '</pre>';
+
 ?>
 
 

@@ -3,42 +3,6 @@
 /* Миксины для сайта */
 /* Настройки Bootstrap */
 /* Customization Bootstrap vars from "bootstrap/_variables.scss" */
-@font-face {
-	font-family: "ProximaNova";
-	src: url("../fonts/ProximaNova-Black/ProximaNova-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Black/ProximaNova-Black.woff") format("woff"), url("../fonts/ProximaNova-Black/ProximaNova-Black.ttf") format("truetype");
-	font-weight: 900;
-}
-
-@font-face {
-	font-family: "ProximaNova";
-	src: url("../fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold/ProximaNova-Bold.ttf") format("truetype");
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: "ProximaNova";
-	src: url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.ttf") format("truetype");
-	font-weight: 600;
-}
-
-@font-face {
-	font-family: "ProximaNova";
-	src: url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf") format("truetype");
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "ProximaNova";
-	src: url("../fonts/ProximaNova-RegularIt/ProximaNova-RegularIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-RegularIt/ProximaNova-RegularIt.woff") format("woff"), url("../fonts/ProximaNova-RegularIt/ProximaNova-RegularIt.ttf") format("truetype");
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Rouble";
-	src: url("../fonts/Rouble/rouble.eot?#iefix") format("embedded-opentype"), url("../fonts/Rouble/rouble.woff") format("woff"), url("../fonts/Rouble/rouble.ttf") format("truetype");
-	font-weight: 400;
-}
 
 html,
 body {
@@ -12537,4 +12501,7 @@ main.catalog-actions {
 }
 .ordering-form__info--delivery {
 	padding-top: 10px;
+}
+.bx-ui-combobox-variant.bx-ui-combobox-deselect-item {
+	display: none;
 }

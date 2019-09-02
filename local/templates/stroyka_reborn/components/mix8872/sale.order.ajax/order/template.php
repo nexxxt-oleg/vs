@@ -19,6 +19,7 @@ if($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y")
 
 $APPLICATION->SetAdditionalCSS($templateFolder."/style_cart.css");
 $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
+$APPLICATION->AddHeadScript($templateFolder.'/jquery.maskedinput.min.js');
 ?>
 <a name="order_form"></a>
 <section class="page-all-sect page-ordering__order">
@@ -149,6 +150,55 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
 
                             return true;
                         }
+                        
+                        function validsubmitForm() {
+                        	
+                        	$('.ordering-form__input-block').removeClass('error');
+    						$('#ORDER_FORM .error-text').remove();
+                        	
+                    	    var name = $('#ORDER_PROP_1').val();
+						    var phone = $('#ORDER_PROP_3').val();
+						    var email = $('#ORDER_PROP_2').val();
+                        	var error = 0;
+                        	
+                        	if (name.length<1) {
+								$('#ORDER_PROP_1').parent().addClass('error');
+								$('#ORDER_PROP_1').after('<p class="ordering-form__error-text error-text">Обязательное поле</p>');
+								error = 1;
+							}
+							
+							if (email.length<1) {
+								$('#ORDER_PROP_2').parent().addClass('error');
+								$('#ORDER_PROP_2').after('<p class="ordering-form__error-text error-text">Обязательное поле</p>');
+								error = 1;
+							} else {
+								var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+								if(!pattern.test(email)) {
+								   	$('#ORDER_PROP_2').parent().addClass('error');
+									$('#ORDER_PROP_2').after('<p class="ordering-form__error-text error-text">Вы ввели некорректный e-mail</p>');
+									error = 1;
+								}
+							}
+							
+							if (phone.length<1) {
+								$('#ORDER_PROP_3').parent().addClass('error');
+								$('#ORDER_PROP_3').after('<p class="ordering-form__error-text error-text">Обязательное поле</p>');
+								error = 1;
+							}
+							
+							if($('#ORDER_PROP_7').length > 0) {
+								var adr = $('#ORDER_PROP_7').val();
+								if (adr.length<1) {
+									$('#ORDER_PROP_7').parent().addClass('error');
+									$('#ORDER_PROP_7').after('<p class="ordering-form__error-text error-text">Обязательное поле</p>');
+									error = 1;
+								}
+							}
+                        	
+                        	if(!error) {
+								submitForm('Y');	
+							}
+						}
 
                         function ajaxResult(res)
                         {
@@ -252,7 +302,7 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
                     <input type="hidden" name="json" value="Y">
                     <button
                             class="ordering-form__send gradient-btn"
-                            onclick="submitForm('Y'); return false;"
+                            onclick="validsubmitForm('Y'); return false;"
                             id="ORDER_CONFIRM_BUTTON"><span>Подтвердить заказ</span>
                     </button>
                 </form>

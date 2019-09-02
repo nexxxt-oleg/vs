@@ -109,7 +109,8 @@ if (!function_exists("PrintPropsForm"))
 							</span>
 
 
-								<input placeholder="<?=$arProperties["DESCRIPTION"]?>"
+								<input 
+									placeholder="<?=$arProperties["DESCRIPTION"]?>"
                                        class="ordering-form-field js-name-form-field"
                                        type="text"
                                        value="<?=$arProperties["VALUE"]?>"

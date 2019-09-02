@@ -85,7 +85,7 @@
 		paramsDialog.ClearButtons();
 		paramsDialog.SetButtons(button);
 		//paramsDialog.adjustSizeEx();
-		paramsDialog.Show();
+		//paramsDialog.Show();
 	}
 
 	function insertParamsToForm(deliveryId, paramsFormName)
@@ -191,9 +191,9 @@
 			}
 			else // stores and courier
 			{
-				if (count($arDelivery["STORE"]) > 0)
-					$clickHandler = "onClick = \"fShowStore('".$arDelivery["ID"]."','".$arParams["SHOW_STORES_IMAGES"]."','".$width."','".SITE_ID."')\";";
-				else
+				//if (count($arDelivery["STORE"]) > 0)
+				//	$clickHandler = "onClick = \"fShowStore('".$arDelivery["ID"]."','".$arParams["SHOW_STORES_IMAGES"]."','".$width."','".SITE_ID."')\";";
+				//else
 					$clickHandler = "onClick = \"BX('ID_DELIVERY_ID_".$arDelivery["ID"]."').checked=true;submitForm();\"";
 				?>
 					<div class="form-flex__btn-wrap">
@@ -234,7 +234,7 @@
                     ?>
                     <div id="select_store"<?if($_REQUEST["DELIVERY_ID"] == 3){} else { echo " style=\"display:none;\"";}?>>
                         <p class="ordering-form__info ordering-form__info--delivery"><?=GetMessage('SOA_ORDER_GIVE_TITLE');?>:
-                        <span class="ora-store" id="store_desc"><?=htmlspecialcharsbx($arResult["STORE_LIST"][$arResult["BUYER_STORE"]]["TITLE"])?></span></p>
+                        <span class="ora-store" id="store_desc"><?=htmlspecialcharsbx($arResult["STORE_LIST"][2]["TITLE"])?></span></p>
                     </div>
                     <?
                 endif;

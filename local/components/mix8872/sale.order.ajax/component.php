@@ -318,6 +318,8 @@ if (!$USER->IsAuthorized() && $arParams["ALLOW_AUTO_REGISTER"] == "N")
 				$arResult["ERROR"][] = GetMessage("STOF_ERROR_REG_BAD_EMAIL");
 
 			$arResult["AUTH"]["NEW_EMAIL"] = $_POST["NEW_EMAIL"];
+			
+			
 
 			if (empty($arResult["ERROR"]))
 			{

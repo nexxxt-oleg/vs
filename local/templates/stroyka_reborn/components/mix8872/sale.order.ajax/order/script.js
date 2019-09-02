@@ -444,3 +444,14 @@ BX.saleOrderAjax = { // bad solution, actually, a singleton at the page
 	}
 
 }
+$( document ).ready(function() {
+   $('#ORDER_PROP_3').mask("+7(999)999-99-99");
+   $('#ORDER_FORM').on('click', '.ordering-form-field', function() {
+		$(this).parent().removeClass('error');
+   });
+    $('#ORDER_FORM').on('click', '.ordering-form-textarea', function() {
+		$(this).parent().removeClass('error');
+   });
+   
+});
+
