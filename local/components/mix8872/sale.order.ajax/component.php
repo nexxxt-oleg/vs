@@ -10,6 +10,7 @@
 /** @global CMain $APPLICATION */
 use Bitrix\Main\Loader;
 use Bitrix\Sale\DiscountCouponsManager;
+use Bitrix\Main\UserTable;
 
 if (!Loader::includeModule("sale"))
 {
@@ -280,7 +281,8 @@ if (!$USER->IsAuthorized() && $arParams["ALLOW_AUTO_REGISTER"] == "N")
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST" && ($arParams["DELIVERY_NO_SESSION"] == "N" || check_bitrix_sessid()))
 	{
-		foreach ($_POST as $vname=>$vvalue)
+
+	    foreach ($_POST as $vname=>$vvalue)
 		{
 			if (in_array($vname, array("USER_LOGIN", "USER_PASSWORD", "do_authorize", "NEW_NAME", "NEW_LAST_NAME", "NEW_EMAIL", "NEW_GENERATE", "NEW_LOGIN", "NEW_PASSWORD", "NEW_PASSWORD_CONFIRM", "captcha_sid", "captcha_word", "do_register", "AJAX_CALL", "is_ajax_post")))
 				continue;
@@ -318,8 +320,8 @@ if (!$USER->IsAuthorized() && $arParams["ALLOW_AUTO_REGISTER"] == "N")
 				$arResult["ERROR"][] = GetMessage("STOF_ERROR_REG_BAD_EMAIL");
 
 			$arResult["AUTH"]["NEW_EMAIL"] = $_POST["NEW_EMAIL"];
-			
-			
+
+
 
 			if (empty($arResult["ERROR"]))
 			{
@@ -920,6 +922,23 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 
 				//}//end isset
 			}//end while
+            if (!$USER->IsAuthorized()) {
+                //$arResult["ERROR"][]  = $arUserResult["USER_EMAIL"];
+
+                $user = UserTable::getList([
+                    'select' => [
+                        'ID'
+                    ],
+                    'filter' => [
+                        'EMAIL' => $arUserResult["USER_EMAIL"]
+                    ]
+                ])->fetch();
+
+                if (isset($user['ID'])) {
+                    $arResult["ERROR"][] = "Пользователь с таким email уже существует. Пожалуйста, авторизуйтесь";
+                }
+            }
+
 		}
 		/* Check Values End */
 

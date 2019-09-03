@@ -63,7 +63,10 @@
 			<input type="hidden" id="account_only" value="<?=$accountOnly?>" class="form-flex__radio" />
 
 					<input type="hidden" name="PAY_CURRENT_ACCOUNT" value="N">
-					<label class="form-flex__btn form-flex__btn_sm form-flex-btn_sm form-flex-btn" for="PAY_CURRENT_ACCOUNT" id="PAY_CURRENT_ACCOUNT_LABEL" onclick="changePaySystem('account');" class="<?if($arResult["USER_VALS"]["PAY_CURRENT_ACCOUNT"]=="Y") echo "selected"?>">
+					<label
+                            class="form-flex__btn form-flex__btn_sm form-flex-btn_sm form-flex-btn"
+                            for="PAY_CURRENT_ACCOUNT"
+                            id="PAY_CURRENT_ACCOUNT_LABEL" onclick="changePaySystem('account');" class="<?if($arResult["USER_VALS"]["PAY_CURRENT_ACCOUNT"]=="Y") echo "selected"?>">
 						<input type="checkbox" name="PAY_CURRENT_ACCOUNT" id="PAY_CURRENT_ACCOUNT" value="Y"<?if($arResult["USER_VALS"]["PAY_CURRENT_ACCOUNT"]=="Y") echo " checked=\"checked\"";?>>
 						<!--div class="bx_logotype">
 							<span style="background-image:url(<?=$templateFolder?>/images/logo-default-ps.gif);"></span>
@@ -113,9 +116,8 @@
 									$imgUrl = $templateFolder."/images/logo-default-ps.gif";
 								endif;
 								?>
-								<!--div class="bx_logotype">
-									<span style="background-image:url(<?=$imgUrl?>);"></span>
-								</div-->
+								<div class="bx_logotype" style="background-image:url(<?=$imgUrl?>);">
+								</div>
 
 									<?if ($arParams["SHOW_PAYMENT_SERVICES_NAMES"] != "N"):?>
 										<span><?=$arPaySystem["PSA_NAME"];?></span>
@@ -144,13 +146,13 @@
 									$imgUrl = $templateFolder."/images/logo-default-ps.gif";
 								endif;
 								?>
-								<!--div class="bx_logotype">
-									<span style='background-image:url(<?=$imgUrl?>);'></span>
-								</div-->
+
 
 									<?if ($arParams["SHOW_PAYMENT_SERVICES_NAMES"] != "N"):?>
 										<span><?=$arPaySystem["PSA_NAME"];?></span>
 									<?endif;?>
+                                <div class="bx_logotype" style='background-image:url(<?=$imgUrl?>);'>
+                                </div>
 
 							</label>
 

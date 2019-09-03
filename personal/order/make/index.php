@@ -25,7 +25,7 @@ $APPLICATION->IncludeComponent(
 		"SHOW_PAYMENT_SERVICES_NAMES" => "Y",
 		"SHOW_STORES_IMAGES" => "N",
 		"PATH_TO_BASKET" => "/personal/cart/",
-		"PATH_TO_PERSONAL" => "index.php",
+		"PATH_TO_PERSONAL" => "/personal/",
 		"PATH_TO_PAYMENT" => "payment.php",
 		"PATH_TO_AUTH" => "/auth/",
 		"SET_TITLE" => "Y",

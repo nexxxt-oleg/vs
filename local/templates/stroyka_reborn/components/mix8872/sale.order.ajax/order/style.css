@@ -12505,3 +12505,37 @@ main.catalog-actions {
 .bx-ui-combobox-variant.bx-ui-combobox-deselect-item {
 	display: none;
 }
+.ordering-form__ps {
+	display: block;
+	padding: 15px 0;
+	font-size: 14px;
+	line-height: 16px;
+}
+.location-block-wrapper .bx-ui-slst-pool {
+	width: -webkit-calc(416px - 24px);
+	width: calc(416px - 24px);
+}
+.location-block-wrapper .bx-ui-slst-pool .dropdown-block {
+	padding: 0 32px 0 16px !important;
+	position: relative;
+}
+.location-block-wrapper .bx-ui-slst-pool .dropdown-block::after {
+	content: "";
+	position: absolute !important;
+	right: 0 !important;
+	top: -1px !important;
+	display: block !important;
+	width: 32px !important;
+	height: 38px !important;
+	padding: 0 !important;
+	border: none !important;
+	outline: none !important;
+	cursor: pointer !important;
+	background: url("./images/dropdown.svg") 50% 50% no-repeat transparent !important;
+}
+.bx_logotype {
+	width: 24px;
+	height: 24px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
